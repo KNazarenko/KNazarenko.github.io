@@ -1,0 +1,299 @@
+/**
+* Adjustment settings
+**/
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body, html {
+  width: 100%;
+  min-height: 100vh;
+}
+
+body {
+  font-family: 'PT Sans', sans-serif;
+}
+
+.container {
+  width: 940px;
+  padding: 0 15px;
+  margin: 0 auto;
+  display: flex;
+}
+
+.column-50 {
+  width: 50%;
+}
+
+.column-42 {
+  width: 42%;
+}
+
+.column-58 {
+  width: 58%;
+}
+
+.section {
+  padding: 110px 0 155px 0;
+}
+
+.section-block-wrap {
+  text-align: center;
+  max-width: 730px;
+  margin: 0 auto;
+}
+
+.main-title {
+  font-weight: 700;
+  margin: 0;
+  color: #010101;
+  font-size: 32px;
+}
+
+.main-sub-title {
+  color: #313841;
+  font-weight: 400;
+  font-size: 20px;
+  margin: 0;
+  line-height: 24px;
+}
+
+.content-text {
+  color: #545454;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 20px;
+  margin: 0;
+  text-align: left;
+}
+
+/**
+* Hero
+**/
+
+.hero {
+  width: 100%;
+  height: 100vh;
+  background: #fcdb00;
+  position: relative;
+}
+
+.main-header {
+  padding: 60px 0;
+}
+
+.container--header {
+  align-items: center;
+}
+
+.column-50--header {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.logo__link {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+} 
+
+.logo__img {
+  width: 43px;
+  height: 43px;
+  display: block;
+}
+
+.logo__title {
+  margin-left: 10px;
+  color:  #010101;
+  font-weight: 700;
+  font-size: 30px;
+}
+
+/**
+* Nav
+**/
+
+.nav__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+}
+
+.nav__item:not(:first-child) {
+  margin-left: 70px;
+}
+
+.nav__link {
+  font-weight: 700;
+  font-size: 22px;
+  color: #010101;
+  text-decoration: none;
+}
+
+.nav__link:hover {
+  color: #fff;
+}
+
+.hero__main-sub-title {
+  margin-top: 18px;
+}
+
+.hero__content-text {
+  margin-top: 20px;
+}
+
+.apps {
+  margin-top: 65px;
+}
+
+.apps__list {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  display: flex;
+}
+
+.apps__item:not(:first-child) {
+  margin-left: 38px;
+}
+
+.apps__link {
+  display: block;
+  width: 40px;
+  height: 40px;
+}
+
+.apps__link--apple {
+  background: url('../img/icon-fa-apple.png') center center no-repeat;
+}
+.apps__link--andr {
+  background: url('../img/icon-fa-android.png') center center no-repeat;
+}
+.apps__link--windows {
+  background: url('../img/icon-fa-windows.png') center center no-repeat;
+}
+
+.column-58--tablet-wrap {
+  display: flex;
+  flex-direction: column;
+}
+
+.hero__tablet {
+  margin: auto 0 107px 175px;
+}
+
+.container--hero {
+  height: calc(100vh - 165px);
+}
+
+.slider{  
+  display: block;
+  width: 56px;
+  height: 16px; 
+  position: absolute;
+  bottom: 49px; 
+  left: 50%;
+  transform: translateX(-50%);
+  }
+
+.slider__list{
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  list-style: none;  
+}
+
+.slider__item{
+  display: inline-block;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background-color:  rgba(255, 255, 255, 0.5); 
+  cursor: pointer;
+}
+
+.slider__item:hover, .slider__item:first-child{
+  background-color:  #ffffff;
+}
+
+
+/**
+* Features
+**/
+
+.features {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+}
+
+.container--features {
+  flex-direction: column;
+}
+
+.features__sub-title {
+  margin-top: 15px;
+}
+
+.features__list {
+  display: flex;
+  list-style-type: none;
+  margin: 0 -22px 0 -22px;
+  padding: 0;
+  flex-wrap: wrap;
+}
+
+.features__item {
+  width: 274px;
+  margin: 0 22px;
+  margin-top: 87px;
+  padding-left: 75px;
+  position: relative;
+}
+
+.features__icon {
+  font-size: 30px;
+  position: absolute;
+  left: 0;
+  top: 20px;
+  width: 50px;
+  height: 50px;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+
+.features__list-title{  
+  color: #010101;
+  font-size: 22px;
+  font-weight: 400;
+  line-height: 24px;
+  text-align: left;
+}
+
+.content-text{
+  color:  #898989;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 20px;
+  text-align: left; 
+  margin-top: 15px;
+}
+
+/**
+* Support
+**/
+
+.support {
+  width: 100%;
+  height: 767px;
+  position: relative;
+  background-color: #010101;  
+}
