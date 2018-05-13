@@ -364,6 +364,11 @@ body {
   margin-top: 79px;
 }
 
+.apps__wrap{
+  display: flex;
+  margin: 0 auto;
+}
+
 .apps__list--support{
   width: 240px;
   height: 36px;
@@ -372,6 +377,7 @@ body {
   list-style-type: none;
   display: flex;  
   transform: translateX(-27px);
+  justify-content: space-between;
 }
 
 .apps__item--support:not(:first-child) {
@@ -385,7 +391,7 @@ body {
 }
 
 .apps__link--fb{
-  background: url('../img/facebook-ico.png') center center no-repeat;
+  background: url('../img/facebook-ico.png') center center no-repeat;  
 }
 
 .apps__link--tw{
@@ -400,6 +406,66 @@ body {
   background: url('../img/pinterest-ico.png') center center no-repeat;
 }
 
+.apps__link--fb, .apps__link--tw, .apps__link--goog, .apps__link--pint{
+  background-size: cover;
+}
+
+/* /support apps */
+
+/* support address */
+.footer__wrap{
+  margin-top: 134px;
+  display: flex;  
+}
+
+.address__wrap{
+  width: 310px;
+  padding-right: 117px;
+}
+
+.links__wrap{  
+  width: 600px;
+  justify-content: space-between;
+}
+
+.address__list, .links__list{
+  list-style: none;
+  font-style: normal;   
+}
+
+.address__wrap, .links__wrap{  
+  color:  #ffffff;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 20px; 
+  display: block;     
+}
+
+.address__link, .links__link{
+  text-decoration: none;
+  color:  #ffffff;
+}
+
+.address__link:hover, .links__link:hover{
+  color:  #fcdb00;
+}
+
+.address__contacts{
+  display: inline-block;
+  margin-top: 5px;
+}
+/* support address */
+
+/* support links */
 
 
+.footer__links{
+  display: flex;
+  justify-content: space-between;
+}
 
+/* /support links */
+
+/**
+* /Support
+**/
