@@ -223,7 +223,7 @@ body {
 
 .features {
   width: 100%;
-  min-height: 100vh; 
+  /* min-height: 100vh;  */
   padding: 110px 0 155px 0; 
   position: relative;
 }
@@ -314,14 +314,11 @@ body {
 
 /* support form */
 
-.support__form--wrap{
-  margin-top: 41px; 
-}
-
 .support__form{
   width: 727px;  
   display: flex;  
   margin: 0 auto;
+  margin-top: 41px;
 }
 
 .support__textfield{
