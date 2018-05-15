@@ -253,13 +253,13 @@ body {
 .decor--wrap::after{
     content: '.';    
     width: 73px;
-    height: 329px;      
+    height: 317px;      
     border: 1px dashed rgba(255, 255, 255, 0.2);
     border-left: none;
     border-bottom: none;
     position: absolute;
     border-top-right-radius:30px 30px;
-    top: 18px;
+    top: 16px;
     right: -74px;
 }
 
@@ -320,13 +320,111 @@ body {
     justify-content: center;
 }
 
+.receive__item--wrap{    
+}
+
 .receive__logo{
     display: block;
     width: 102px;
     height: 116px;
     margin: 0 auto;
-    border: 5px solid #fe8682;    
+    background: url('../img/outer_lightred.png') center center no-repeat;
+    position: relative;
+    margin-bottom: 21px;    
 }
+
+.receive__logo:hover{    
+    background: url('../img/outer_red.png') center center no-repeat;    
+}
+
+.logo--ba::before, .logo--ba::after{
+    content: '';    
+    position: absolute;
+    width: 102px;
+    height: 116px;
+    top: 0;
+    left: 0;
+}
+
+.logo--ba::before{
+    background: url('../img/inner_red.png') center center no-repeat;
+}
+
+.logo--ba:hover::before{    
+    background: url('../img/inner_white.png') center center no-repeat;
+}
+
+/* logo icons hover */
+
+.logo--clients::after{    
+    background: url('../img/clients_white.png') center center no-repeat;    
+}
+
+.logo--clients:hover::after{    
+    background: url('../img/clients_red.png') center center no-repeat;    
+}
+
+.logo--branding::after{    
+    background: url('../img/branding_white.png') center center no-repeat;    
+}
+
+.logo--branding:hover::after{    
+    background: url('../img/branding_red.png') center center no-repeat;    
+}
+
+.logo--market::after{    
+    background: url('../img/market_white.png') center center no-repeat;    
+}
+
+.logo--market:hover::after{    
+    background: url('../img/market_red.png') center center no-repeat;    
+}
+
+.logo--adv::after{    
+    background: url('../img/adv_white.png') center center no-repeat;    
+}
+
+.logo--adv:hover::after{    
+    background: url('../img/adv_red.png') center center no-repeat;    
+}
+/* /logo icons hover */
+
+.receive__topic{
+    color:  #868686;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 18px;
+    text-align: center;
+    text-transform: uppercase;
+    position: relative;
+    margin-bottom: 22px;
+}
+
+.receive__topic::before{
+    content: '';
+    position: absolute;
+    width: 60px;
+    height: 1px;
+    background:  #adadad;
+    top: 0;
+    left: 50%;
+    transform: translate(-30px, 27px);
+    
+}
+
+.receive__text{
+    color:  #adadad;
+    font-size: 13.5px;
+    font-weight: 300;
+    line-height: 18px;
+    text-align: center;
+} 
+ 
+
+
+
+
+
 
 
 /**
