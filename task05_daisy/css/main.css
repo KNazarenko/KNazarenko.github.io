@@ -54,14 +54,14 @@ body {
 }
 
 
-/* .button--reset{
+.button--reset{
     background: none;
     padding: 0;
     border: none;
     outline: none;
     cursor: pointer;
   }
- */
+
  .button-transp{
     display: flex; 
     width: 205px;
@@ -76,6 +76,20 @@ body {
     justify-content: center;
     text-decoration: none;   
 }
+
+.button-red{
+    display: flex; 
+    width: 167px;
+    height: 44px;    
+    color:  #f2f2f2;
+    background: #fc635e;
+    border-radius: 7px;
+    font-size: 20px;
+    font-weight: 300;
+    line-height: 26px;    
+    align-items: center;
+    justify-content: center;    
+}   
 
 .slider-red--wrap{    
     position: absolute;
@@ -103,7 +117,7 @@ body {
     background: url('../img/slider_white.png') center center no-repeat; 
 }
 
-.topic{    
+.topic{       
     color:  #868686;
     font-size: 26px;
     font-weight: 500;
@@ -275,16 +289,14 @@ body {
 **/
 
 .receive{
-    width: 1260px;
-    /* height: 576px; */
+    width: 1260px;    
     margin: 0 auto;
     position: relative;
     padding-bottom: 94px;
 }
 
 .receive__wrap{
-    width: 941px;
-    height: 100%;
+    width: 941px;    
     display: flex;
     flex-flow: column wrap;    
     align-items: center; 
@@ -482,4 +494,74 @@ body {
 * /Business section
 **/
 
+/**
+* Process section
+**/
 
+/**
+* /Process section
+**/
+
+/**
+Wedo section
+**/
+.wedo{
+    width: 1260px;    
+    margin: 0 auto;
+    position: relative;
+    padding-top: 60px;
+    padding-bottom: 94px;
+    background: #f2f2f2;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; 
+}
+
+.topic--border{    
+    padding-bottom: 10px;
+    border-bottom: 1px solid #868686;
+    
+}
+
+.container{
+    width: 940px;
+    display: flex;
+    flex-flow: row wrap;   
+    justify-content: space-between; 
+    margin-top: 67px;
+    align-items: center; 
+}
+
+.text--wrap{
+    width: 392px;    
+}
+
+.container__title{
+    height: 39px;
+    color:  #868686;
+    font-size: 28px;
+    font-weight: 500;
+    line-height: 39px;
+    /* text-align: center; */
+    text-transform: uppercase;    
+    border-left: 10px solid #fc635e;
+    padding-left: 12px;
+    margin-bottom: 20px;
+}
+
+.container__text{
+    color:  #9e9999;
+    font-size: 15px;
+    font-weight: 300;
+    line-height: 24px;
+    text-align: left;
+    margin-bottom: 39px;
+}
+
+.container__form{
+
+}
+/**
+ /Wedo section
+**/
