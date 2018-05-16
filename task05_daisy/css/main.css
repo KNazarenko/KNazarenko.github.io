@@ -57,9 +57,10 @@ body {
 .button--reset{
     background: none;
     padding: 0;
+    margin: 0;
     border: none;
     outline: none;
-    cursor: pointer;
+    cursor: pointer;    
   }
 
  .button-transp{
@@ -88,7 +89,8 @@ body {
     font-weight: 300;
     line-height: 26px;    
     align-items: center;
-    justify-content: center;    
+    justify-content: center;  
+    margin: 0;  
 }   
 
 .slider-red--wrap{    
@@ -529,8 +531,7 @@ Wedo section
     display: flex;
     flex-flow: row wrap;   
     justify-content: space-between; 
-    margin-top: 67px;
-    align-items: center; 
+    margin-top: 67px;    
 }
 
 .text--wrap{
@@ -542,8 +543,7 @@ Wedo section
     color:  #868686;
     font-size: 28px;
     font-weight: 500;
-    line-height: 39px;
-    /* text-align: center; */
+    line-height: 39px;    
     text-transform: uppercase;    
     border-left: 10px solid #fc635e;
     padding-left: 12px;
@@ -560,8 +560,72 @@ Wedo section
 }
 
 .container__form{
-
+    display: flex;
+    margin: 0;
+    justify-content: flex-start;
 }
 /**
  /Wedo section
+**/
+
+/**
+Advertising section
+**/
+.advert{
+    width: 1260px;    
+    margin: 0 auto;
+    position: relative;
+    padding-top: 60px;
+    padding-bottom: 94px;
+    /* background: #f2f2f2; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; 
+}
+
+.text--right{
+    text-align: left;
+}
+
+.container__title--right{
+    height: 39px;
+    color:  #868686;
+    font-size: 28px;
+    font-weight: 500;
+    line-height: 39px;
+    text-align: right;
+    text-transform: uppercase;    
+    border-right: 10px solid #fc635e;
+    padding-right: 12px;
+    margin-bottom: 20px;
+}
+
+.container__text--right{
+    color:  #9e9999;
+    font-size: 15px;
+    font-weight: 300;
+    line-height: 24px;
+    text-align: right;
+    margin-bottom: 39px;
+}
+
+.container__form--right{
+    display: flex;
+    margin: 0;
+    justify-content: flex-end;
+}
+
+/**
+/Advertising section
+**/
+
+/**
+Marketing section
+**/
+
+
+
+/**
+/Marketing section
 **/
