@@ -189,7 +189,10 @@ body {
     font-weight: 100;
     line-height: 28px;  
     border-bottom: 4px solid transparent;
-    border-top: 4px solid transparent;         
+    border-top: 4px solid transparent;  
+    transition: color .2s ease-in-out;  
+    transition: border-bottom .2s ease-in-out;   
+      
 }
 
 .main__link:hover, .main__link--red {    
@@ -273,9 +276,10 @@ body {
 
 .receive{
     width: 1260px;
-    height: 576px;
+    /* height: 576px; */
     margin: 0 auto;
     position: relative;
+    padding-bottom: 94px;
 }
 
 .receive__wrap{
@@ -330,7 +334,8 @@ body {
     margin: 0 auto;
     background: url('../img/outer_lightred.png') center center no-repeat;
     position: relative;
-    margin-bottom: 21px;    
+    margin-bottom: 21px; 
+    transition: background .2s ease-in-out;   
 }
 
 .receive__logo:hover{    
@@ -344,6 +349,7 @@ body {
     height: 116px;
     top: 0;
     left: 0;
+    transition: background .2s ease-in-out;
 }
 
 .logo--ba::before{
@@ -408,8 +414,7 @@ body {
     background:  #adadad;
     top: 0;
     left: 50%;
-    transform: translate(-30px, 27px);
-    
+    transform: translate(-30px, 27px);    
 }
 
 .receive__text{
@@ -419,13 +424,6 @@ body {
     line-height: 18px;
     text-align: center;
 } 
- 
-
-
-
-
-
-
 
 /**
 * /Receive section
