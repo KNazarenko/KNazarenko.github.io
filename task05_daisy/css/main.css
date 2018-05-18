@@ -301,7 +301,7 @@ body {
 }
 
 .receive__wrap{
-    width: 941px;    
+    width: 940px;    
     display: flex;
     flex-flow: column wrap;    
     align-items: center; 
@@ -656,6 +656,36 @@ Advertising section
     color:  #fc635e;
 }
 
+.sets__list{
+    display: flex;
+    width: 940px;
+    flex-wrap: wrap;
+    list-style: none;
+    justify-content: space-between;  
+    margin-top: 46px;     
+}
+
+.sets__item{
+    margin-bottom: 12px;    
+    cursor: pointer;
+    text-align: center;    
+}
+
+.sets__img--464{
+    height: 200px;
+    width: 464px;
+}
+
+.sets__img--464:hover{
+    background: rgba(252, 99, 94, 0.78);
+    z-index: 99;
+}
+
+.sets__img--226{
+    height: 200px;
+    width: 226px;
+}
+
 .button-portfolio{
     display: flex; 
     width: 192px;
@@ -669,11 +699,8 @@ Advertising section
     align-items: center;
     justify-content: center;  
     margin: 0; 
-    margin-top: 59px;
+    margin-top: 47px;
 } 
-
-
-
 
 /**
 * /Portfolio section
