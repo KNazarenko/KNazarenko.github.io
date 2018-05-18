@@ -806,7 +806,7 @@ Advertising section
     width: 1260px;    
     margin: 0 auto;
     position: relative;
-    padding-top: 55px;
+    padding-top: 52px;
     padding-bottom: 160px;    
     display: flex;
     flex-direction: column;
@@ -814,9 +814,94 @@ Advertising section
     align-items: center; 
 }
 
+.ceo__logo{
+    width: 74px;
+    height: 86px;
+}
+
+.ceo__wrap{
+    width: 940px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 74px;
+    align-items: center;
+}
+
+.ceo__text{
+    width: 320px;
+    color:  #767676;
+    font-size: 15px;
+    font-weight: 300;
+    line-height: 21px;
+    text-align: right;
+}
+
+.ceo__photo{
+    width: 161px;
+    height: 185px;
+}
+
+.ceo__name--wrap{
+    display: flex;
+    flex-wrap: wrap;    
+    width: 319px;
+    height: 84px;
+    justify-content: flex-start;
+    align-content: space-around;
+}
+
+.ceo__name{
+    color:  #818181;
+    font-size: 28px;
+    font-weight: 500;
+    line-height: 1;
+    text-align: left;
+}
+
+.ceo__position{
+    color:  #818181;
+    font-size: 20px;
+    font-weight: 300;
+    line-height: 1;
+    text-align: left;    
+}
+
+.ceo__button--wrap{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 88px;
+    height: 31px;
+    margin-top: 52px;    
+}
+
+.ceo__button--left, .ceo__button--right{
+    display: block;
+    width: 31px;
+    height: 31px;    
+}
+
+.ceo__button--left{
+    background: url(../img/ceo_button-left.png);
+}
+
+.ceo__button--left:hover{
+    background: url(../img/ceo_button-left-hover.png);
+}
+
+.ceo__button--right{
+    background: url(../img/ceo_button-right.png);
+}
+
+.ceo__button--right:hover{
+    background: url(../img/ceo_button-right-hover.png);
+}
+
 /**
 * /CEO section
 **/
+
 
 /**
 * Map section
@@ -829,8 +914,7 @@ Advertising section
     position: relative;  
     display: flex;
     justify-content: center;
-    background: url('../img/map.png') ;
-    
+    background: url('../img/map.png');    
 }
 
 .map__address{
@@ -846,8 +930,9 @@ Advertising section
     position: absolute;
     left: 50%;
     bottom: 85px;      
-    width: 176px;    
+    width: 163px;    
     color:  #fff;
+    font-size: 15px;
     font-weight: 300;
     line-height: 21px;
     text-align: left;
