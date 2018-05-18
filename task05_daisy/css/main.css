@@ -121,13 +121,13 @@ body {
 
 .topic{       
     color:  #868686;
-    font-size: 26px;
+    font-size: 28px;
     font-weight: 500;
     line-height: 26px;
     text-align: center;
     text-transform: uppercase;
-    padding-bottom: 10px;
-    border-bottom: 1px solid #868686; 
+    padding-bottom: 11px;
+    border-bottom: 1px solid #adadad; 
 }
     
 .topic--red{
@@ -701,7 +701,101 @@ Advertising section
     margin: 0; 
     margin-top: 47px;
 } 
-
 /**
 * /Portfolio section
+**/
+
+/**
+* OurTeam section
+**/
+
+.container--ourteam{
+    width: 820px;
+    display: flex;
+    flex-flow: row wrap;   
+    justify-content: space-between; 
+    margin-top: 67px;    
+}
+
+.topic--ourteam{       
+    color:  #565656;
+    font-size: 28px;
+    font-weight: 500;
+    line-height: 26px;
+    text-align: center;
+    text-transform: uppercase;
+    padding-bottom: 11px;
+    border-bottom: 1px solid #757575;
+} 
+
+.team__wrap{
+    width: 33%;
+}
+
+.team__img{
+    display: block;
+    width: 147px;
+    height: 171px;
+    margin: 0 auto;
+}
+
+.team__name{
+    color:  #565656;
+    font-size: 28px;
+    font-weight: 500;
+    line-height: 26px;
+    text-align: center;
+    margin-top: 23px;
+}
+
+.team__position{
+    color:  #565656;
+    font-size: 20px;
+    font-weight: 300;
+    line-height: 20px;
+    text-align: center;
+    margin-top: 19px;
+}
+
+.social__list{
+    list-style: none;
+    display: flex;
+    width: 147px;
+    justify-content: space-between;    
+    margin: 0 auto;  
+    margin-top: 12px;
+}
+
+.social__link{
+    display: block;
+    width: 37px;
+    height: 37px;    
+}
+
+.social__link--tw{
+    background: url('../img/social_tw.png') center center no-repeat;    
+}
+
+.social__link--tw:hover{
+    background: url('../img/social_tw-red.png') center center no-repeat;    
+}
+
+.social__link--fb{
+    background: url('../img/social_fb.png') center center no-repeat;    
+}
+
+.social__link--fb:hover{
+    background: url('../img/social_fb-red.png') center center no-repeat;    
+}
+
+.social__link--in{
+    background: url('../img/social_in.png') center center no-repeat;    
+}
+
+.social__link--in:hover{
+    background: url('../img/social_in-red.png') center center no-repeat;    
+}
+
+/**
+* OurTeam section
 **/
