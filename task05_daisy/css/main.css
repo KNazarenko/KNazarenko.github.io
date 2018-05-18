@@ -126,7 +126,9 @@ body {
     line-height: 26px;
     text-align: center;
     text-transform: uppercase;
-    }
+    padding-bottom: 10px;
+    border-bottom: 1px solid #868686; 
+}
     
 .topic--red{
     color:  #fc635e;
@@ -294,6 +296,7 @@ body {
     width: 1260px;    
     margin: 0 auto;
     position: relative;
+    padding-top: 67px;
     padding-bottom: 94px;
 }
 
@@ -305,22 +308,14 @@ body {
     margin: 0 auto;      
 }
 
-
-.topic-receive--margin{
-    margin-top: 67px;
-    padding-bottom: 10px;
-    border-bottom: 1px solid #868686;   
-    margin-bottom: 19px; 
-}
-
 .text{
     width: 530px;      
     color:  #adadad;
     font-size: 20px;
     font-weight: 300;
     line-height: 26px;
-    text-align: center;
-    margin-bottom: 81px;
+    text-align: center; 
+    margin-top: 19px;   
 }
 
 .receive__list{
@@ -328,6 +323,7 @@ body {
     display: flex;
     justify-content: space-between;
     list-style: none; 
+    margin-top: 81px;
 }
 
 .receive__item{
@@ -500,6 +496,16 @@ body {
 * Process section
 **/
 
+.process{  
+    position: relative;    
+    padding-bottom: 85px;
+}
+
+.img--process{
+    margin-top: 57px;
+}
+
+
 /**
 * /Process section
 **/
@@ -518,12 +524,6 @@ Wedo section
     flex-direction: column;
     justify-content: center;
     align-items: center; 
-}
-
-.topic--border{    
-    padding-bottom: 10px;
-    border-bottom: 1px solid #868686;
-    
 }
 
 .container{
@@ -621,11 +621,60 @@ Advertising section
 **/
 
 /**
-Marketing section
+* Portfolio section
 **/
+
+.portfolio{  
+    position: relative;    
+    padding-bottom: 67px;
+}
+
+.nav--wrap{
+    width: 100%;  
+    height: 59px;
+    margin-top: 39px;
+    border-top: 1px solid #adadad;
+    border-bottom: 1px solid #adadad;
+    padding: 0 15px 0 15px;
+
+}
+
+.nav__list{
+    display: flex;
+    height: 100%;
+    justify-content: space-between;
+    align-items: center;
+    list-style: none;
+    text-transform: uppercase;
+    font-size: 20px;
+    font-weight: 300;   
+    color:  #606060; 
+}
+
+.nav__link{
+    text-decoration: none;
+    color:  #fc635e;
+}
+
+.button-portfolio{
+    display: flex; 
+    width: 192px;
+    height: 51px;    
+    color:  #fff;
+    background: #fc635e;
+    border-radius: 8px;
+    font-size: 20px;
+    font-weight: 300;
+    line-height: 26px;    
+    align-items: center;
+    justify-content: center;  
+    margin: 0; 
+    margin-top: 59px;
+} 
+
 
 
 
 /**
-/Marketing section
+* /Portfolio section
 **/
