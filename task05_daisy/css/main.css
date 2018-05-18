@@ -823,20 +823,43 @@ Advertising section
 **/
 
 .map{
-    width: 1260px;    
+    width: 1260px;  
+    height: 338px;  
     margin: 0 auto;
-    position: relative;
-    padding-top: 55px;
-    padding-bottom: 160px;    
+    position: relative;  
     display: flex;
-    flex-direction: column;
     justify-content: center;
-    align-items: center; 
+    background: url('../img/map.png') ;
+    
+}
+
+.map__address{
+    width: 209px;
+    height: 242px;
+    position: relative;
+    position: absolute;    
+    top: 0;
+    transform: translateY(-50%);    
+}
+
+.address{           
+    position: absolute;
+    left: 50%;
+    bottom: 85px;      
+    width: 176px;    
+    color:  #fff;
+    font-weight: 300;
+    line-height: 21px;
+    text-align: left;
+    font-style: normal;
+    transform: translateX(-50%);    
 }
 
 /**
 * /Map section
 **/
+
+
 
 /**
 * Footer section
