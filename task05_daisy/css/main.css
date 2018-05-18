@@ -17,7 +17,6 @@ body {
     font-family: 'PFEncoreSansPro', sans-serif;
 }
 
-
 .main{
     width: 1260px;
     height: 765px;
@@ -53,7 +52,6 @@ body {
     text-transform: uppercase;
 }
 
-
 .button--reset{
     background: none;
     padding: 0;
@@ -61,9 +59,9 @@ body {
     border: none;
     outline: none;
     cursor: pointer;    
-  }
+}
 
- .button-transp{
+.button-transp{
     display: flex; 
     width: 205px;
     height: 56px;
@@ -797,5 +795,92 @@ Advertising section
 }
 
 /**
-* OurTeam section
+* /OurTeam section
+**/
+
+/**
+* CEO section
+**/
+
+.ceo{
+    width: 1260px;    
+    margin: 0 auto;
+    position: relative;
+    padding-top: 55px;
+    padding-bottom: 160px;    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; 
+}
+
+/**
+* /CEO section
+**/
+
+/**
+* Map section
+**/
+
+.map{
+    width: 1260px;    
+    margin: 0 auto;
+    position: relative;
+    padding-top: 55px;
+    padding-bottom: 160px;    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; 
+}
+
+/**
+* /Map section
+**/
+
+/**
+* Footer section
+**/
+
+.footer{
+    width: 1260px;
+    height: 211px;
+    margin: 0 auto;
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+
+.footer::before, .footer::after{
+    content: '';
+    width: 1260px;
+    height: 211px; 
+    position:absolute;      
+    left: 0;
+    top: 0;    
+}
+
+.footer::before{               
+    background: url('../img/footer.png');    
+    background-size: cover; 
+    z-index: -10;    
+}
+
+.footer::after{  
+    background-color:  rgba(35, 35, 35, 0.74);
+    z-index: -5;
+}
+
+.footer__logo--wrap{
+    display: flex;
+    flex-direction: row;
+    width: 185px;
+    height: 90px;
+    margin-top: 75px;
+    align-items: center;
+    justify-content: space-between;       
+}
+
+/**
+* /Footer section
 **/
