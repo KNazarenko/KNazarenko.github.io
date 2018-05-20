@@ -654,6 +654,7 @@ Advertising section
     color:  #fc635e;
 }
 
+/* portfolio images */
 .sets__list{
     display: flex;
     width: 940px;
@@ -666,7 +667,8 @@ Advertising section
 .sets__item{
     margin-bottom: 12px;    
     cursor: pointer;
-    text-align: center;    
+    text-align: center;   
+    position: relative; 
 }
 
 .sets__img--464{
@@ -674,15 +676,49 @@ Advertising section
     width: 464px;
 }
 
-.sets__img--464:hover{
-    background: rgba(252, 99, 94, 0.78);
-    z-index: 99;
-}
-
 .sets__img--226{
     height: 200px;
     width: 226px;
+} 
+
+.set__bicycle--hover{
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    transition: all .2s ease-in-out; 
 }
+
+.set__bicycle--hover:hover{
+    opacity: 1;
+} 
+
+.set__img--226--hover{   
+    background: rgba(252, 99, 94, 0.78);
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    transition: all .2s ease-in-out;
+}
+
+.set__img--226--hover:hover{
+    opacity: 1;
+}
+
+.set__img--464--hover{   
+    background: rgba(252, 99, 94, 0.78);
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    transition: all .2s ease-in-out;
+}
+
+.set__img--464--hover:hover{
+    opacity: 1;
+}
+/* /portfolio images */
 
 .button-portfolio{
     display: flex; 
