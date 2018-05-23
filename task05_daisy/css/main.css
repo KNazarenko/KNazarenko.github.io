@@ -332,76 +332,62 @@ body {
     justify-content: center;
 }
 
-.receive__item--wrap{    
-}
-
 .receive__logo{
     display: block;
-    width: 102px;
+    width: 101px;
     height: 116px;
-    margin: 0 auto;
-    background: url('../img/outer_lightred.png') center center no-repeat;
-    position: relative;
-    margin-bottom: 21px; 
-    transition: background .2s ease-in-out;   
+    margin: 0 auto;    
+    position: relative;      
 }
 
-.receive__logo:hover{    
-    background: url('../img/outer_red.png') center center no-repeat;    
-}
-
-.logo--ba::before, .logo--ba::after{
-    content: '';    
-    position: absolute;
-    width: 102px;
+.receive__logo::before{
+    content: '';
+    width: 101px;
     height: 116px;
-    top: 0;
+    position: absolute;    
     left: 0;
-    transition: background .2s ease-in-out;
+    top: 0;
+    opacity: 0;
+    transition: all .2s ease-in-out;
 }
 
-.logo--ba::before{
-    background: url('../img/inner_red.png') center center no-repeat;
+.receive__logo:hover::before{
+    opacity: 1;
 }
 
-.logo--ba:hover::before{    
-    background: url('../img/inner_white.png') center center no-repeat;
+.receive__logo--clients{
+    background: url('../img/receive_clients.png');
 }
 
-/* logo icons hover */
-
-.logo--clients::after{    
-    background: url('../img/clients_white.png') center center no-repeat;    
+.receive__logo--branding{
+    background: url('../img/receive_branding.png');
 }
 
-.logo--clients:hover::after{    
-    background: url('../img/clients_red.png') center center no-repeat;    
+.receive__logo--market{
+    background: url('../img/receive_market.png');
 }
 
-.logo--branding::after{    
-    background: url('../img/branding_white.png') center center no-repeat;    
+.receive__logo--adv{
+    background: url('../img/receive_adv.png');
 }
 
-.logo--branding:hover::after{    
-    background: url('../img/branding_red.png') center center no-repeat;    
+.receive__logo--clients::before{
+    background: url('../img/receive_clients-hover.png');
 }
 
-.logo--market::after{    
-    background: url('../img/market_white.png') center center no-repeat;    
+.receive__logo--branding::before{
+    background: url('../img/receive_branding-hover.png');
 }
 
-.logo--market:hover::after{    
-    background: url('../img/market_red.png') center center no-repeat;    
+.receive__logo--market::before{
+    background: url('../img/receive_market-hover.png');
 }
 
-.logo--adv::after{    
-    background: url('../img/adv_white.png') center center no-repeat;    
+.receive__logo--adv::before{
+    background: url('../img/receive_adv-hover.png');
 }
 
-.logo--adv:hover::after{    
-    background: url('../img/adv_red.png') center center no-repeat;    
-}
-/* /logo icons hover */
+
 
 .receive__topic{
     color:  #868686;
@@ -412,6 +398,7 @@ body {
     text-transform: uppercase;
     position: relative;
     margin-bottom: 22px;
+    margin-top: 21px;
 }
 
 .receive__topic::before{
@@ -791,6 +778,8 @@ Advertising section
     margin-top: 19px;
 }
 
+/* social icons */
+
 .social__list{
     list-style: none;
     display: flex;
@@ -803,14 +792,30 @@ Advertising section
 .social__link{
     display: block;
     width: 37px;
-    height: 37px;    
+    height: 37px; 
+    position: relative;   
+}
+
+.social__link::before{
+    content: '';    
+    width: 37px;
+    height: 37px;
+    position: absolute;
+    left: 0;
+    top: 0;    
+    opacity: 0;  
+    transition: opacity .2s ease-in-out;  
+}
+
+.social__link:hover::before{    
+    opacity: 1;  
 }
 
 .social__link--tw{
     background: url('../img/social_tw.png') center center no-repeat;    
 }
 
-.social__link--tw:hover{
+.social__link--tw::before{
     background: url('../img/social_tw-red.png') center center no-repeat;    
 }
 
@@ -818,7 +823,7 @@ Advertising section
     background: url('../img/social_fb.png') center center no-repeat;    
 }
 
-.social__link--fb:hover{
+.social__link--fb::before{
     background: url('../img/social_fb-red.png') center center no-repeat;    
 }
 
@@ -826,9 +831,10 @@ Advertising section
     background: url('../img/social_in.png') center center no-repeat;    
 }
 
-.social__link--in:hover{
+.social__link--in::before{
     background: url('../img/social_in-red.png') center center no-repeat;    
 }
+/* /social icons */
 
 /**
 * /OurTeam section
@@ -915,24 +921,42 @@ Advertising section
 .ceo__button--left, .ceo__button--right{
     display: block;
     width: 31px;
-    height: 31px;    
+    height: 31px;  
+    position: relative;
 }
 
 .ceo__button--left{
-    background: url(../img/ceo_button-left.png);
-}
-
-.ceo__button--left:hover{
-    background: url(../img/ceo_button-left-hover.png);
+    background: url(../img/ceo_button-left.png);    
 }
 
 .ceo__button--right{
     background: url(../img/ceo_button-right.png);
 }
 
-.ceo__button--right:hover{
+.ceo__button--left::before, .ceo__button--right::before{
+    content: '';    
+    width: 31px;
+    height: 31px;
+    position: absolute;
+    left: 0;
+    top: 0;    
+    opacity: 0;  
+    transition: opacity .2s ease-in-out;  
+}
+
+.ceo__button--left::before{
+    background: url(../img/ceo_button-left-hover.png);
+}
+
+.ceo__button--right::before{
     background: url(../img/ceo_button-right-hover.png);
 }
+
+
+.ceo__button--left:hover::before, .ceo__button--right:hover::before{
+    opacity: 1;
+}
+
 
 /**
 * /CEO section
