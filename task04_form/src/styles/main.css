@@ -1,9 +1,10 @@
 @import "libs.css";
 
-body{
-    background: #eceef4;
-    position: relative;
-    min-height: 100%;
+body{    
+    background: #eceef4;    
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
 }
 
 .header__wrap{    
@@ -13,8 +14,7 @@ body{
     justify-content: space-between;
     align-items: center;
     margin-top: 100px; 
-    margin: 0 auto;
-    
+    margin: 0 auto;    
     background: rgb(156, 132, 88);
 }
 
@@ -25,12 +25,25 @@ body{
     border: 1px solid black;
 }
 
-.footer__wrap{
-    position: absolute;  
-    bottom: 0;
-    left: 0;  
+/* .footer__wrap{     
     width: 100%;
     height: 250px;
+    background: #444a62;
+} */
 
+.maincontent{
+    width: 1290px;    
+    margin: 0 auto;    
+    background: rgb(212, 212, 211);  
+    flex: 1 0 auto;  
+}
+
+.text{
+    margin: 50px;
+}
+
+footer{
+    width: 100%;
+    height: 250px;
     background: #444a62;
 }

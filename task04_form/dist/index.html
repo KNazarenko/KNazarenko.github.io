@@ -1,17 +1,26 @@
-{% extends 'template.html' %}
-{% set active = 'Home' %}
-
-{% block title %}Form{% endblock %}
-
-{% block header %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Form</title>
+  <link rel="stylesheet" href="styles/main.min.css">
+</head>
+<body>
+  <header>
+      
 <div class="header__wrap">
     <div class="button"><input type="text" class="button">dfsdffsd</div>
     <a href="" class="header__logo"><img src="img/main_logo.jpg" alt="" class="header__logo-img"></a>
     <div class="button"><input type="text" class="button"></div>
 </div>
-{% endblock %}
 
-{% block maincontent %}
+    
+  </header>
+
+  <div class="maincontent">
+    
 <div class="text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dignissimos, alias ipsa minus modi, illo ducimus debitis neque consectetur magni molestias laboriosam, mollitia repellat pariatur ipsam. Inventore excepturi aliquam voluptatum nisi quia temporibus sapiente optio debitis maxime laboriosam libero voluptas incidunt doloremque sint, culpa beatae, minima veritatis quod explicabo tempore impedit.</div>
 <div class="text">In cum numquam et minima quo voluptatum accusantium nesciunt laudantium dicta sit, repellat aliquam harum commodi porro consequuntur sed mollitia sunt saepe. Vitae corporis iusto laboriosam, provident facere, omnis facilis mollitia quisquam distinctio autem reprehenderit iste odio illo accusantium dolore id enim in, doloremque expedita tempora nihil esse? Dolorum, beatae!</div>
 <div class="text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dignissimos, alias ipsa minus modi, illo ducimus debitis neque consectetur magni molestias laboriosam, mollitia repellat pariatur ipsam. Inventore excepturi aliquam voluptatum nisi quia temporibus sapiente optio debitis maxime laboriosam libero voluptas incidunt doloremque sint, culpa beatae, minima veritatis quod explicabo tempore impedit.</div>
@@ -23,13 +32,22 @@
 
 
  
-{% endblock %}
 
-{% block footer %}
+  </div>
+
+  <footer>
+      
 <div class="footer__wrap">
   <div class="footer__item"></div>
   <div class="footer__item"></div>
   <div class="footer__item"></div>
   <a href="" class="footer__logo"><img src="" alt="" class="footer__logo-img"></a>
 </div>
-{% endblock %}
+
+    
+  </footer>
+
+
+  <script src="js/bundle.js"></script>
+</body>
+</html>
