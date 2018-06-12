@@ -3,7 +3,7 @@
 *{
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+    box-sizing: border-box;    
 }
 
 body{    
@@ -40,7 +40,7 @@ body{
     color: #a4aac4;
     padding: 0 35px;
     align-items: center;
-    font-size: 13px;
+    font-size: 12px;
     font-weight: 600;
 }
 /* /HEADER */
@@ -68,21 +68,104 @@ body{
 
 .order__container{
     width: 70%;
+    display: flex;
     
+}
+
+.order__wrap{
+    flex: 1 0 auto;
 }
 
 .buttons{
     width: 222px;
+    display: flex;
+    flex-direction: column;
+    margin: 25px 0;
+    justify-content: space-between;
+    align-items: center;
+    border-left: 1px solid #000;
+}
 
+.btn--reset{
+    background: #f7f7fa;
+    /* outline: none; */
+    border: none;
+    cursor: pointer;
+    text-transform: uppercase;
+    border: 1px solid #cdd4e3;
+    border-radius: 3px;    
+}
+
+.btn{
+    width: 170px;
+    height: 50px;
+    font-size: 12px;
+    font-weight: 600;
+    color: #9ea5bb;    
+}
+
+.btn:hover{
+    color: #fff;
+    background: #5fcac6;
+    border: 1px solid #5db2af;
+    transition: .2s ease-in-out;
 }
 
 /* maincontent help */
-.help__wrap{
+.help__container{
     width: 30%;
     border-left: 2px solid #dbdfeb;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 27px 46px 27px 73px;     
+    font-size: 12px;     
+}
+
+.help__header{
+    text-transform: uppercase;  
+    font-weight: 600;  
+    color: #656e87;
+    position: relative;
+}
+
+.help__header::before{
+    content: '';
+    display: block;
+    width: 22px;
+    height: 22px;
+    position: absolute;
+    background: url(../img/icon_help.png);
+    top: 0;
+    left: 0;   
+    transform: translate(-42px,-5px);
+}
+
+.help__text{
+    font-weight: 400;
+    color: #9ea5bb;
+    line-height: 1.5em;    
+}
+
+.help__contacts--list{
+    display: flex;
+    flex-direction: row;
+}
+
+.help__contacts--item{
+    list-style: none;    
+}
+
+.help__contacts--item:not(:first-child){
+    margin-left: 18px;
+}
+
+.help__contacts--link{
+    text-decoration: none;
+    font-style: normal;
+    color: #656e87;
 }
 /* /maincontent help */
-
 
 /* /maincontent header */
 
