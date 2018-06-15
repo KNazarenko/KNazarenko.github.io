@@ -269,8 +269,12 @@ legend{
     position: relative;
 }
 
-.translate__radio--item{
-    display: block;
+.radio__btn--wrap{
+    display: flex;
+    flex-direction: column;
+    align-items: center;  
+    /* justify-content: space-between;   */
+    padding-top: 27px;
     width: 100%;
     height: 100%;  
     color: #9ea5bb; 
@@ -283,8 +287,39 @@ legend{
     top: 0;
 }
 
-input[type="radio"]:checked + span{
-    border: 4px solid #76a7e1;    
+.translate__radio--checked{
+    display: block;    
+    width: 32px;
+    height: 32px;
+    position: absolute;
+    right: 0;
+    top: 0;
+    transform: translate(12px, -12px);
+}
+
+input[type="radio"]:checked + div{
+    border: 4px solid #76a7e1; 
+    padding-top: 24px;
+    transition: .2s ease-in-out;   
+}
+
+input[class="radio"]:checked + div span[class="translate__radio--checked"]{
+    display: none;
+    border: 3px solid red;
+    transition: .2s ease-in-out;     
+} 
+
+.radio__btn--img{
+    width: 96px;
+    height: 110px;
+}
+
+.radio__btn--text{
+    display: inline-block;
+    font-weight: 600;  
+    color: #656e87;
+    letter-spacing: 1px;
+    margin-top: 15px;
 }
 
 
