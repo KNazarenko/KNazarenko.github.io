@@ -6,8 +6,9 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Form</title>
   <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="fonts/proxima-nova/fonts.min.css">  
+  <link rel="stylesheet" href="fonts/font-awesome-4.7.0/css/font-awesome.min.css">  
   <link rel="stylesheet" href="css/main.css">
-  <link rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.min.css">
 </head>
 <body>
 
@@ -25,27 +26,43 @@
     <!-- maincontent header -->
     <div class="maincontent__header">
 
-      <!-- order -->
-      <div class="order__container">
-        <div class="order__wrap">
-          vxxvvxvc
+      <!-- order wrap -->
+      <form class="order__wrap" action="#" method="GET">
 
-        </div>
+        <!-- order -->
+        <div class="order__container">
+          <h4 class="order__header order__header--before">your order</h4>
+          <ul class="order__list">
+            <li class="order__item">
+              <span class="order__item--header">items</span>
+              <span class="order__item--text">2 documents</span>
+            </li>
+            <li class="order__item">
+              <span class="order__item--header">details</span>
+              <span class="order__item--text">2 languages</span>
+            </li>
+            <li class="order__item">
+              <span class="order__item--header">price</span>
+              <span class="order__item--text">$ 696.06</span>
+            </li>
+            <li class="order__item">
+              <span class="order__item--header">delivery</span>
+              <span class="order__item--text">48 hours*</span>
+            </li>
+          </ul>
+        </div><!-- /order -->
 
-        <!-- buttons order and print -->
-        <form action="#" class="buttons" method="GET">
-          <button class="btn btn--reset">place order</button>
-          <button class="btn btn--reset">print a quote</button>
-        </form><!-- /buttons order and print -->
+        <!-- buttons wrap -->
+        <div action="#" class="buttons" method="GET">
+          <button type="submit" class="btn btn--reset" name="placeOrder" value="order" autofocus>place order</button>
+          <button type="button" class="btn btn--reset" name="printQuate" value="print">print a quote</button>
+        </div><!-- /buttons wrap -->
 
-
-
-
-      </div><!-- /order -->
+      </form><!-- /order -->
 
       <!-- help -->
       <div class="help__container">
-        <h4 class="help__header">help center</h4>
+        <h4 class="order__header help__header--before">help center</h4>
         <p class="help__text">If you need assistance while placing your order, contact one of our beloved Project Manager by phone or email.</p>
         <address class="help__contacts">
           <ul class="help__contacts--list">
@@ -61,56 +78,81 @@
       </div><!-- /help -->
     </div><!-- /maincontent header -->
 
-    <!-- to translate -->
-    <div class="translate__wrap">
-      <form action="" class="translate">
+    <!-- Main form -->
+    <form action="#" class="main__form" method="GET">
 
-      </form>
-    </div><!-- /to translate -->
+      <!-- to translate -->
+      <fieldset class="section translate">
+        <legend class="translate__title">select what you want to translate</legend>
+        <div class="radio__wrap">
+          <label class="translate__radio">
+            <input type="radio" class="translate__radio--btn" name="translate" value="website" required>
+            <span class="translate__radio--item"></span>
+          </label>
+          <label class="translate__radio">
+            <input type="radio" class="translate__radio--btn" name="translate" value="documents" required checked>
+            <span class="translate__radio--item"></span>
+          </label>
+          <label class="translate__radio">
+            <input type="radio" class="translate__radio--btn" name="translate" value="social account" required>
+            <span class="translate__radio--item"></span>
+          </label>
+        </div>
+      </fieldset><!-- /to translate -->
 
-    <!-- 1_upload -->
-    <section class="section">
-      http://shpargalkablog.ru/2015/02/h1-seo.html
-      
-      http://vsemproblemam.net/seo/tegi-zagolovka-h1-h6.html
+      <!-- 1_upload -->
+      <section class="section">
+  
+  
+      </section><!-- /1_upload -->
+  
+      <!-- 2_choose -->
+      <section class="section">
+  
+      </section><!-- /2_choose -->
+  
+      <!-- 3_select -->
+      <section class="section">
+  
+      </section><!-- /3_select -->
+  
+      <!-- 4_tellus -->
+      <section class="section">
+  
+      </section><!-- /4_select -->
+  
+      <!-- 5_signup -->
+      <section class="section">
+  
+      </section><!-- /5_signup -->
+  
+      <!-- submit -->
+      <div class="submit__wrap">
+  
+      </div><!-- /submit -->
+  
+      <!-- to translate -->
+      <section class="section translate">
+        <h2 class="translate__header">delet me</h2>
+        <form action="" class="translate__form">
+  
+        </form>
+      </section><!-- /to translate -->
 
-    </section><!-- /1_upload -->
 
-    <!-- 2_choose -->
-    <section class="section">
-
-    </section><!-- /2_choose -->
-
-    <!-- 3_select -->
-    <section class="section">
-
-    </section><!-- /3_select -->
-
-    <!-- 4_tellus -->
-    <section class="section">
-
-    </section><!-- /4_select -->
-
-    <!-- 5_signup -->
-    <section class="section">
-
-    </section><!-- /5_signup -->
-
-    <!-- submit -->
-    <div class="submit__wrap">
-
-    </div><!-- /submit -->
+    </form>
 
   </div>
 
+
   <footer>
       
-<div class="footer__wrap">
-  <div class="footer__item"></div>
-  <div class="footer__item"></div>
-  <div class="footer__item"></div>
-  <a href="" class="footer__logo"><img src="" alt="" class="footer__logo-img"></a>
-</div>
+    <div class="footer__wrap">
+      <div class="footer__item"></div>
+      <div class="footer__item"></div>
+      <div class="footer__item"></div>
+      <a href="" class="footer__logo"><img src="" alt="" class="footer__logo-img"></a>
+    </div>
     
   </footer>
   
