@@ -442,8 +442,7 @@ footer{
 
 /* main office */
 .address__container, .address__social{    
-    margin-left: 40px;    
-    
+    margin-left: 40px;     
 }
 
 .address__map--link, .address__tel, .social__link{    
@@ -471,7 +470,6 @@ footer{
 .social__link--wrap{
     display: flex;
     align-items: center;
-
 }
 
 .fa-facebook-square, .fa-twitter-square, .fa-linkedin{
@@ -481,8 +479,6 @@ footer{
 .social__link--text{
     margin-left: 18px;
 }
-
-
 
 /* /connect */
 
