@@ -7,17 +7,17 @@
   <title>Form</title>
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="fonts/proxima-nova/fonts.min.css">  
-  <link rel="stylesheet" href="fonts/font-awesome-4.7.0/css/font-awesome.min.css">  
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css">  
   <link rel="stylesheet" href="css/main.css">
 </head>
 <body>
 
   <header>      
     <div class="header__wrap">
-        <a href="#" class="button button__signin">
-          <i class="fa fa-long-arrow-left fa-lg" aria-hidden="true"></i>&nbsp; go back</a>
-        <a href="https://github.com/KNazarenko/KNazarenko.github.io" class="header__logo"><img src="img/main_logo.jpg" alt="" class="header__logo-img"></a>
-        <a href="#" class="button button__goback"><i class="fa fa-user fa-lg" aria-hidden="true"></i>&nbsp; sign in</a>        
+        <a href="#" class="button">
+          <i class="fas fa-arrow-left"></i>&nbsp;&nbsp; go back</a>
+        <a href="https://github.com/KNazarenko/KNazarenko.github.io" class="header__logo" target="_blank"><img src="img/main_logo_header.png" alt="" class="header__logo-img"></a>
+        <a href="#" class="button"><i class="fas fa-user-alt"></i>&nbsp;&nbsp; sign in</a>        
     </div>    
   </header>
 
@@ -54,7 +54,7 @@
 
         <!-- buttons wrap -->
         <div action="#" class="buttons" method="GET">
-          <button type="submit" class="btn btn--reset" name="placeOrder" value="order" autofocus>place order</button>
+          <button type="submit" class="btn btn--reset" name="placeOrder" value="order">place order</button>
           <button type="button" class="btn btn--reset" name="printQuate" value="print">print a quote</button>
         </div><!-- /buttons wrap -->
 
@@ -78,11 +78,11 @@
       </div><!-- /help -->
     </div><!-- /Maincontent header -->
 
-    <!-- Maincontent -->
+    <!-- Maincontent form-->
     <form action="#" class="main__form" method="GET">
 
       <!-- to translate -->
-      <fieldset class="section translate">
+      <fieldset class="translate">
         <legend class="translate__title">select what you want to translate</legend>
 
         <!-- radio buttons -->
@@ -125,46 +125,47 @@
       </fieldset><!-- /to translate -->
 
       <!-- 1_upload -->
-      <section class="section">
+      <fieldset class="section">
+        <legend class="title title__upload">Upload your documents 
+          <span class="upload__title--small">(Doc, Docx, Text, PDF, Markdown)</span>
+        </legend>
+        
   
-  
-      </section><!-- /1_upload -->
+      </fieldset><!-- /1_upload -->
   
       <!-- 2_choose -->
-      <section class="section">
+      <fieldset class="section">
+        <legend class="title title__choose">Choose your languages pairings</legend>
   
-      </section><!-- /2_choose -->
+      </fieldset><!-- /2_choose -->
   
       <!-- 3_select -->
-      <section class="section">
+      <fieldset class="section">
+        <legend class="title title__select">Select your desired tone</legend>
   
-      </section><!-- /3_select -->
+      </fieldset><!-- /3_select -->
   
       <!-- 4_tellus -->
-      <section class="section">
+      <fieldset class="section">
+        <legend class="title title__tellus">Tell up how urgent this job is</legend>
   
-      </section><!-- /4_select -->
+      </fieldset><!-- /4_tellus -->
   
       <!-- 5_signup -->
-      <section class="section">
+      <fieldset class="section">
+        <legend class="title title__signup">Sign up and choose a payment method</legend>
   
-      </section><!-- /5_signup -->
+      </fieldset><!-- /5_signup -->
   
       <!-- submit -->
       <div class="submit__wrap">
   
       </div><!-- /submit -->
   
-      <!-- to translate -->
-      <section class="section translate">
-        <h2 class="translate__header">delet me</h2>
-        <form action="" class="translate__form">
-  
-        </form>
-      </section><!-- /to translate -->
+    
 
 
-    </form><!-- Maincontent -->
+    </form><!-- /Maincontent form-->
 
   </div>
 
@@ -172,10 +173,92 @@
   <footer>
       
     <div class="footer__wrap">
-      <div class="footer__item"></div>
-      <div class="footer__item"></div>
-      <div class="footer__item"></div>
-      <a href="" class="footer__logo"><img src="" alt="" class="footer__logo-img"></a>
+
+      <!-- what we do -->
+      <div class="footer__item">
+
+        <div class="footer__container">
+          <span class="footer__icon">
+            <i class="far fa-heart"></i>
+          </span>
+          <h4 class="footer__title">what we do</h4>
+        </div>
+
+        <p class="footer__text">We provide a full range of language services including content development, document, website and social media accounts translations.</p>
+      </div><!-- /what we do -->
+
+      <!-- main office -->
+      <div class="footer__item">
+
+        <div class="footer__container">
+          <span class="footer__icon">
+            <i class="far fa-compass"></i>
+          </span>
+          <h4 class="footer__title">our main office</h4>        
+        </div>
+
+        <address class="address__container">      
+          <a href="https://www.google.ru/maps/@25.2524946,55.2937875,11z" 
+            target="_blank"
+          class="address__map--link">
+            <div class="address__map--text-wrap">
+              <span class="address__map--text">Dubai, UAE</span>
+              <span class="address__map--text">P.O. Box:502735</span>
+            </div>            
+          </a>
+        
+          <a href="tel:+971044278128" class="address__tel">Phone: +971 (0) 44278128</a>
+        
+        </address>        
+        
+      </div><!-- /main office -->
+
+      <!-- connect -->
+      <div class="footer__item">
+
+        <div class="footer__container">
+          <span class="footer__icon">
+            <i class="fas fa-share-alt"></i>
+          </span>
+          <h4 class="footer__title">connect with us</h4>
+        </div>
+
+        <address class="address__social">  
+          <ul class="social__container">
+
+            <li class="social__item">                            
+              <a href="https://www.facebook.com/" class="social__link social__link--wrap" target="_blank">
+                <span class="footer__icon">
+                  <i class="fab fa-facebook-square"></i>
+                </span>
+                <span class="social__link--text">Facebook</span>
+              </a>              
+            </li>
+
+            <li class="social__item">                            
+              <a href="https://twitter.com/" class="social__link social__link--wrap" target="_blank">
+                <span class="footer__icon">
+                  <i class="fab fa-twitter-square"></i>
+                </span>
+                <span class="social__link--text">Twitter</span>
+              </a>              
+            </li>
+
+            <li class="social__item">                            
+              <a href="https://www.linkedin.com/" class="social__link social__link--wrap" target="_blank">
+                <span class="footer__icon">
+                  <i class="fab fa-linkedin"></i>
+                </span>
+                <span class="social__link--text">Linkedin</span>
+              </a>              
+            </li>         
+            
+          </ul> 
+        </address>  
+
+      </div><!-- /connect -->  
+
+      <a href="https://github.com/KNazarenko/KNazarenko.github.io" class="footer__logo" target="_blank"><img src="img/main_logo_footer.png" alt="Logo" class="footer__logo-img"></a>
     </div>
     
   </footer>
