@@ -49,6 +49,10 @@ body{
     font-weight: 600;
     letter-spacing: 1px;
 }
+
+.button:hover{
+    border: 1px solid #a4aac4;
+}
 /* /HEADER */
 
 
@@ -135,10 +139,10 @@ body{
 .buttons{
     width: 240px;
     display: flex;
-    flex-direction: column;
-    margin: 25px 0;
+    flex-direction: column;    
     justify-content: space-between;
-    align-items: center;   
+    align-items: center; 
+    padding: 25px 0;  
 }
 
 .btn--reset{    
@@ -284,6 +288,10 @@ fieldset{
     position: absolute;
     left: 0;
     top: 0;
+}
+
+.radio__btn--wrap:hover{
+    border: 1px solid #a4aac4;
 }
 
 .radio__btn--wrap--translate{
