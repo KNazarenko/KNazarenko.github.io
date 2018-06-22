@@ -374,6 +374,85 @@ input[type="radio"]:checked + div span[class="radio--checked"]{
 .title__choose::before{      
     background: url(../img/icon_2.png);      
 }
+
+.choose__wrap{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    margin-top: 54px;
+}
+
+.choose__from--wrap, .choose__to--wrap{
+    display: flex;
+    align-items: center;
+    
+}
+
+.choose__to--wrap{
+    margin-top: 40px;
+}
+
+.choose--label{
+    display: flex;
+    justify-content: flex-end;
+    width: 60px;
+    margin-right: 19px;     
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    color: #9ea5bb; 
+    text-transform: uppercase;
+}
+
+.language__plus{
+    margin-left: 24px;
+}
+
+select[name="language"]{   
+    width: 197px;
+    height: 51px;      
+    background: #f7f7fa;
+    font-weight: 600;  
+    color: #9ea5bb;
+    font-size: 14px;
+    letter-spacing: 1px; 
+    text-align: center;
+    border: 1px solid #cdd4e3;
+    border-radius: 3px; 
+    cursor: pointer;
+    padding-left: 52px;   
+    /* outline: none;     */
+}
+
+option{
+    color: #76a7e1;
+    font-size: 16px;    
+}
+
+
+
+.radio__btn--text--select{
+    display: inline-block;
+     
+    margin-left: 19px;  
+}
+
+.radio__btn--wrap{
+    display: flex;    
+    align-items: center;    
+    width: 100%;
+    height: 100%;  
+    color: #9ea5bb; 
+    background: #f7f7fa; 
+       
+    cursor: pointer;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+
+
 /* /2_choose section */
 
 /* section 3 and 4 */
