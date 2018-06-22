@@ -272,11 +272,8 @@ fieldset{
 }
 
 .radio__btn--wrap{
-    display: flex;
-    flex-direction: column;
-    align-items: center;  
-    /* justify-content: space-between;   */
-    padding-top: 27px;
+    display: flex;    
+    align-items: center;    
     width: 100%;
     height: 100%;  
     color: #9ea5bb; 
@@ -289,7 +286,12 @@ fieldset{
     top: 0;
 }
 
-.translate__radio--checked{
+.radio__btn--wrap--translate{
+    flex-direction: column;
+    padding-top: 27px;
+}
+
+.radio--checked{
     display: none;    
     width: 32px;
     height: 32px;
@@ -300,11 +302,14 @@ fieldset{
 }
 
 input[type="radio"]:checked + div{
-    border: 4px solid #76a7e1; 
+    border: 4px solid #76a7e1;       
+}
+
+input[class="translate__radio--btn"]:checked + div{    
     padding-top: 24px;    
 }
 
-input[type="radio"]:checked + div span[class="translate__radio--checked"]{
+input[type="radio"]:checked + div span[class="radio--checked"]{
     display: block;     
 } 
 
@@ -316,7 +321,8 @@ input[type="radio"]:checked + div span[class="translate__radio--checked"]{
 .radio__btn--text{
     display: inline-block;
     font-weight: 600;  
-    color: #656e87;
+    font-size: 16px;
+    color: #9ea5bb;
     letter-spacing: 1px;
     margin-top: 15px;
 }
@@ -362,16 +368,224 @@ input[type="radio"]:checked + div span[class="translate__radio--checked"]{
 }
 /* /2_choose section */
 
+/* section 3 and 4 */
+.section__container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+/* /section 3 and 4 */
+
 /* 3_select section */
 .title__select::before{      
     background: url(../img/icon_3.png);      
 }
+
+.radio__wrap--select{
+    display: flex;
+    flex-direction: column;    
+    justify-content: space-between;    
+    margin-top: 54px;
+}
+
+.wrap--height{
+    height: 256px;
+}
+
+.select__radio{
+    display: block;
+    width: 234px;
+    height: 70px;           
+    position: relative;
+}
+
+.select__radio--btn{
+    /* display: none; */
+    width: 234px;
+    height: 70px;
+}
+
+.radio__btn--wrap--select{
+    justify-content: center;   
+    color: #9ea5bb;
+}
+
+.radio__btn--text--select{
+    display: inline-block;
+    font-weight: 600;  
+    color: #9ea5bb;
+    font-size: 14px;
+    letter-spacing: 1px;  
+    margin-left: 19px;  
+}
+
+.fa-suitcase, .fa-comments, .fa-bullhorn{
+    font-size: 120%;    
+}
 /* /3_select section */
 
 /* 4_tellus section */
-.title__tellus::before{      
+.tellus__title::before{      
     background: url(../img/icon_4.png);      
 }
+
+.tellus--wrap{    
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-top: 54px;
+    margin-left: -67px;    
+}
+
+/* tellus range */
+.tellus__range{
+    width: 484px;
+    height: 70px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;    
+    justify-content: flex-end;
+}
+
+.range__names{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-between;
+    margin-top: 16px;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    color: #9ea5bb; 
+    text-transform: uppercase;
+}
+
+.range__names--center{
+    color: #ecbb73;      
+}
+
+/* range slider */
+input[type=range] {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;       
+    position: relative;
+    cursor: pointer;    
+    width: 400px;
+    outline: none;    
+}
+  
+input[type=range]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    width: 19px;
+    height: 19px;
+    border-radius: 10px;
+    background: #ecbb73;
+    margin-top: -5px;
+    z-index: 2;
+    position: relative;
+}
+
+input[type=range]::-webkit-slider-runnable-track {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;    
+    background: #eeeff4;
+    height: 9px;
+    border-radius: 5px;
+}
+
+input[type=range]::before {
+    content: '';
+    display: block;
+    width: 9px;
+    height: 9px;
+    border-radius: 5px;
+    background: #d6d8e2;
+    position: absolute;
+    left: 0;
+    top: 0;    
+}  
+  
+input[type=range]::after {
+    content: '';
+    display: block;
+    width: 9px;
+    height: 9px;
+    border-radius: 5px;
+    background: #d6d8e2;
+    position: absolute;
+    right: 0;
+    top: 0;    
+}
+/*  /range slider */
+/* /tellus range */
+
+/* tellus box */
+.tellus__box{    
+    width: 484px;
+    height: 125px;
+    border: 1px solid #e8eaf0;
+    border-radius: 3px;
+    font-size: 12px;    
+    color: #d8e8ff;    
+}
+
+.tellus__box--container{
+    display: flex;
+    align-items: center;
+    margin-top: 21px;
+    margin-left: 32px;
+    color: #656e87;
+    font-size: 12px; 
+}
+
+.fa-info-circle{
+    font-size: 150%;    
+}
+
+.tellus__header{
+    text-transform: uppercase;  
+    font-weight: 600;  
+    letter-spacing: 1px;    
+    margin-left: 14px;
+}
+
+.tellus__text{
+    font-weight: 400;
+    color: #9ea5bb;
+    line-height: 1.5em;  
+    margin: 22px 44px 0 66px;
+}
+
+.tellus__text>span{
+    text-transform: uppercase;
+    color: #ecbb73;
+    font-weight: bold;
+    letter-spacing: 1.2px;
+}
+
+.footer__wrap{    
+    width: 1140px; 
+    height: 100%;    
+    display: flex;  
+    justify-content: space-between;  
+    align-items: center;     
+    margin: 0 auto; 
+    font-size: 12px;    
+    color: #d8e8ff;
+}
+
+.footer__item{
+    width: 254px;
+    height: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;    
+}
+/* /tellus box */
 /* /4_tellus section */
 
 /* 5_signup section */

@@ -12,6 +12,7 @@
 </head>
 <body>
 
+  <!-- HEADER -->
   <header>      
     <div class="header__wrap">
         <a href="#" class="button">
@@ -19,8 +20,9 @@
         <a href="https://github.com/KNazarenko/KNazarenko.github.io" class="header__logo" target="_blank"><img src="img/main_logo_header.png" alt="" class="header__logo-img"></a>
         <a href="#" class="button"><i class="fas fa-user-alt"></i>&nbsp;&nbsp; sign in</a>        
     </div>    
-  </header>
+  </header><!-- /HEADER -->
 
+  <!-- MAINCONTENT -->
   <div class="maincontent">
 
     <!-- Maincontent header -->
@@ -50,7 +52,7 @@
               <span class="order__item--text">48 hours*</span>
             </li>
           </ul>
-        </div><!-- /order -->
+        </div><!-- /order -->       
 
         <!-- buttons wrap -->
         <div action="#" class="buttons" method="GET">
@@ -90,10 +92,10 @@
           
           <label class="translate__radio">
             <input type="radio" class="translate__radio--btn" name="translate" value="website" required>
-            <div class="radio__btn--wrap">
+            <div class="radio__btn--wrap radio__btn--wrap--translate">
               <img class="radio__btn--img" src="img/translate_website.png" alt="Website">              
               <span class="radio__btn--text">Website</span>      
-              <span class="translate__radio--checked">
+              <span class="radio--checked">
                 <img src="img/icon_checked-big.png" alt="" class="translate__checked--img">
               </span>
             </div>
@@ -101,10 +103,10 @@
 
           <label class="translate__radio">
             <input type="radio" class="translate__radio--btn" name="translate" value="documents" required checked>
-            <div class="radio__btn--wrap">
+            <div class="radio__btn--wrap radio__btn--wrap--translate">
               <img class="radio__btn--img" src="img/translate_documents.png" alt="Documents">              
               <span class="radio__btn--text">Documents</span>
-              <span class="translate__radio--checked">
+              <span class="radio--checked">
                 <img src="img/icon_checked-big.png" alt="" class="translate__checked--img">
               </span>
             </div>
@@ -112,17 +114,17 @@
 
           <label class="translate__radio">
             <input type="radio" class="translate__radio--btn" name="translate" value="social account" required>
-            <div class="radio__btn--wrap">
+            <div class="radio__btn--wrap radio__btn--wrap--translate">
               <img class="radio__btn--img" src="img/translate_social.png" alt="Social Account">              
               <span class="radio__btn--text">Social Account</span>
-              <span class="translate__radio--checked">
+              <span class="radio--checked">
                 <img src="img/icon_checked-big.png" alt="" class="translate__checked--img">
               </span>
             </div>
           </label>
 
         </div><!-- /radio buttons -->
-      </fieldset><!-- /to translate -->
+      </fieldset><!-- /to translate -->     
 
       <!-- 1_upload -->
       <fieldset class="section">
@@ -138,18 +140,89 @@
         <legend class="title title__choose">Choose your languages pairings</legend>
   
       </fieldset><!-- /2_choose -->
+
+      <!-- sections 3 and 4 -->
+      <div class="section__container">
+        
+        <!-- 3_select -->
+        <fieldset class="section">
+          <legend class="title title__select">Select your desired tone</legend>
   
-      <!-- 3_select -->
-      <fieldset class="section">
-        <legend class="title title__select">Select your desired tone</legend>
+          <!-- radio buttons -->
+          <div class="radio__wrap--select wrap--height">
+            
+            <label class="select__radio">
+              <input type="radio" class="select__radio--btn" name="translate" value="website" required>
+              <div class="radio__btn--wrap radio__btn--wrap--select">
+                <i class="fas fa-comments"></i>          
+                <span class="radio__btn--text--select">Friendly/ Casual</span>      
+                <span class="radio--checked">
+                  <img src="img/icon_checked-big.png" alt="" class="translate__checked--img">
+                </span>
+              </div>
+            </label>
+    
+            <label class="select__radio">
+              <input type="radio" class="select__radio--btn" name="translate" value="documents" required checked>
+              <div class="radio__btn--wrap radio__btn--wrap--select">
+                <i class="fas fa-suitcase"></i>          
+                <span class="radio__btn--text--select">Corporate/ Pro</span>
+                <span class="radio--checked">
+                  <img src="img/icon_checked-big.png" alt="" class="translate__checked--img">
+                </span>
+              </div>
+            </label>
+    
+            <label class="select__radio">
+              <input type="radio" class="select__radio--btn" name="translate" value="social account" required>
+              <div class="radio__btn--wrap radio__btn--wrap--select">
+                <i class="fas fa-bullhorn"></i>          
+                <span class="radio__btn--text--select">Media/ Formal</span>
+                <span class="radio--checked">
+                  <img src="img/icon_checked-big.png" alt="" class="translate__checked--img">
+                </span>
+              </div>
+            </label>
+    
+            </div><!-- /radio buttons -->
+    
+        </fieldset><!-- /3_select -->
+    
+        <!-- 4_tellus -->
+        <fieldset class="section">
+          <legend class="title tellus__title">Tell us how urgent this job is</legend>
   
-      </fieldset><!-- /3_select -->
+          <div class="tellus--wrap wrap--height">
   
-      <!-- 4_tellus -->
-      <fieldset class="section">
-        <legend class="title title__tellus">Tell up how urgent this job is</legend>
+            <!-- tellus range -->
+            <div class="tellus__range">
+              <input type="range" class="range" min="0" max="100" step="50" value="50" required>
+              <div class="range__names">
+                <div class="range__names--item">i got time</div>
+                <div class="range__names--item range__names--center">average</div>
+                <div class="range__names--item">yestarday</div>
+
+              </div>
   
-      </fieldset><!-- /4_tellus -->
+            </div><!-- tellus range -->
+  
+            <!-- tellus box -->
+            <div class="tellus__box">
+              <div class="tellus__box--container">
+                <span class="footer__icon">
+                  <i class="fas fa-info-circle"></i>
+                </span>
+                <h4 class="tellus__header">timeline info</h4>
+              </div>
+      
+              <p class="tellus__text">Wigh an <span>average</span> timeline set up, our expert translator can take a reasonable amount of time perfecting your translation</p>
+            </div><!-- /tellus box -->
+
+          </div>
+    
+        </fieldset><!-- /4_tellus -->
+
+      </div><!-- /sections 3 and 4 --> 
   
       <!-- 5_signup -->
       <fieldset class="section">
@@ -161,15 +234,12 @@
       <div class="submit__wrap">
   
       </div><!-- /submit -->
-  
-    
-
 
     </form><!-- /Maincontent form-->
+    
+  </div><!-- /MAINCONTENT -->
 
-  </div>
-
-
+  <!-- FOOTER -->
   <footer>
       
     <div class="footer__wrap">
@@ -181,10 +251,10 @@
           <span class="footer__icon">
             <i class="far fa-heart"></i>
           </span>
-          <h4 class="footer__title">what we do</h4>
+          <h4 class="footer__title" contenteditable>what we do</h4>
         </div>
 
-        <p class="footer__text">We provide a full range of language services including content development, document, website and social media accounts translations.</p>
+        <p class="footer__text" contenteditable>We provide a full range of language services including content development, document, website and social media accounts translations.</p>
       </div><!-- /what we do -->
 
       <!-- main office -->
@@ -203,12 +273,11 @@
           class="address__map--link">
             <div class="address__map--text-wrap">
               <span class="address__map--text">Dubai, UAE</span>
-              <span class="address__map--text">P.O. Box:502735</span>
+              <span class="address__map--text">P.O. Box: 502735</span>
             </div>            
           </a>
         
-          <a href="tel:+971044278128" class="address__tel">Phone: +971 (0) 44278128</a>
-        
+          <a href="tel:+971044278128" class="address__tel">Phone: +971 (0) 44278128</a>       
         </address>        
         
       </div><!-- /main office -->
@@ -254,14 +323,14 @@
             </li>         
             
           </ul> 
-        </address>  
+        </address> 
 
       </div><!-- /connect -->  
 
       <a href="https://github.com/KNazarenko/KNazarenko.github.io" class="footer__logo" target="_blank"><img src="img/main_logo_footer.png" alt="Logo" class="footer__logo-img"></a>
     </div>
     
-  </footer>
+  </footer><!-- /FOOTER -->
   
 </body>
 </html>
