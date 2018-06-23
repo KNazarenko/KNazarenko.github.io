@@ -366,8 +366,6 @@ input[type="radio"]:checked + div span[class="radio--checked"]{
     font-weight: 400;
     color: #9ea5bb;
 }
-
-
 /* /1_upload section */
 
 /* 2_choose section */
@@ -384,8 +382,7 @@ input[type="radio"]:checked + div span[class="radio--checked"]{
 
 .choose__from--wrap, .choose__to--wrap{
     display: flex;
-    align-items: center;
-    
+    align-items: center;    
 }
 
 .choose__to--wrap{
@@ -408,7 +405,7 @@ input[type="radio"]:checked + div span[class="radio--checked"]{
     margin-left: 24px;
 }
 
-select[name="language"]{   
+.language{   
     width: 197px;
     height: 51px;      
     background: #f7f7fa;
@@ -420,8 +417,28 @@ select[name="language"]{
     border: 1px solid #cdd4e3;
     border-radius: 3px; 
     cursor: pointer;
-    padding-left: 52px;   
+    padding-left: 52px;     
     /* outline: none;     */
+    appearance:none;
+    -moz-appearance:none; 
+    -webkit-appearance:none;
+}
+
+.language--wrap{
+    position: relative;
+}
+
+.language--wrap::before{
+    content: '';
+    display: inline-block;    
+    background: url(../img/language_icon.png) no-repeat center;
+    position: absolute;
+    width: 48px;
+    height: 51px;
+    border-left: 1px solid #cdd4e3;    
+    top: 0;
+    right: 0;
+
 }
 
 option{
@@ -429,27 +446,44 @@ option{
     font-size: 16px;    
 }
 
-
-
-.radio__btn--text--select{
-    display: inline-block;
-     
-    margin-left: 19px;  
+.language:hover, .btn__add:hover{
+    border: 1px solid #a4aac4;
 }
 
-.radio__btn--wrap{
-    display: flex;    
-    align-items: center;    
-    width: 100%;
-    height: 100%;  
+.btn__delete{
+    background: transparent;
+    cursor: pointer;    
+    border: none;    
+    width: 30px;
+    height: 51px;
+    font-size: 12px;
+    font-weight: 600;    
+    color: #9ea5bb; 
+    outline: none;
+}
+
+
+.btn__add{
+    cursor: pointer;
+    text-transform: uppercase;
+    border: 1px solid #cdd4e3;
+    border-radius: 3px;
+    width: 120px;
+    height: 51px;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 1px;
     color: #9ea5bb; 
     background: #f7f7fa; 
-       
-    cursor: pointer;
-    position: absolute;
-    left: 0;
-    top: 0;
+    margin-left: 18px;
 }
+
+
+
+.fa-plus{
+    font-weight: bold;
+}
+
 
 
 

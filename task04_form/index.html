@@ -145,29 +145,39 @@
           <div class="choose__from--wrap">
             <label for="language__from">
               <div class="choose--label">from</div>
-            </label>            
-            <select name="language" id="language__from">
-              <option value="English" selected>English</option>
-              <option value="Arabic">Arabic</option>
-              <option value="Kurdish">Kurdish</option>
-            </select>            
+            </label>  
+            <div class="language--wrap">
+              <select name="language" id="language__from" class="language">
+                <option value="English" selected>English</option>
+                <option value="Arabic">Arabic</option>
+                <option value="Kurdish">Kurdish</option>
+              </select> 
+            </div>        
           </div><!-- choose from -->
 
           <!-- choose to -->
           <div class="choose__to--wrap">
             <label for="language__to">
               <div class="choose--label">to</div>
-            </label>             
-            <select name="language" id="language__to">
-              <option value="Arabic" selected>Arabic</option>
-              <option value="English">English</option>
-              <option value="Kurdish">Kurdish</option>
-            </select>  
-            <select name="language" class="language__plus">
-              <option value="Kurdish" selected>Kurdish</option>
-              <option value="English">English</option>
-              <option value="Arabic">Arabic</option>
-            </select>           
+            </label>   
+            <div class="language--wrap">
+              <select name="language" id="language__to" class="language">
+                <option value="Arabic" selected>Arabic</option>
+                <option value="English">English</option>
+                <option value="Kurdish">Kurdish</option>
+              </select>  
+            </div> 
+            <div class="language--wrap">
+              <select name="language" class="language language__plus">
+                <option value="Kurdish" selected>Kurdish</option>
+                <option value="English">English</option>
+                <option value="Arabic">Arabic</option>
+              </select> 
+            </div> 
+            <button type="button" class="btn__delete" name="delete" value="">
+                <i class="fas fa-trash"></i></button> 
+            <button type="button" class="btn__add" name="add" value="print">
+                <i class="fas fa-plus"></i>&nbsp;&nbsp;&nbsp;add</button>        
           </div><!-- choose to -->
 
 
