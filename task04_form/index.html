@@ -55,9 +55,9 @@
         </div><!-- /order -->       
 
         <!-- buttons wrap -->
-        <div action="#" class="buttons" method="GET">
-          <button type="submit" class="btn btn--reset" name="placeOrder" value="order">place order</button>
-          <button type="button" class="btn btn--reset" name="printQuate" value="print">print a quote</button>
+        <div class="buttons">
+          <button type="submit" class="btn btn__order btn--reset" name="placeOrder" value="order">place order</button>
+          <button type="button" class="btn btn__print btn--reset" name="printQuate" value="print">print a quote</button>
         </div><!-- /buttons wrap -->
 
       </form><!-- /order -->
@@ -152,7 +152,8 @@
                 <option value="Arabic">Arabic</option>
                 <option value="Kurdish">Kurdish</option>
               </select> 
-            </div>        
+              <label for="language__from" class="choose__label--add"></label>
+            </div> 
           </div><!-- choose from -->
 
           <!-- choose to -->
@@ -164,15 +165,17 @@
               <select name="language" id="language__to" class="language">
                 <option value="Arabic" selected>Arabic</option>
                 <option value="English">English</option>
-                <option value="Kurdish">Kurdish</option>
+                <option value="Kurdish">Kurdish</option>   
               </select>  
+              <label for="language__to" class="choose__label--add"></label>
             </div> 
             <div class="language--wrap">
-              <select name="language" class="language language__plus">
+              <select name="language" id="language__add" class="language language__plus">
                 <option value="Kurdish" selected>Kurdish</option>
                 <option value="English">English</option>
                 <option value="Arabic">Arabic</option>
               </select> 
+              <label for="language__add" class="choose__label--add"></label>
             </div> 
             <button type="button" class="btn__delete" name="delete" value="">
                 <i class="fas fa-trash"></i></button> 
@@ -196,7 +199,7 @@
           <div class="radio__wrap--select wrap--height">
             
             <label class="select__radio">
-              <input type="radio" class="select__radio--btn" name="translate" value="website" required>
+              <input type="radio" class="select__radio--btn" name="select" value="Friendly/ Casual" required>
               <div class="radio__btn--wrap radio__btn--wrap--select">
                 <i class="fas fa-comments"></i>          
                 <span class="radio__btn--text--select">Friendly/ Casual</span>      
@@ -207,7 +210,7 @@
             </label>
     
             <label class="select__radio">
-              <input type="radio" class="select__radio--btn" name="translate" value="documents" required checked>
+              <input type="radio" class="select__radio--btn" name="select" value="Corporate/ Pro" required checked>
               <div class="radio__btn--wrap radio__btn--wrap--select">
                 <i class="fas fa-suitcase"></i>          
                 <span class="radio__btn--text--select">Corporate/ Pro</span>
@@ -218,7 +221,7 @@
             </label>
     
             <label class="select__radio">
-              <input type="radio" class="select__radio--btn" name="translate" value="social account" required>
+              <input type="radio" class="select__radio--btn" name="select" value="Media/ Formal" required>
               <div class="radio__btn--wrap radio__btn--wrap--select">
                 <i class="fas fa-bullhorn"></i>          
                 <span class="radio__btn--text--select">Media/ Formal</span>
@@ -271,13 +274,117 @@
       <!-- 5_signup -->
       <fieldset class="section">
         <legend class="title title__signup">Sign up and choose a payment method</legend>
+
+        <div class="signup__text">
+          <p class="signup__text--text">Already have an account with us?</p>
+          <a href="#" class="signup__text--link">Sign in.</a>
+        </div>
+
+        <!-- full name -->
+        <div class="signup__name--wrap">
+          <label for="username" class="signup__name--label">full name</label>
+          <input type="text" id="username" name="username" placeholder="Your Name" pattern="[A-Za-z\s]{3,}" maxlength="32" required class="card--input signup__name--input">  
+          <label for="username" class="label--invalid"></label>         
+        </div><!-- /full name -->
+
+
+        <div class="signup__emailAndPass--wrap">
+
+          <!-- email adress -->
+          <div class="signup__email--wrap">
+            <label for="email" class="signup__name--label">email adress</label>
+            <input type="email" id="email" name="email" placeholder="characters@characters.domain" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$" required class="card--input signup__name--input">  
+            <label for="email" class="label--invalid"></label>        
+          </div><!-- /email adress -->
+
+          <!-- password -->
+          <div class="signup__pass--wrap">
+            <label for="pass" class="signup__name--label">choose a password</label>
+            <input type="password" id="pass" name="pass" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters" required class="card--input signup__name--input">
+            <label for="pass" class="label--invalid"></label>
+          </div><!-- /password -->
+
+        </div>
+
+        <!-- card select -->
+        <div class="signup__cardSelect--wrap">
+          
+          <label class="signup__radio">
+            <input type="radio" class="signup__radio--btn" name="card" value="visa/master" required  checked>
+            <div class="radio__btn--wrap">
+              <img class="signup__radio--img" src="img/card_visa-master.png" alt="Visa/MasterCard">                   
+              <span class="radio--checked">
+                <img src="img/icon_checked-big.png" alt="" class="translate__checked--img">
+              </span>
+            </div>
+          </label>
+
+          <label class="signup__radio">
+            <input type="radio" class="signup__radio--btn" name="card" value="paypal" required>
+            <div class="radio__btn--wrap">
+              <img class="signup__radio--img" src="img/card_PayPal.png" alt="PayPal">            
+              <span class="radio--checked">
+                <img src="img/icon_checked-big.png" alt="" class="translate__checked--img">
+              </span>
+            </div>
+          </label>
+
+          <label class="signup__radio">
+            <input type="radio" class="signup__radio--btn" name="card" value="amazon" required>
+            <div class="radio__btn--wrap">
+              <img class="signup__radio--img" src="img/card_amazon.png" alt="Amazon">            
+              <span class="radio--checked">
+                <img src="img/icon_checked-big.png" alt="" class="translate__checked--img">
+              </span>
+            </div>
+          </label>       
+
+        </div><!-- /card select -->
+
+        <!-- card data -->
+        <div class="signup__cardData--wrap">
+
+          <!-- card number -->
+          <div class="cardnumber--wrap">
+            <label for="card__number" class="signup__name--label">card number</label>
+            <input type="text" id="card__number" name="card__number" placeholder="0000 0000 0000 0000" maxlength="16" title="Enter card number" required class="card--input cardnumber--input">
+          </div><!-- /card number -->
+
+          <!-- expiry date -->
+          <div class="expiryDate--wrap">
+            <label for="expiry__date" class="signup__name--label">card number</label>
+            <input type="datetime" id="expiry__date" name="expiry__date" placeholder="DD/MM/YY" title="Enter the validity period of the card" required class="card--input expiryDate--input">
+          </div><!-- /expiry date -->
+
+          <!-- code -->
+          <div class="code--wrap">
+            <label for="card__code" class="signup__name--label">card number</label>
+            <input type="text" id="card__code" name="card__code" required class="card--input code--input" placeholder="000" title="Enter three digits from the back of the card" maxlength="3">
+          </div><!-- /expiry date -->
+
+        </div><!-- /card data -->
+        
+        <!-- signup buttons wrap -->
+        <div class="signup__btn--wrap" method="GET">
+          
+          <!-- check wrap -->
+          <div class="checkbox--wrap">
+            <input type="checkbox" id="check" name="check"  checked>
+            <label for="check" class="check__text--wrap">
+              <p class="check__text">I agree to the</p>
+              <a href="#" class="check__link">Terms & Conditions</a>
+            </label>             
+          </div> <!-- /check wrap --> 
+
+          <!-- buttons wrap -->
+          <div class="signup__btn" method="GET">
+            <button type="submit" class="btn btn__order btn--reset" name="placeOrder" value="order">place order</button>
+            <button type="button" class="btn btn__print btn--reset" name="printQuate" value="print">print a quote</button>
+          </div><!-- /buttons wrap -->          
+         
+        </div><!-- /signup buttons wrap -->
   
-      </fieldset><!-- /5_signup -->
-  
-      <!-- submit -->
-      <div class="submit__wrap">
-  
-      </div><!-- /submit -->
+      </fieldset><!-- /5_signup -->      
 
     </form><!-- /Maincontent form-->
     

@@ -52,6 +52,8 @@ body{
 
 .button:hover{
     border: 1px solid #a4aac4;
+    color: #82899e;
+    transition: .2s ease-in-out;
 }
 /* /HEADER */
 
@@ -147,27 +149,42 @@ body{
 
 .btn--reset{    
     /* outline: none; */
-    border: none;
-    cursor: pointer;
-    text-transform: uppercase;
-    border: 1px solid #cdd4e3;
-    border-radius: 3px;    
+    border: none;       
 }
 
 .btn{
     width: 170px;
     height: 50px;
+    border-radius: 3px; 
     font-size: 12px;
     font-weight: 600;
+    text-transform: uppercase;
     letter-spacing: 1px;
-    color: #9ea5bb; 
-    background: #f7f7fa;   
+    cursor: pointer;      
 }
 
-.btn:hover{
+.btn__order{    
     color: #fff;
     background: #5fcac6;
-    border: 1px solid #5db2af;
+    border: 1px solid #5db2af; 
+}
+
+.btn__order:hover{   
+    color: #fff;   
+    background: #56b6b3; 
+    border: 1px solid #44817f;  
+    transition: .2s ease-in-out;
+}
+
+.btn__print{    
+    color: #9ea5bb; 
+    background: #f7f7fa; 
+    border: 1px solid #cdd4e3; 
+}
+
+.btn__print:hover{
+    border: 1px solid #a4aac4;
+    color: #82899e;
     transition: .2s ease-in-out;
 }
 /* /buttons wrap */
@@ -277,7 +294,8 @@ fieldset{
 
 .radio__btn--wrap{
     display: flex;    
-    align-items: center;    
+    align-items: center;   
+    justify-content: center; 
     width: 100%;
     height: 100%;  
     color: #9ea5bb; 
@@ -292,6 +310,8 @@ fieldset{
 
 .radio__btn--wrap:hover{
     border: 1px solid #a4aac4;
+    color: #656e87;
+    transition: .2s ease-in-out;
 }
 
 .radio__btn--wrap--translate{
@@ -310,15 +330,18 @@ fieldset{
 }
 
 input[type="radio"]:checked + div{
-    border: 4px solid #76a7e1;       
+    border: 4px solid #76a7e1;  
+    transition: 0s ease-in-out;     
 }
 
 input[class="translate__radio--btn"]:checked + div{    
-    padding-top: 24px;    
+    padding-top: 24px;  
+    transition: 0s ease-in-out;  
 }
 
 input[type="radio"]:checked + div span[class="radio--checked"]{
-    display: block;     
+    display: block;  
+    transition: 0s ease-in-out;   
 } 
 
 .radio__btn--img{
@@ -329,8 +352,7 @@ input[type="radio"]:checked + div span[class="radio--checked"]{
 .radio__btn--text{
     display: inline-block;
     font-weight: 600;  
-    font-size: 16px;
-    color: #9ea5bb;
+    font-size: 16px;    
     letter-spacing: 1px;
     margin-top: 15px;
 }
@@ -427,8 +449,8 @@ input[type="radio"]:checked + div span[class="radio--checked"]{
 .language--wrap{
     position: relative;
 }
-
-.language--wrap::before{
+/* var1 - before for wrap */
+/* .language--wrap::before{
     content: '';
     display: inline-block;    
     background: url(../img/language_icon.png) no-repeat center;
@@ -437,8 +459,29 @@ input[type="radio"]:checked + div span[class="radio--checked"]{
     height: 51px;
     border-left: 1px solid #cdd4e3;    
     top: 0;
-    right: 0;
+    right: 0;    
+} */
 
+/* var2 - before for label */
+.choose__label--add{
+    display: inline-block;
+    width: 48px;
+    height: 51px;    
+    position: absolute;
+    top: 0;
+    right: 0;    
+}
+
+.choose__label--add::before{
+    content: '';
+    display: inline-block;    
+    background: url(../img/language_icon.png) no-repeat center;
+    position: absolute;
+    width: 48px;
+    height: 51px;
+    border-left: 1px solid #cdd4e3;    
+    top: 0;
+    right: 0;    
 }
 
 option{
@@ -448,6 +491,8 @@ option{
 
 .language:hover, .btn__add:hover{
     border: 1px solid #a4aac4;
+    color: #82899e;
+    transition: .2s ease-in-out;
 }
 
 .btn__delete{
@@ -461,7 +506,6 @@ option{
     color: #9ea5bb; 
     outline: none;
 }
-
 
 .btn__add{
     cursor: pointer;
@@ -477,16 +521,6 @@ option{
     background: #f7f7fa; 
     margin-left: 18px;
 }
-
-
-
-.fa-plus{
-    font-weight: bold;
-}
-
-
-
-
 /* /2_choose section */
 
 /* section 3 and 4 */
@@ -533,8 +567,7 @@ option{
 
 .radio__btn--text--select{
     display: inline-block;
-    font-weight: 600;  
-    color: #9ea5bb;
+    font-weight: 600;     
     font-size: 14px;
     letter-spacing: 1px;  
     margin-left: 19px;  
@@ -712,6 +745,229 @@ input[type=range]::after {
 /* 5_signup section */
 .title__signup::before{      
     background: url(../img/icon_5.png);      
+}
+
+.signup__name--wrap, .signup__email--wrap, .signup__pass--wrap{
+    width: 300px;
+    position: relative;
+}
+
+.signup__name--wrap{
+    margin-top: 50px;
+}
+
+.signup__name--label{  
+    display: block;  
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    color: #9ea5bb; 
+    text-transform: uppercase;
+    margin-bottom: 9px;
+    margin-left: 9px;
+}
+
+.signup__name--input{
+    width: 100%;
+    height: 46px;
+}
+
+.label--invalid{
+    display: inline-block;
+    width: 42px;
+    height: 46px;    
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+
+.label--invalid::before{
+    content: '';
+    display: inline-block;    
+    background: url(../img/input_invalid.png) no-repeat center;
+    position: absolute;
+    width: 24px;
+    height: 24px;    
+    bottom: 11px;
+    right: 9px;    
+}
+
+
+.signup__name--input:valid + label::before{
+    background: url(../img/input_valid.png) no-repeat center;
+}
+
+
+
+.signup__emailAndPass--wrap{
+    display: flex;    
+    width: 632px;
+    justify-content: space-between;
+    margin-top: 36px;    
+}
+
+.signup__cardSelect--wrap{
+    display: flex;
+    flex-direction: row;
+    width: 722px;
+    justify-content: space-between;
+    margin-top: 65px;
+}
+
+
+
+
+
+.signup__cardData--wrap{
+    display: flex;    
+    width: 722px;
+    justify-content: space-between;
+    margin-top: 78px;
+
+}
+
+.card--input{
+    height: 46px;    
+    /* background: #f7f7fa; */
+    border: 1px solid #cdd4e3;
+    border-radius: 3px; 
+    padding: 0 18px;
+    font-size: 14px;
+    font-weight: 600;
+    color: #656e87;
+    line-height: 1.5em;    
+}
+
+.card--input:focus{
+    outline: none;
+}
+
+.card--input::-webkit-input-placeholder{
+    font-size: 14px;
+    font-weight: 400;
+    color: #7e89a7;
+    line-height: 1.5em;
+}
+
+.card--input:hover{
+    border: 1px solid #a4aac4;
+    color: #82899e;
+    transition: .2s ease-in-out;
+}
+
+
+.cardnumber--input{
+    height: 46px;
+    width: 378px;
+}
+
+
+.expiryDate--input{
+    height: 46px;
+    width: 170px;
+}
+
+
+
+.code--input{
+    height: 46px;
+    width: 104px;
+}
+
+
+/* ggggggggggggg */
+
+
+
+
+
+
+
+/* hhhhhhhhh */
+
+
+
+
+
+
+
+.signup__radio--btn{
+    width: 220px;
+    height: 100px;
+}
+
+.signup__radio{
+    display: block;
+    width: 220px;
+    height: 100px;           
+    position: relative;
+}
+
+.signup__radio--img{
+    width: 114px;
+    height: 30px;
+}
+
+
+
+
+/* checkbox and buttons */
+.signup__text{
+    display: inline-block;
+    font-size: 14px;
+    font-weight: 400;
+    color: #9ea5bb;
+    line-height: 1.5em;
+    margin-top: 56px;
+}
+
+.signup__text--text{
+    display: inline-block;
+}
+
+
+.signup__text--link{
+    display: inline-block;
+    color: #9ea5bb;
+}
+
+.signup__btn--wrap{
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 108px;
+}
+
+.checkbox--wrap{    
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-right: 42px;     
+}
+
+.check__text--wrap{
+    font-size: 12px;
+    font-weight: 400;
+    color: #656e87;
+    line-height: 1.5em;
+}
+
+.check__text{    
+    display: inline-block;     
+    margin-left: 15px;
+}
+
+.check__link{
+    display: inline-block;  
+    color: #656e87;     
+}
+
+.signup__btn{
+    width: 372px;
+    display: flex;
+    /* flex-direction: column;     */
+    justify-content: space-between;
+    /* align-items: center;  */
+    /* padding: 25px 0;   */
 }
 /* /5_signup section */
 
