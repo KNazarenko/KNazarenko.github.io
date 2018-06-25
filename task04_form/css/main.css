@@ -792,12 +792,13 @@ input[type=range]::after {
     right: 9px;    
 }
 
-
 .signup__name--input:valid + label::before{
     background: url(../img/input_valid.png) no-repeat center;
 }
 
-
+input[id="card__number"]:invalid{
+    border: 1px solid red;
+}
 
 .signup__emailAndPass--wrap{
     display: flex;    
@@ -814,16 +815,11 @@ input[type=range]::after {
     margin-top: 65px;
 }
 
-
-
-
-
 .signup__cardData--wrap{
     display: flex;    
     width: 722px;
     justify-content: space-between;
     margin-top: 78px;
-
 }
 
 .card--input{
@@ -855,41 +851,20 @@ input[type=range]::after {
     transition: .2s ease-in-out;
 }
 
-
 .cardnumber--input{
     height: 46px;
     width: 378px;
 }
-
 
 .expiryDate--input{
     height: 46px;
     width: 170px;
 }
 
-
-
 .code--input{
     height: 46px;
     width: 104px;
 }
-
-
-/* ggggggggggggg */
-
-
-
-
-
-
-
-/* hhhhhhhhh */
-
-
-
-
-
-
 
 .signup__radio--btn{
     width: 220px;
@@ -907,9 +882,6 @@ input[type=range]::after {
     width: 114px;
     height: 30px;
 }
-
-
-
 
 /* checkbox and buttons */
 .signup__text{
@@ -969,6 +941,7 @@ input[type=range]::after {
     /* align-items: center;  */
     /* padding: 25px 0;   */
 }
+/* /checkbox and buttons */
 /* /5_signup section */
 
 /* /MAINCONTENT */
