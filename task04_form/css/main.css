@@ -378,7 +378,7 @@ input[type="radio"]:checked + div span[class="radio--checked"]{
     transform: translate(-71px, -9px);
 }
 
-/* 1_upload section */
+/* 1_UPLOAD */
 .title__upload::before{      
     background: url(../img/icon_1.png);      
 }
@@ -388,9 +388,118 @@ input[type="radio"]:checked + div span[class="radio--checked"]{
     font-weight: 400;
     color: #9ea5bb;
 }
-/* /1_upload section */
 
-/* 2_choose section */
+.upload--wrap{
+    width: 230px;
+    height: 51px;
+    margin-top: 54px;
+    border: 1px solid #cdd4e3;
+    border-radius: 3px;
+    position: relative;
+    background: #f7f7fa;
+    font-weight: 600;  
+    color: #9ea5bb;
+    font-size: 14px;
+    letter-spacing: .5px; 
+}
+
+.upload--wrap span{
+    position: absolute;
+    width: 230px;
+    height: 51px;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.upload--wrap input{
+    position: absolute;
+    cursor: pointer;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    opacity: 0;   
+}
+
+.table--wrap{
+    margin-top: 39px;
+    width: 100%;
+    border: 1px solid #cdd4e3;
+    border-radius: 3px;
+    padding: 30px 41px 35px 41px;
+}
+
+table {
+    table-layout: fixed;
+    width: 100%;
+    border-collapse: collapse;    
+}
+
+/* thead,tbody, tr, th, td{
+    border: 1px solid #cdd4e3;
+} */
+
+thead th:nth-child(1) {
+    width: 40%;
+}
+  
+thead th:nth-child(2) {
+    width: 25%;
+}
+  
+thead th:nth-child(3) {
+    width: 25%;
+}
+  
+thead th:nth-child(4) {
+    width: 10%;
+}
+
+.scope{    
+    text-align: left;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    color: #9ea5bb; 
+    text-transform: uppercase;
+}
+
+thead th:last-child{
+    text-align: right;
+}
+
+tbody tr td:last-child{
+    text-align: right;
+    padding-right: 15px;
+}
+
+tbody tr:first-child th, tbody tr:first-child td{
+    padding-top: 24px;
+}
+
+tbody tr:nth-child(2) th, tbody tr:nth-child(2) td{
+    padding-top: 18px;
+}
+
+tbody{
+    text-align: left;
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    color: #9ea5bb; 
+}
+
+.fa-file-alt{
+    font-size: 120%;
+} 
+
+
+/* /1_UPLOAD */
+
+/* 2_CHOOSE */
 .title__choose::before{      
     background: url(../img/icon_2.png);      
 }
@@ -495,12 +604,15 @@ option{
     transition: .2s ease-in-out;
 }
 
+.btn--choose{
+    height: 51px;
+}
+
 .btn__delete{
     background: transparent;
     cursor: pointer;    
     border: none;    
-    width: 30px;
-    height: 51px;
+    width: 30px;    
     font-size: 12px;
     font-weight: 600;    
     color: #9ea5bb; 
@@ -512,8 +624,7 @@ option{
     text-transform: uppercase;
     border: 1px solid #cdd4e3;
     border-radius: 3px;
-    width: 120px;
-    height: 51px;
+    width: 120px;    
     font-size: 12px;
     font-weight: 600;
     letter-spacing: 1px;
@@ -521,7 +632,7 @@ option{
     background: #f7f7fa; 
     margin-left: 18px;
 }
-/* /2_choose section */
+/* /2_CHOOSE */
 
 /* section 3 and 4 */
 .section__container{
@@ -576,9 +687,9 @@ option{
 .fa-suitcase, .fa-comments, .fa-bullhorn{
     font-size: 120%;    
 }
-/* /3_select section */
+/* /3_SELECT */
 
-/* 4_tellus section */
+/* 4_TELLUS */
 .tellus__title::before{      
     background: url(../img/icon_4.png);      
 }
@@ -740,9 +851,9 @@ input[type=range]::after {
     justify-content: space-between;    
 }
 /* /tellus box */
-/* /4_tellus section */
+/* /4_TELLUS */
 
-/* 5_signup section */
+/* 5_SIGNUP */
 .title__signup::before{      
     background: url(../img/icon_5.png);      
 }
@@ -942,7 +1053,7 @@ input[id="card__number"]:invalid{
     /* padding: 25px 0;   */
 }
 /* /checkbox and buttons */
-/* /5_signup section */
+/* /5_SIGNUP section */
 
 /* /MAINCONTENT */
 
@@ -1050,6 +1161,7 @@ footer{
     display: block;
     width: 100px;
     height: 100px;
+    text-decoration: none;
 }
 
 /* /FOOTER */

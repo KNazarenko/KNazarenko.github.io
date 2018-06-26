@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Form</title>
+  <link rel="shortcut icon" type="image/png" href="img/favicon.png">
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="fonts/proxima-nova/fonts.min.css">  
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css">  
@@ -17,7 +18,7 @@
     <div class="header__wrap">
         <a href="#" class="button">
           <i class="fas fa-arrow-left"></i>&nbsp;&nbsp; go back</a>
-        <a href="https://github.com/KNazarenko/KNazarenko.github.io" class="header__logo" target="_blank"><img src="img/main_logo_header.png" alt="" class="header__logo-img"></a>
+        <a href="#" class="header__logo" target="_blank"><img src="img/main_logo_header.png" alt="" class="header__logo-img"></a>
         <a href="#" class="button"><i class="fas fa-user-alt"></i>&nbsp;&nbsp; sign in</a>        
     </div>    
   </header><!-- /HEADER -->
@@ -126,16 +127,67 @@
         </div><!-- /radio buttons -->
       </fieldset><!-- /to translate -->     
 
-      <!-- 1_upload -->
+      <!-- 1_UPLOAD -->
       <fieldset class="section">
         <legend class="title title__upload">Upload your documents 
           <span class="upload__title--small">(Doc, Docx, Text, PDF, Markdown)</span>
         </legend>
-        
+
+        <!-- upload -->
+        <div class="upload--wrap">
+          <span><i class="fas fa-cloud-upload-alt"></i>&nbsp;&nbsp;
+            Upload a new file</span>
+          <input type="file">
+        </div><!-- /upload -->
+
+        <!-- table -->
+        <div class="table--wrap">
+          <table>
+            <thead>
+              <tr>
+                <th class="scope" scope="col">file name</th>
+                <th class="scope" scope="col">file size</th>
+                <th class="scope" scope="col">number of words</th>
+                <th class="scope" scope="col">remove</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">
+                  <span><i class="fas fa-file-alt"></i>&nbsp;&nbsp;
+                    business_operations.docx
+                  </span>
+                </th>
+                <td>78kb</td>
+                <td>842</td>
+                <td>
+                  <button type="button" class="btn__delete" name="delete" value="">
+                    <i class="fas fa-trash"></i>
+                  </button> 
+                </td>
+              </tr>
+              <tr>
+                <th scope="row">
+                  <span>
+                    <i class="fas fa-file-alt"></i>&nbsp;&nbsp;
+                    business_financial.docx                    
+                  </span>
+                </th>
+                <td>26kb</td>
+                <td>2,326</td>
+                <td>
+                  <button type="button" class="btn__delete" name="delete" value="">
+                    <i class="fas fa-trash"></i>
+                  </button> 
+                </td>
+              </tr>
+            </tbody>  
+          </table>
+        </div><!-- /table -->        
   
-      </fieldset><!-- /1_upload -->
+      </fieldset><!-- /1_UPLOAD -->
   
-      <!-- 2_choose -->
+      <!-- 2_CHOOSE -->
       <fieldset class="section">
         <legend class="title title__choose">Choose your languages pairings</legend>
 
@@ -177,21 +229,20 @@
               </select> 
               <label for="language__add" class="choose__label--add"></label>
             </div> 
-            <button type="button" class="btn__delete" name="delete" value="">
+            <button type="button" class="btn__delete btn--choose" name="delete" value="">
                 <i class="fas fa-trash"></i></button> 
-            <button type="button" class="btn__add" name="add" value="print">
+            <button type="button" class="btn__add btn--choose" name="add" value="print">
                 <i class="fas fa-plus"></i>&nbsp;&nbsp;&nbsp;add</button>        
           </div><!-- choose to -->
 
-
         </div>
   
-      </fieldset><!-- /2_choose -->
+      </fieldset><!-- /2_CHOOSE -->
 
       <!-- sections 3 and 4 -->
       <div class="section__container">
         
-        <!-- 3_select -->
+        <!-- 3_SELECT -->
         <fieldset class="section">
           <legend class="title title__select">Select your desired tone</legend>
   
@@ -233,9 +284,9 @@
     
             </div><!-- /radio buttons -->
     
-        </fieldset><!-- /3_select -->
+        </fieldset><!-- /3_SELECT -->
     
-        <!-- 4_tellus -->
+        <!-- 4_TELLUS -->
         <fieldset class="section">
           <legend class="title tellus__title">Tell us how urgent this job is</legend>
   
@@ -267,11 +318,11 @@
 
           </div>
     
-        </fieldset><!-- /4_tellus -->
+        </fieldset><!-- /4_TELLUS -->
 
       </div><!-- /sections 3 and 4 --> 
   
-      <!-- 5_signup -->
+      <!-- 5_SIGNUP -->
       <fieldset class="section">
         <legend class="title title__signup">Sign up and choose a payment method</legend>
 
@@ -384,7 +435,7 @@
          
         </div><!-- /signup buttons wrap -->
   
-      </fieldset><!-- /5_signup -->      
+      </fieldset><!-- /5_SIGNUP -->      
 
     </form><!-- /Maincontent form-->
     
@@ -478,7 +529,7 @@
 
       </div><!-- /connect -->  
 
-      <a href="https://github.com/KNazarenko/KNazarenko.github.io" class="footer__logo" target="_blank"><img src="img/main_logo_footer.png" alt="Logo" class="footer__logo-img"></a>
+      <a href="https://github.com/KNazarenko/KNazarenko.github.io/tree/master/task04_form" class="footer__logo" target="_blank"><img src="img/main_logo_footer.png" alt="Logo" class="footer__logo-img"></a>
     </div>
     
   </footer><!-- /FOOTER -->
