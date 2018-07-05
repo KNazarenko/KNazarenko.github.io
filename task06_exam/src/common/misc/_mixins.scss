@@ -1,0 +1,45 @@
+// Extra small devices (portrait phones, less than 576px)
+@mixin extra-small {
+  @media screen and (max-width: 576px) {
+    @content;
+  }
+}
+
+// Small devices (landscape phones, less than 768px)
+@mixin small {
+  @media screen and (max-width: 768px) {
+    @content;
+  }
+}
+
+// Medium devices (tablets, less than 992px)
+@mixin medium {
+  @media screen and (max-width: 992px) {
+    @content;
+  }
+}
+
+// Large devices (desktops, less than 1200px)
+@mixin large {
+  @media screen and (max-width: 1200px) {
+    @content;
+  }
+}
+
+@mixin container {
+  padding: 0 15px;
+  width: 100%;
+
+  @include medium {
+    width: 640px;
+    margin: 0 auto;
+  }
+
+  @include large {
+    width: 990px;
+  }
+}
+
+@mixin rem($size) {
+  font-size: $size / $basic-font-size + rem;
+}

@@ -1,0 +1,11 @@
+{% extends 'template.html' %}
+{% set pageTitle = 'Главная' %}
+
+{% block title %}Главная страница {% endblock %}
+
+
+{% block content %}  
+    {% include 'layout/aboutLong/aboutLong.html' %}
+    {% include 'layout/aboutShort/aboutShort.html' %}
+  
+{% endblock %}

@@ -1,0 +1,64 @@
+
+.about__list--wrap {
+    margin-top: 40px;
+    margin-left: 25px;    
+
+    @include extra-small {               
+        align-self: center;        
+    }
+}
+
+.about__list {
+    list-style: none;     
+}
+
+.about__item {  
+    display: block;  
+    color: $black;
+    @include rem(18);
+    line-height: 1.5rem;  
+    position: relative;
+
+    @include small {
+        @include rem(12);
+    }
+
+    @include extra-small {
+        text-align: start;  
+        line-height: 1rem;      
+    }
+}
+
+.about__item:not(:first-child) {
+    margin-top: 18px;      
+}
+
+.about__item::before {
+    content: '';
+    position: absolute;
+    display: inline-block;
+    width: 16px;
+    height: 17px;
+    top: 3px;
+    left: -25px;
+
+    @include extra-small {
+        top: -1px;
+    }
+}
+
+.about__item--one::before {
+    background: url(../../img/Cup.png) center center no-repeat;
+}
+
+.about__item--two::before {
+    background: url(../../img/Mouse.png) center center no-repeat;
+}
+
+.about__item--three::before {
+    background: url(../../img/Energy.png) center center no-repeat;
+}
+
+.about__item--four::before {
+    background: url(../../img/Speedometer.png) center center no-repeat;
+}

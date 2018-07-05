@@ -1,0 +1,47 @@
+.section__aboutLong {
+    background: #fff;   
+    height: auto; 
+}
+
+.section__aboutLong--wrap {    
+    display: flex;
+    justify-content: space-between;
+    width: 1170px;
+    margin: 0 auto;
+    padding: 35px 0;
+
+    @include large {
+        width: 100%;
+        padding: 50px 10px 50px 50px;
+    }   
+
+    @include extra-small {
+        width: 100%;
+        padding: 40px 40px;
+    }
+}
+
+.aboutLong__img--wrap {
+    display: flex;
+    align-items: center;
+    margin: 20px 0;
+    width: 530px / 1170px * 99%;   
+
+    @include extra-small {
+        display: none;
+    }
+}
+
+.aboutLong__text--wrap{    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;    
+    width: 570px / 1170px * 99%;
+    padding-right: 100px;
+
+    @include extra-small {
+        width: 100%;
+        text-align: center;
+        padding-right: 0;
+    }
+}

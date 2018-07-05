@@ -1,0 +1,40 @@
+@import "../node_modules/normalize-scss/sass/normalize/import-now";
+
+@import "common/libs/fontawesome/fontawesome-all";
+@import "common/misc/fonts";
+@import "common/misc/env";
+@import "common/misc/mixins";
+@import "common/misc/adjustment";
+
+/**
+*
+* Layout
+*
+**/
+
+@import "layout/aboutLong/aboutLong";
+@import "layout/aboutShort/aboutShort";
+
+
+
+// @import "layout/hero/hero";
+// @import "layout/header/header";
+// @import "layout/nav/nav";
+// @import "layout/footer/footer";
+
+
+
+/**
+*
+* Partials
+*
+**/
+
+@import "component/aboutLong/list/list";
+@import "component/home/nav/nav";
+
+// @import "components/homepage/statistics/statistics";
+// @import "components/homepage/features/features";
+// @import "components/homepage/news/news";
+// @import "components/homepage/feedback/feedback";
+// @import "components/homepage/feedback/feedback-slider/feedback-slider";
