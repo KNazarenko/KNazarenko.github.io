@@ -81,7 +81,7 @@ body {
 .title__name--left::before{
   content: '';
   position: absolute;
-  background: url(../../img/two-blue-lines.png);    
+  background: url(/img/two-blue-lines.png);    
   width: 40px;
   height: 2px;
   bottom: -29px;
@@ -96,7 +96,7 @@ body {
 .title__name--center::before {
   content: '';
   position: absolute;
-  background: url(../../img/two-blue-lines.png);    
+  background: url(/img/two-blue-lines.png);    
   width: 40px;
   height: 2px;
   bottom: -29px;
