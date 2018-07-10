@@ -12,8 +12,11 @@
 *
 **/
 
+@import "layout/features/features";
 @import "layout/aboutLong/aboutLong";
 @import "layout/aboutShort/aboutShort";
+@import "layout/testimonials/testimonials";
+@import "layout/likeAndGet/likeAndGet";
 
 
 
@@ -32,6 +35,8 @@
 
 @import "component/aboutLong/list/list";
 @import "component/home/nav/nav";
+@import "component/testimonials/testimonial/testimonial";
+@import "component/testimonials/buttons/buttons";
 
 // @import "components/homepage/statistics/statistics";
 // @import "components/homepage/features/features";

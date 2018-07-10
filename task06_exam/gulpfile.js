@@ -29,7 +29,7 @@ gulp.task('css', function() {
 });
 
 gulp.task('html', function() {
-  return gulp.src('src/views/*.html')
+  return gulp.src('src/pages/*.html')
     .pipe(plumber())
     .pipe(nunjucks({
       path: 'src/'

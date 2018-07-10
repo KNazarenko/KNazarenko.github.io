@@ -1,0 +1,16 @@
+
+
+{% macro  testimonial(text= "", img="", name="", company="") %}
+<div class="testimonials__container">
+    <span class="testimonials--text">{{ text }}</span>
+    <div class="name--container">
+        <div class="name__img">
+            <img src="{{ img }}" alt="Photo">
+        </div>
+        <div class="name--wrap">
+            <div class="name__name">{{ name }}</div>
+            <div class="name__company">{{ company }}</div>
+        </div>
+    </div>
+</div>
+{% endmacro %} 

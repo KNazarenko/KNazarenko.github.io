@@ -1,23 +1,19 @@
 .section__aboutLong {
-    background: #fff;   
-    height: auto; 
+    background: #fff;     
 }
 
-.section__aboutLong--wrap {    
-    display: flex;
-    justify-content: space-between;
-    width: 1170px;
-    margin: 0 auto;
-    padding: 35px 0;
-
+.container__aboutLong--wrap {      
+    padding: 35px 0; 
+    justify-content: space-between; 
+    
     @include large {
         width: 100%;
-        padding: 50px 10px 50px 50px;
+        padding: 50px 10px 50px 50px;     
     }   
-
+  
     @include extra-small {
-        width: 100%;
-        padding: 40px 40px;
+        width: 100%; 
+        padding: 40px;     
     }
 }
 

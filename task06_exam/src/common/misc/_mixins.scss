@@ -1,6 +1,6 @@
 // Extra small devices (portrait phones, less than 576px)
 @mixin extra-small {
-  @media screen and (max-width: 576px) {
+  @media screen and (max-width: 576px) {    
     @content;
   }
 }
@@ -19,9 +19,9 @@
   }
 }
 
-// Large devices (desktops, less than 1200px)
+// Large devices (desktops, less than 1270px)
 @mixin large {
-  @media screen and (max-width: 1200px) {
+  @media screen and (max-width: 1270px) {    
     @content;
   }
 }

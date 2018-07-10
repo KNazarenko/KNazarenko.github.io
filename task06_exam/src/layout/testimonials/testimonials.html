@@ -1,0 +1,36 @@
+{% import "component/testimonials/testimonial/testimonial.html" as block  %}
+
+<section class="section section__testimonials">
+    <div class="container container__testimonials--wrap">
+        <div class="testimonials__header--wrap">
+            <h2 class="title">quality has its price</h2>
+            <h3 class="title__name title__name--center">Pricings & Plans</h3>        
+        </div>
+        <!-- testimonials -->
+        <div class="testimonials__wrap">             
+
+            {{ block.testimonial
+                (
+                    text="Once upon a time all the Rivers combined to protest against the action of the Sea in making their waters salt. \“When we come to you,\” said they to the Sea.", 
+                    img="../../img/Warstwa01.png",
+                    name="John Doe",
+                    company="CEO, THE RIVERS COMPANY"
+                )
+            }}  
+
+            {{ block.testimonial
+                (
+                    text="A shoe is not only a design, but it's a part of your body language, the way you walk. The way you're going to move is quite dictated by your shoes.",
+                    img="../../img/Warstwa02.png",
+                    name="Dean Winchester",
+                    company="UX DESIGNER, GOOGLE INC."
+                ) 
+            }}
+
+        </div><!-- /testimonials -->
+
+        <div class="testimonials__buttons--wrap"> 
+            {% include 'component/testimonials/buttons/buttons.html' %}
+        </div>
+    </div>
+</section>

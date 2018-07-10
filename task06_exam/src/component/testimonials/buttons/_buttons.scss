@@ -1,0 +1,22 @@
+.radioBtn__list {
+    display: flex;   
+}
+
+.radioBtn__item {
+    list-style: none;   
+}
+
+.radioBtn__item:not(:first-child) {
+    margin-left: 20px;
+}
+
+.btn__radio {
+    cursor: pointer;
+    width: 8px;    
+}
+
+.btn__radio:checked {
+    width: 16px;  
+    height: 16px; 
+}
+    

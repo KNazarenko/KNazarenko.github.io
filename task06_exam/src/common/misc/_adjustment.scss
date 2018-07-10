@@ -7,6 +7,7 @@
 html,
 body {
   width: 100%;
+  min-width: 320px;
   min-height: 100vh;  
 }
 
@@ -19,8 +20,26 @@ body {
 }
 
 .section {
-  width: 100%;  
+  width: 100%; 
+  height: auto; 
 }
+
+.container {    
+  display: flex;   
+  width: 1170px;
+  margin: 0 auto; 
+
+  // @include large {
+  //     width: 100%;
+  //     padding: 50px 10px 50px 50px;     
+  // }   
+
+  // @include extra-small {
+  //     width: 100%; 
+  //     padding: 40px 40px;     
+  // }
+}
+
 
 .text__img{      
   width: 100%;    
@@ -39,20 +58,27 @@ body {
   }
 }
 
-.title__name{
-  color: $black;    
+.title__name{      
   @include rem(36);
+  color: $black;
   letter-spacing: .05rem;
   font-weight: 700;
   margin-top: 20px;
-  position: relative;
 
   @include small {
       @include rem(20);
   }
 }
 
-.title__name::before{
+.title__name--left {
+  position: relative;
+}
+
+.title__name--center {
+  position: relative;
+}
+
+.title__name--left::before{
   content: '';
   position: absolute;
   background: url(../../img/two-blue-lines.png);    
@@ -67,7 +93,18 @@ body {
   }
 }
 
-.title__text{
+.title__name--center::before {
+  content: '';
+  position: absolute;
+  background: url(../../img/two-blue-lines.png);    
+  width: 40px;
+  height: 2px;
+  bottom: -29px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.title__text {
   margin-top: 58px;
   color: $grey;
   @include rem(18);
