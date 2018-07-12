@@ -27,17 +27,7 @@ body {
 .container {    
   display: flex;   
   width: 1170px;
-  margin: 0 auto; 
-
-  // @include large {
-  //     width: 100%;
-  //     padding: 50px 10px 50px 50px;     
-  // }   
-
-  // @include extra-small {
-  //     width: 100%; 
-  //     padding: 40px 40px;     
-  // }
+  margin: 0 auto;   
 }
 
 
@@ -62,7 +52,7 @@ body {
   @include rem(36);
   color: $black;
   letter-spacing: .05rem;
-  font-weight: 700;
+  font-weight: 800;
   margin-top: 20px;
 
   @include small {

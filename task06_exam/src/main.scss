@@ -17,14 +17,8 @@
 @import "layout/aboutShort/aboutShort";
 @import "layout/testimonials/testimonials";
 @import "layout/likeAndGet/likeAndGet";
-
-
-
-// @import "layout/hero/hero";
-// @import "layout/header/header";
-// @import "layout/nav/nav";
-// @import "layout/footer/footer";
-
+@import "layout/pricings/pricings";
+@import "layout/contact/contact";
 
 
 /**
@@ -37,9 +31,5 @@
 @import "component/home/nav/nav";
 @import "component/testimonials/testimonial/testimonial";
 @import "component/testimonials/buttons/buttons";
-
-// @import "components/homepage/statistics/statistics";
-// @import "components/homepage/features/features";
-// @import "components/homepage/news/news";
-// @import "components/homepage/feedback/feedback";
-// @import "components/homepage/feedback/feedback-slider/feedback-slider";
+@import "component/features/feature/feature";
+@import "component/pricings/pricing/pricing";

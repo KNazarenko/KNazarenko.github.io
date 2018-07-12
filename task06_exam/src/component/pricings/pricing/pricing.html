@@ -1,0 +1,46 @@
+{%
+    set pricings = [
+      {
+        title: 'free',
+        number: '0',
+        textFirst: 'Fusce fermentum placerat magna ac pharetra. Aliquam euismod elit non ipsum',
+        textSecond: 'consectetur.'
+      },
+      {
+        title: 'personal',
+        number: '25',
+        textFirst: 'Fusce fermentum placerat magna ac pharetra. Aliquam euismod elit non ipsum',
+        textSecond: 'consectetur.'
+      },
+      {
+        title: 'business',
+        number: '50',
+        textFirst: 'Fusce fermentum placerat magna ac pharetra. Aliquam euismod elit non ipsum',
+        textSecond: 'consectetur.'
+      },
+      {
+        title: 'ultimate',
+        number: '99',
+        textFirst: 'Fusce fermentum placerat magna ac pharetra. Aliquam euismod elit non ipsum',
+        textSecond: 'consectetur.'
+      }      
+    ]  
+  %}
+
+<ul class="pricing__list">
+  {% for item in pricings %}
+  <li class="pricing__item">
+    <div class="pricing__name">{{ item.title }}</div>
+    <div class="pricing__number--wrap">
+      <div class="pricing__number">{{ item.number }}</div>
+      <span class="pricing__number--after">/per month</span>
+    </div>
+    <div class="textAndBtn__wrap">
+      <div class="pricing__text">{{ item.textFirst }}<span> {{ item.title }} </span>{{ item.textSecond }}</div>
+      <div class="pricing__btn--wrap">
+        <button class="pricing__btn">order now</button>
+      </div>
+    </div>
+  </li>
+  {% endfor %} 
+</ul>

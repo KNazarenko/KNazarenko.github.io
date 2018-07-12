@@ -1,0 +1,202 @@
+.pricing__list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    @include medium {
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }   
+}
+
+.pricing__item {
+    display: flex;
+    flex-direction: column;
+    width: 270px / 1170px * 100%;
+    border: 1px solid #e0e0e0;
+    text-align: center;  
+    padding-bottom: 27px;  
+    cursor: pointer;  
+    margin-bottom: 65px;     
+
+    @include medium {
+        width: 450px / 1170px * 100%;        
+    }
+
+    @include extra-small {
+        width: 100%;
+        margin-bottom: 30px;
+    }
+}
+
+.pricing__name {    
+    color: $black;    
+    @include rem(24);
+    letter-spacing: .1rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    padding-top: 26px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #e0e0e0;
+
+    @include medium {
+        @include rem(20);
+    }
+
+    @include small {
+        @include rem(16);        
+    }
+}
+
+.pricing__number--wrap {
+    padding-top: 38px;
+    padding-bottom: 60px;
+    border-bottom: 1px solid #e0e0e0;
+
+    @include medium {
+        padding-top: 30px;
+        padding-bottom: 50px;
+    }
+
+    @include small {
+        padding-top: 20px;
+        padding-bottom: 40px;      
+    }
+}
+
+.pricing__number {
+    display: inline-block;
+    color: $black;    
+    @include rem(60);
+    letter-spacing: .1rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    line-height: 1;    
+    position: relative;    
+
+    @include medium {
+        @include rem(48);
+    }
+
+    @include small {
+        @include rem(40);        
+    }
+}
+
+.pricing__number::before {
+    content: '$';
+    position: absolute;
+    top: 8px;
+    left: -17px;
+    @include rem(28);
+    color: $black;
+   
+    @include medium {
+        @include rem(22);
+    }
+
+    @include small {
+        @include rem(18);        
+    }
+}
+
+.pricing__number--after {
+    display: block;
+    margin: 0 auto;
+    width: 104px;     
+    color: $grey;
+    @include rem(18);    
+    text-transform: lowercase; 
+    font-weight: 300;     
+
+    @include medium {
+        @include rem(16);
+    }
+
+    @include small {
+      @include rem(12);
+    }
+}
+
+.textAndBtn__wrap {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.pricing__text {   
+    flex: 1 0 auto; 
+    color: $grey;
+    @include rem(18);
+    line-height: 1.5rem; 
+    padding: 42px 30px;  
+    
+    @include large {        
+        padding: 34px 24px;
+    }
+
+    @include medium {
+        @include rem(16);
+        padding: 32px 20px;
+    }
+
+    @include small {
+      @include rem(12);
+      padding: 22px 16px;
+    }
+}
+
+.pricing__btn--wrap {
+    flex: 0 0 auto;
+}
+
+.pricing__text span {
+    color: $blue;
+}
+
+.pricing__btn {
+    background: transparent;
+    border: 1px solid #e0e0e0;
+    border-radius: 3px;
+    padding: 18px 38px 16px;
+    color: $blue;
+    text-transform: uppercase;
+    @include rem(14);
+    font-weight: 700; 
+    cursor: pointer;    
+
+    @include small {
+        @include rem(10);
+  }
+}
+
+.pricing__item:hover {
+    .pricing__name, {
+        color: $blue;
+    }
+
+    .pricing__number, .pricing__number::before, .pricing__number--after, .pricing__btn {
+        color: white;        
+    }
+
+    .pricing__number--wrap, .pricing__btn {
+        background: $blue;
+    }
+}
+
+.pricing__item { 
+    .pricing__number,
+    .pricing__name,
+    .pricing__number::before,
+    .pricing__number--after,
+    .pricing__number--wrap,
+    .pricing__btn {
+        transition: all .2s ease-in-out;
+    }
+}
+
+// .pricing__btn:focus {
+//     background: $blue;
+//     color: white;
+// }
+

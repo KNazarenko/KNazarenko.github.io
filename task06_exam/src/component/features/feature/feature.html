@@ -1,0 +1,38 @@
+{%
+    set features = [
+      {
+        imgPath: 'img/features_Monitor.png',
+        title: 'Responsive',
+        description: 'Fusce fermentum placerat magna ac pharetra. Aliquam euismod elit non ipsum lacinia consectetur.'
+      },
+      {
+        imgPath: 'img/features_Settings.png',
+        title: 'Customizable',
+        description: 'Fusce fermentum placerat magna ac pharetra. Aliquam euismod elit non ipsum lacinia consectetur.'
+      },
+      {
+        imgPath: 'img/features_Like.png',
+        title: 'Lovely design',
+        description: 'Fusce fermentum placerat magna ac pharetra. Aliquam euismod elit non ipsum lacinia consectetur.'
+      },
+      {
+        imgPath: 'img/features_Phone.png',
+        title: 'Mobile Friendly',
+        description: 'Fusce fermentum placerat magna ac pharetra. Aliquam euismod elit non ipsum lacinia consectetur.'
+      }
+    ]  
+  %}
+
+
+
+<ul class="feature__list">
+    {% for item in features %}
+    <li class="feature__item">
+        <div class="feature__img">
+            <img src="{{ item.imgPath }}" alt="{{ item.title }}" class="feature__icon">
+        </div>
+        <h4 class="feature__name">{{ item.title }}</h4>
+        <p class="feature__text">{{ item.description }}</p>
+    </li>
+    {% endfor %}    
+</ul>
