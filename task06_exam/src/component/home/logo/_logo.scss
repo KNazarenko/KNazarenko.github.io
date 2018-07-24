@@ -1,0 +1,23 @@
+.logo__wrap {
+  display: flex;
+  width: 120px;
+  height: 19px;
+  text-transform: uppercase;
+  align-items: center;
+}
+
+.logo__name {
+  display: flex;
+  color: white;
+  @include rem(24);
+  letter-spacing: 0.2rem;
+  font-weight: 700;
+  //   font-stretch: 100%;
+}
+
+.logo__text {
+  display: flex;
+  color: $grey;
+  @include rem(9);
+  margin-left: 4px;
+}

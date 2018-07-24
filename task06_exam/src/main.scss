@@ -5,6 +5,7 @@
 @import "common/misc/env";
 @import "common/misc/mixins";
 @import "common/misc/adjustment";
+@import "common/buttons/buttons";
 
 /**
 *
@@ -12,6 +13,7 @@
 *
 **/
 
+@import "layout/home/home";
 @import "layout/features/features";
 @import "layout/aboutLong/aboutLong";
 @import "layout/aboutShort/aboutShort";
@@ -19,7 +21,8 @@
 @import "layout/likeAndGet/likeAndGet";
 @import "layout/pricings/pricings";
 @import "layout/contact/contact";
-
+@import "layout/contact_map/cont_map";
+@import "layout/footer/footer";
 
 /**
 *
@@ -33,3 +36,6 @@
 @import "component/testimonials/buttons/buttons";
 @import "component/features/feature/feature";
 @import "component/pricings/pricing/pricing";
+@import "component/home/nav/nav";
+@import "component/home/logo/logo";
+@import "component/contact/form/form";

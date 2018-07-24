@@ -1,0 +1,171 @@
+.section__home {
+  background: linear-gradient(
+      to right,
+      rgba(21, 20, 26, 0.85),
+      rgba(21, 20, 26, 0.95)
+    ),
+    url(../img/bg_photo1.png) no-repeat;
+  background-size: 100% auto;
+
+  @include large {
+    background-size: auto;
+  }
+
+  @include medium {
+    background-size: auto;
+  }
+}
+
+.container__home--wrap {
+  display: flex;
+  flex-direction: column;
+  padding: 35px 0;
+  justify-content: space-between;
+
+  @include large {
+    width: 100%;
+    padding: 50px 50px 50px 50px;
+  }
+
+  @include medium {
+    padding: 50px 50px 50px 50px;
+  }
+
+  @include extra-small {
+    width: 100%;
+    padding: 40px;
+  }
+}
+
+.home__header {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  z-index: 99;
+}
+
+.home__body {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 50px;
+}
+
+.home__text--wrap {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 500px / 1170px * 99%;
+
+  @include extra-small {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+.title__name--home {
+  @include rem(48);
+  color: #fff;
+  letter-spacing: 0.05rem;
+  font-weight: 800;
+  margin-top: 25px;
+
+  @include large {
+    @include rem(32);
+  }
+
+  @include medium {
+    @include rem(28);
+  }
+
+  @include small {
+    @include rem(24);
+  }
+
+  @include extra-small {
+    @include rem(20);
+  }
+}
+
+.home__text--wrap span {
+  margin-top: 24px;
+}
+
+.buttons__home--wrap {
+  display: flex;
+  margin-top: 60px;
+
+  @include medium {
+    margin-top: 50px;
+  }
+
+  @include small {
+    margin-top: 40px auto;
+    justify-content: center;
+  }
+}
+
+.home__img--wrap {
+  display: flex;
+  align-items: center;
+  width: 530px / 1170px * 99%;
+  height: 500px;
+  align-items: flex-start;
+
+  @include medium {
+    height: 360px;
+    align-items: flex-start;
+  }
+
+  @include small {
+    align-items: center;
+  }
+
+  @include extra-small {
+    display: none;
+  }
+}
+
+.menu__img {
+  width: 30px;
+  height: 30px;
+}
+
+.menu__btn--checkbox {
+  margin-right: 200px;
+  display: none;
+}
+
+.menu__btn--checkbox:checked ~ .nav {
+  transform: translateX(0);
+}
+
+.menu__btn--checkbox:checked ~ .menu__img {
+  display: none;
+}
+
+.menu__btn--label {
+  display: none;
+  // position: fixed;
+  right: 50px;
+  transition: display 0.2s ease-in-out;
+  z-index: 99;
+
+  @include small {
+    display: flex;
+  }
+}
+
+.buttons__home {
+  display: flex;
+  width: 340px;
+  justify-content: space-between;
+
+  @include medium {
+    width: 300px;
+  }
+
+  @include small {
+    width: 270px;
+  }
+}

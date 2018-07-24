@@ -1,0 +1,13 @@
+{% set navItems = [ { title: 'Home', path: '#home' }, { title: 'Features', path: '#features' }, { title: 'About', path: '#about'
+}, { title: 'Testimonials', path: '#testimonials' }, { title: 'Pricing', path: '#pricing' }, { title: 'Contact', path: '#contact'
+} ] %}
+
+<nav class="nav">
+  <ul class="nav__list">
+    {% for item in navItems %}
+    <li class="nav__item">
+      <a href="{{ item.path }}" class="nav__link">{{ item.title }}</a>
+    </li>
+    {% endfor %}
+  </ul>
+</nav>

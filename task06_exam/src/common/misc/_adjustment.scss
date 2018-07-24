@@ -8,85 +8,101 @@ html,
 body {
   width: 100%;
   min-width: 320px;
-  min-height: 100vh;  
+  min-height: 100vh;
 }
 
 body {
   display: flex;
   flex-direction: column;
-  font-size: $basic-font-size + px;  
-  font-family: 'Source Sans Pro', sans-serif;  
-  background: #fff;  
+  font-size: $basic-font-size + px;
+  font-family: "Source Sans Pro", sans-serif;
+  background: #fff;
 }
 
 .section {
-  width: 100%; 
-  height: auto; 
+  width: 100%;
+  height: auto;
 }
 
-.container {    
-  display: flex;   
+.container {
+  display: flex;
   width: 1170px;
-  margin: 0 auto;   
+  margin: 0 auto;
 }
 
-
-.text__img{      
-  width: 100%;    
-  height: auto;   
+.text__img {
+  width: 100%;
+  height: auto;
 }
 
-.title{
+.title {
   color: $blue;
   text-transform: uppercase;
   @include rem(14);
-  letter-spacing: .1rem;
+  letter-spacing: 0.1rem;
   font-weight: 700;
+
+  @include large {
+    @include rem(12);
+  }
 
   @include small {
     @include rem(10);
   }
 }
 
-.title__name{      
+.title__name {
   @include rem(36);
   color: $black;
-  letter-spacing: .05rem;
+  letter-spacing: 0.05rem;
   font-weight: 800;
-  margin-top: 20px;
+
+  @include large {
+    @include rem(32);
+  }
+
+  @include medium {
+    @include rem(28);
+  }
 
   @include small {
-      @include rem(20);
+    @include rem(24);
+  }
+
+  @include extra-small {
+    @include rem(20);
   }
 }
 
 .title__name--left {
   position: relative;
+  margin-top: 20px;
 }
 
 .title__name--center {
   position: relative;
+  margin-top: 20px;
 }
 
-.title__name--left::before{
-  content: '';
+.title__name--left::before {
+  content: "";
   position: absolute;
-  background: url(../img/two-blue-lines.png);    
+  background: url(../img/two-blue-lines.png);
   width: 40px;
   height: 2px;
   bottom: -29px;
   left: 0;
 
   @include extra-small {
-      left: 50%;
-      transform: translateX(-50%);
+    left: 50%;
+    transform: translateX(-50%);
   }
 }
 
 .title__name--center::before {
-  content: '';
+  content: "";
   position: absolute;
-  background: url(../img/two-blue-lines.png);    
+  background: url(../img/two-blue-lines.png);
   width: 40px;
   height: 2px;
   bottom: -29px;
@@ -98,47 +114,13 @@ body {
   margin-top: 58px;
   color: $grey;
   @include rem(18);
-  line-height: 1.5rem;  
-  
-  @include small {
-      @include rem(12);
-  }
-}
-
-
-
-
-
-
-
-.ui-btn {
-  display: block;
-  width: 100%;
-  text-decoration: none;
-  text-transform: uppercase;
-  color: #000;
-  border: 1px solid #e5ddd5;
-  text-align: center;
-  @include rem(18);
-  
-  padding: 14px;
+  line-height: 1.5rem;
 
   @include medium {
-    padding-left: 28px;
-    padding-right: 28px;
+    @include rem(16);
   }
-}
 
-.section-title {
-  text-align: center;
-  text-transform: uppercase;
-  font-weight: normal;
-  color: #000;
-  margin: 0;
-  
-  @include rem(30);
-
-  @include large {
-    @include rem(40);
+  @include small {
+    @include rem(12);
   }
 }

@@ -1,0 +1,43 @@
+<section id="home" class="section section__home">
+    <div class="container container__home--wrap">
+        <div class="home__header">
+
+            <!-- header logo -->
+            {% include 'component/home/logo/logo.html' %}
+            <!-- /header logo -->
+
+            <input type="checkbox" id="menu-btn" class="menu__btn--checkbox">
+            <label for="menu-btn" class="menu__btn--label">
+                <img src="img/menu_btn.png" class="menu__img">
+            </label>
+
+            <!-- header nav -->
+            {% include 'component/home/nav/nav.html' %}
+            <!-- /header nav -->
+
+        </div>
+
+        <div class="home__body">
+            <div class="home__text--wrap">
+                <h2 class="title">introducing lucid theme</h2>
+                <h3 class="title__name--home">Carefully crafted and beautiful landing page.</h3>
+                <span class="title__text">Etiam ullamcorper et turpis eget hendrerit. Praesent varius risus mi, at elementum magna ultricies accumsan.
+                    Cras venenatis lacus sed dolor placerat tempus. Morbi blandit at neque ut imperdiet.</span>
+                <!-- header buttons -->
+                <div class="buttons__home--wrap">
+                    <div class="buttons__home">
+
+                        {% include 'common/buttons/buttons.html' %}
+
+                    </div>
+                </div>
+                <!-- /header buttons -->
+            </div>
+            <div class="home__img--wrap">
+                <img src="img/phones-header.png" alt="two iPhone5" class="text__img">
+            </div>
+        </div>
+
+
+    </div>
+</section>

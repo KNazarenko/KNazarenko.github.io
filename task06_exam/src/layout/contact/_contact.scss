@@ -1,29 +1,124 @@
 .section__contact {
-    background: #ededed;        
+  background: #ededed;
 }
 
-.container__contact--wrap {      
-    padding: 65px 0;  
-    flex-direction: column; 
-    align-items: center;        
-    
-    @include large {
-        width: 100%;
-        padding: 50px;     
-    }   
-  
-    @include extra-small {
-        width: 100%; 
-        padding: 40px;     
-    }
+.container__contact--wrap {
+  padding: 65px 0 370px 0;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+
+  @include large {
+    width: 100%;
+    padding: 50px 50px 370px 50px;
+  }
+
+  @include extra-small {
+    width: 100%;
+    padding: 40px 40px 570px 40px;
+  }
 }
 
 .features__header--wrap {
-    text-align: center;
+  text-align: center;
 }
 
-.features__wrap {
-    margin-top: 110px;
+.contacts__wrap {
+  margin-top: 110px;
+  width: 1000px/1170px * 100%;
+
+  @include small {
+    width: 1100px/1170px * 100%;
+  }
+
+  @include extra-small {
+    margin-top: 60px;
+  }
+}
+
+.contacts__list {
+  display: flex;
+  justify-content: space-between;
+
+  @include extra-small {
+    flex-direction: column;
+  }
+}
+
+.contacts__item {
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+
+  @include extra-small {
+    margin-top: 35px;
+  }
+}
+
+.contacts__img {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 32px;
+}
+
+.contacts__icon {
+  display: inline-block;
+  height: auto;
+}
+
+.address--wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 32px;
+
+  @include extra-small {
+    margin-top: 15px;
+  }
+}
+
+.contacts {
+  text-decoration: none;
+  font-style: normal;
+  color: $grey;
+  @include rem(18);
+  line-height: 1.5rem;
+
+  @include medium {
+    @include rem(16);
+  }
+
+  @include small {
+    @include rem(12);
+  }
+}
+
+.contacts--container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.form__container {
+  display: flex;
+  justify-content: center;
+  width: 770px;
+  // height: 360px;
+  background: #15141a;
+  padding-top: 60px;
+  padding-bottom: 40px;
+  position: absolute;
+  bottom: 0;
+  transform: translateY(65px);
+
+  @include medium {
+    width: 670px;
+  }
+
+  @include small {
     width: 100%;
+    padding: 40px 0;
+    transform: translateY(0);
+  }
 }
-

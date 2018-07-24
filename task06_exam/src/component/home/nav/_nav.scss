@@ -1,0 +1,101 @@
+.nav {
+  height: 27px;
+
+  @include small {
+    position: fixed;
+    right: 0;
+    top: 90px;
+    display: flex;
+    flex-wrap: wrap;
+    width: 200px;
+    height: 100vh;
+    background: rgba(21, 20, 26, 0.85);
+    transform: translateX(100%);
+
+    transition: transform 0.2s ease-in-out;
+  }
+}
+
+.nav__list {
+  display: flex;
+  justify-content: flex-end;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+
+  @include small {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    width: 100%;
+    margin: 10px;
+  }
+}
+
+.nav__item:not(:first-child) {
+  @include small {
+    border-top: 1px solid $blue;
+  }
+}
+
+.nav__item {
+  position: relative;
+
+  @include small {
+    display: block;
+    width: 100%;
+    padding: 10px;
+  }
+}
+
+.nav__item:not(:first-child) {
+  margin-left: 30px;
+
+  @include small {
+    margin-left: 0;
+  }
+}
+
+.nav__item::before {
+  content: "";
+  position: absolute;
+  background: url(../img/two-blue-lines1.png);
+  width: 40px;
+  height: 2px;
+  bottom: -12px;
+  left: 50%;
+  transform: translateX(-50%);
+  transition: background-image 0.2s ease-in-out;
+
+  @include medium {
+    display: none;
+  }
+}
+
+.nav__item:hover::before,
+.nav__item:first-child::before {
+  content: "";
+  position: absolute;
+  background: url(../img/two-blue-lines.png);
+  width: 40px;
+  height: 2px;
+  bottom: -12px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.nav__link {
+  display: block;
+  line-height: 0.8;
+  color: #fff;
+  @include rem(16);
+  text-decoration: none;
+
+  @include large {
+    @include rem(14);
+  }
+
+  @include small {
+    @include rem(16);
+  }
+}

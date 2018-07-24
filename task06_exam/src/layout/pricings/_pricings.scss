@@ -25,5 +25,9 @@
 .pricing__wrap {
     margin-top: 100px;
     width: 100%;
+
+    @include extra-small {
+       margin-top: 70px;
+    }
 }
 

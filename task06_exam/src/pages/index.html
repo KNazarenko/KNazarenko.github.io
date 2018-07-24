@@ -1,15 +1,5 @@
-{% extends 'template.html' %}
-{% set pageTitle = 'Главная' %}
-
-{% block title %}Главная страница {% endblock %}
-
-
-{% block content %}  
-    {% include 'layout/features/features.html' %}
-    {% include 'layout/aboutLong/aboutLong.html' %}
-    {% include 'layout/aboutShort/aboutShort.html' %}
-    {% include 'layout/testimonials/testimonials.html' %}
-    {% include 'layout/likeAndGet/likeAndGet.html' %}
-    {% include 'layout/pricings/pricings.html' %}
-    {% include 'layout/contact/contact.html' %}
-{% endblock %}
+{% extends 'template.html' %} {% set pageTitle = 'Главная' %} {% block title %}Главная страница {% endblock %} {% block content
+%} {% include 'layout/home/home.html' %} {% include 'layout/features/features.html' %} {% include 'layout/aboutLong/aboutLong.html'
+%} {% include 'layout/aboutShort/aboutShort.html' %} {% include 'layout/testimonials/testimonials.html' %} {% include 'layout/likeAndGet/likeAndGet.html'
+%} {% include 'layout/pricings/pricings.html' %} {% include 'layout/contact/contact.html' %} {% include 'layout/contact_map/cont_map.html'
+%} {% include 'layout/footer/footer.html' %} {% endblock %}

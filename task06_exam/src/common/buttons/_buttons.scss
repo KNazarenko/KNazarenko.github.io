@@ -1,0 +1,44 @@
+.button {
+  width: 160px;
+  height: 50px;
+  color: #fff;
+  @include rem(14);
+  font-weight: bold;
+  letter-spacing: -0.05rem;
+  //   font-stretch: 80%;
+  text-transform: uppercase;
+  border-radius: 2px;
+  cursor: pointer;
+
+  @include medium {
+    width: 140px;
+    height: 45px;
+    @include rem(12);
+  }
+
+  @include small {
+    width: 125px;
+    height: 40px;
+    @include rem(10);
+  }
+}
+
+.download {
+  background: $blue;
+  border: 1px solid $blue;
+  transition: border 0.2s ease-in-out;
+}
+
+.download:hover {
+  border: 1px solid #fff;
+}
+
+.view {
+  background: transparent;
+  border: 1px solid #4d4d52;
+  transition: border 0.2s ease-in-out;
+}
+
+.view:hover {
+  border: 1px solid $blue;
+}
