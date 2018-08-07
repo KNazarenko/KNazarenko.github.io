@@ -414,8 +414,10 @@
         <!-- /form -->
 
     </div>
-</section> <section class="section1">
-    <img src="img/contacts_Map.png" alt="" class="map">
+</section> <section class="section__map">
+    <!-- <img src="img/contacts_Map.png" alt="" class="map"> -->
+    <!-- The element that will contain our Google Map. This is used in both the Javascript and CSS above. -->
+    <div id="map"></div>
 </section> <section class="section section__footer">
     <div class="container container__footer--wrap">
         <!-- social -->
@@ -454,6 +456,9 @@
 
     </div>
 </section> 
+
+  <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js"></script>
+  <script src="js/bundle.js"></script>
 </body>
 
 </html>

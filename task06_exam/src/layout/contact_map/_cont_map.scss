@@ -1,3 +1,19 @@
-.map {
+.section__map {
+  height: 460px;
   width: 100%;
+  background-image: url(../img/contacts_Map.png);
+}
+
+#map {
+  // width: 700px;
+  height: 100%;
+  margin: 0 auto;
+}
+
+#map .gmnoprint {
+  display: none;
+}
+
+#map .gm-style-cc {
+  display: none;
 }
