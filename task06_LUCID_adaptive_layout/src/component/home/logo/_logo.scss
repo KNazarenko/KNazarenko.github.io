@@ -6,13 +6,16 @@
   align-items: center;
 }
 
-.logo__name {
+.logo__name--wrap {
   display: flex;
+}
+
+.logo__name {
   color: white;
   @include rem(24);
   letter-spacing: 0.2rem;
   font-weight: 700;
-  //   font-stretch: 100%;
+  text-decoration: none;
 }
 
 .logo__text {
