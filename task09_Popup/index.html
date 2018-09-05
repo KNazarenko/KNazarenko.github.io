@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+        crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ"
+        crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <title>Popup</title>
+</head>
+
+<body>
+    <div class="section_wrapper">
+
+        <!-- link to my Git -->
+        <div class="link_wrapper">
+            <a class="btn btn-primary" href="https://github.com/KNazarenko/KNazarenko.github.io" role="button">my Git</a>
+        </div><!-- /link to my Git -->
+
+        <!-- set of buttons -->
+        <div class="buttons">
+            <!-- about button -->
+            <button type="button" class="btn btn-outline-primary btn-lg btn_about">About</button>
+            <div class="popup_about">
+                <div class="pupup_wrap">
+                    <img class="popup_img" src="img/about.png" alt="about" width="137" height="91">
+                    <div class="popup_text">
+                        <p>- Как вам удается столько успевать и относиться ко всему оптимистично?</p>
+                        <p>- А я просто ни с кем не спорю.</p>
+                        <p>- Но это же невозможно?!</p>
+                        <p>- Ну, невозможно так невозможно...</p>
+                    </div>
+                </div>
+            </div><!-- /about button -->
+
+            <!-- submit button -->
+            <button type="button" class="btn btn-outline-primary btn-lg btn_submit">Submit</button>
+
+            <div class="popup_submit">
+                <div class="pupup_wrap">
+                    <img class="popup_img" src="img/submit.png" alt="about" width="98" height="103">
+                    <div class="popup_text">
+                        <p>- Папа, а ты ещё вырастешь?</p>
+                        <p>- Нет, сынок.</p>
+                        <p>- А зачем ты тогда кушаешь?</p>
+                    </div>
+                </div>
+            </div><!-- /submit button -->
+
+            <!-- call me button -->
+            <button type="button" class="btn btn-outline-primary btn-lg btn_callMe">Call me</button>
+            <div class="popup_callMe">
+                <div class="pupup_wrap">
+                    <img class="popup_img" src="img/call.png" alt="about" width="100" height="139">
+                    <div class="popup_text">
+                        <p>- А вы в гномиков верите?</p>
+                        <p>- Нет.</p>
+                        <p>- А они в вас да...</p>
+                    </div>
+                </div>
+            </div><!-- /call me button -->
+        </div><!-- /set of buttons -->
+
+        <!-- popup and overlay -->
+        <div class="popup">
+            <div class="popup_closeBtn">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+
+            <div class="popup_innerHTML"></div>
+
+            <!-- <hr> I'm the modal window! -->
+        </div>
+        <div class="overlay"></div>
+        <!-- /popup and overlay -->
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

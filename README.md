@@ -11,3 +11,5 @@
 #### [task 06 - LUCID](https://knazarenko.github.io/task06_LUCID_adaptive_layout/dist/index.html) (адаптивная верстка, [Snazzy Maps](https://snazzymaps.com/))
 
 #### [task 07 - Slider ООП](https://knazarenko.github.io/task07_Slider_gallery/) (класс Slider на чистом js, bootstrap-buttons)
+
+#### [task 09 - Popup ООП](https://knazarenko.github.io/task09_Popup/) (класс Popup на чистом js, bootstrap-buttons)
