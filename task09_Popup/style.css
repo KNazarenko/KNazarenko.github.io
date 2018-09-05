@@ -18,6 +18,12 @@ body {
   background-size: 100%;
 }
 
+/* 
+**
+Body
+**
+*/
+
 .section_wrapper {
   display: flex;
   flex-direction: column;
@@ -37,6 +43,18 @@ body {
   margin-top: 170px;
   justify-content: space-around;
 }
+
+/* 
+**
+/Body
+**
+*/
+
+/* 
+**
+Overlay and Modal
+**
+*/
 
 .overlay {
   position: absolute;
@@ -67,6 +85,17 @@ body {
   display: block;
 }
 
+/* 
+**
+/Overlay and Modal
+**
+*/
+
+/* 
+**
+Modal Structure
+**
+*/
 .popup_about,
 .popup_submit,
 .popup_callMe {
@@ -88,3 +117,8 @@ body {
   align-self: center;
   line-height: 2rem;
 }
+/* 
+**
+/Modal Structure
+**
+*/

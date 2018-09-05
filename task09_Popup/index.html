@@ -24,7 +24,7 @@
         <!-- set of buttons -->
         <div class="buttons">
             <!-- about button -->
-            <button type="button" class="btn btn-outline-primary btn-lg btn_about">About</button>
+            <button type="button" data-popup=".popup_about" class="btn btn-outline-primary btn-lg btn_about forPopup">About</button>
             <div class="popup_about">
                 <div class="pupup_wrap">
                     <img class="popup_img" src="img/about.png" alt="about" width="137" height="91">
@@ -38,7 +38,7 @@
             </div><!-- /about button -->
 
             <!-- submit button -->
-            <button type="button" class="btn btn-outline-primary btn-lg btn_submit">Submit</button>
+            <button type="button" data-popup=".popup_submit" class="btn btn-outline-primary btn-lg btn_submit forPopup">Submit</button>
 
             <div class="popup_submit">
                 <div class="pupup_wrap">
@@ -52,7 +52,9 @@
             </div><!-- /submit button -->
 
             <!-- call me button -->
-            <button type="button" class="btn btn-outline-primary btn-lg btn_callMe">Call me</button>
+            <button type="button" data-popup=".popup_callMe" class="btn btn-outline-primary btn-lg btn_callMe forPopup">Call
+                me
+            </button>
             <div class="popup_callMe">
                 <div class="pupup_wrap">
                     <img class="popup_img" src="img/call.png" alt="about" width="100" height="139">
@@ -72,10 +74,7 @@
                     <span aria-hidden="true">&times;</span>
                 </button>
             </div>
-
             <div class="popup_innerHTML"></div>
-
-            <!-- <hr> I'm the modal window! -->
         </div>
         <div class="overlay"></div>
         <!-- /popup and overlay -->

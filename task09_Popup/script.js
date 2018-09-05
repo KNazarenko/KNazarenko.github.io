@@ -34,20 +34,15 @@ window.onload = function() {
     innerHTML: ".popup_innerHTML"
   });
 
-  document.querySelector(".btn_about").onclick = function() {
-    let inner = document.querySelector(".popup_about");
-    p.open(inner.innerHTML);
-  };
+  let buttons = document.querySelectorAll(".forPopup");
 
-  document.querySelector(".btn_submit").onclick = function() {
-    let inner = document.querySelector(".popup_submit");
-    p.open(inner.innerHTML);
-  };
-
-  document.querySelector(".btn_callMe").onclick = function() {
-    let inner = document.querySelector(".popup_callMe");
-    p.open(inner.innerHTML);
-  };
+  for (let i = 0; i < buttons.length; i++) {
+    buttons[i].onclick = function() {
+      let atttrName = this.getAttribute("data-popup");
+      let inner = document.querySelector(atttrName);
+      p.open(inner.innerHTML);
+    };
+  }
 
   document.onkeydown = function(evt) {
     evt = evt || window.event;
