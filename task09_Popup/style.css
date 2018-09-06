@@ -102,6 +102,13 @@ Overlay and Modal
   z-index: 11;
 }
 
+@media screen and (max-width: 768px) {
+  .popup {
+    width: 60%;
+    padding: 10px;
+  }
+}
+
 @media screen and (max-width: 576px) {
   .popup {
     width: 80%;
@@ -140,10 +147,10 @@ Modal Structure
   display: flex;
   flex-direction: column;
   margin-top: 50px;
-  font-size: 1.3rem;
+  font-size: 1.1rem;
   width: 80%;
   align-self: center;
-  line-height: 2rem;
+  line-height: 1.5rem;
 }
 /* 
 **
