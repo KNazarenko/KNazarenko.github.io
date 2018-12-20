@@ -31,6 +31,12 @@ class ItemCtrl {
     };
   }
 
+  getTotalTasks() {
+    const totalTasks = this.data.items.length;
+    this.data.totalTasks = totalTasks;
+    return totalTasks;
+  }
+
   getItems() {
     return this.data.items;
   }
@@ -43,43 +49,29 @@ class ItemCtrl {
     this.description = description;
   }
 
-  addItem() {
-    // let ID;
-    // // Create ID
-    // if (data.items.length > 0) {
-    //   ID = data.items[data.items.length - 1].id + 1;
-    // } else {
-    //   ID = 0;
-    // }
-
-    // Calories to number
-    // calories = parseInt(calories);
-
-    const items = this.data.items;
-    console.log(items);
-
+  addNewItem(input) {
+    let ID;
+    // Create ID
+    if (this.data.items.length > 0) {
+      ID = this.data.items[this.data.items.length - 1].id + 1;
+    } else {
+      ID = 0;
+    }
     // Create new item
-    // const newItem = new Item(
-    //   items.id,
-    //   items.name,
-    //   items.project,
-    //   items.priority,
-    //   items.description
-    // );
-    // console.log(newItem);
+    const newItem = new this.Item(
+      ID,
+      input.name,
+      input.project,
+      input.priority,
+      input.description
+    );
 
     // Add to items array
-    // data.items.push(newItem);
+    this.data.items.push(newItem);
+    console.log(this.data.items);
 
-    // return newItem;
+    return newItem;
   }
-
-  card() {
-    console.log(this.data);
-  }
-  // logData = function() {
-  //   return data;
-  // };
 }
 
 export const ctrl = new ItemCtrl();

@@ -9,3 +9,12 @@
 #newTaskForm {
   display: none;
 }
+
+.card-text {
+  display: none;
+}
+
+#totalTasks {
+  font-size: 1.3rem;
+  text-align: center;
+}
