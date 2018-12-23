@@ -1,3 +1,7 @@
+html {
+  font-size: 0.9rem;
+}
+
 #cardList {
   display: none;
 }
@@ -10,11 +14,17 @@
   display: none;
 }
 
-.card-text {
+.displayNone {
   display: none;
 }
 
 #totalTasks {
   font-size: 1.3rem;
   text-align: center;
+}
+
+.appName {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-left: 10px;
 }

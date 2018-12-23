@@ -31,7 +31,7 @@ class ItemCtrl {
     };
   }
 
-  getTotalTasks() {
+  totalTasksNumber() {
     const totalTasks = this.data.items.length;
     this.data.totalTasks = totalTasks;
     return totalTasks;
@@ -65,12 +65,70 @@ class ItemCtrl {
       input.priority,
       input.description
     );
-
     // Add to items array
     this.data.items.push(newItem);
-    console.log(this.data.items);
-
     return newItem;
+  }
+
+  // Get item from Data
+  getItemByID(idNumber) {
+    let findItem = null;
+    // Find current item
+    this.data.items.forEach(function(item) {
+      if (item.id === idNumber) {
+        findItem = item;
+      }
+    });
+    return findItem;
+  }
+
+  // Set currenItem into Data
+  setCurrentItem(e) {
+    // Get list item id (item-0, item-1)
+    const listItemId = e.target.parentNode.parentNode.parentNode.id;
+    // Get list item id number
+    const listItemIdArray = listItemId.split('-');
+    const idNumber = parseInt(listItemIdArray[1]);
+    // Get item by id
+    const itemToEdit = ctrl.getItemByID(idNumber);
+    // Set currenItem
+    this.data.currentItem = itemToEdit;
+  }
+
+  // Get currenItem from Data
+  getCurrentItem() {
+    return this.data.currentItem;
+  }
+
+  // Update item's data
+  updateItemData(input) {
+    let itemToUpdate;
+    let that = this;
+    // Find current item
+    this.data.items.forEach(function(item) {
+      if (item.id == that.data.currentItem.id) {
+        itemToUpdate = item;
+      }
+    });
+    // Set new value to data
+    itemToUpdate.name = input.name;
+    itemToUpdate.project = input.project;
+    itemToUpdate.priority = input.priority;
+    itemToUpdate.description = input.description;
+    // Return to update UI
+    return itemToUpdate;
+  }
+
+  // Delete item from data
+  deleteCurrentItem(id) {
+    // Get ids from data
+    const ids = this.data.items.map(function(item) {
+      return item.id;
+    });
+    // Get index
+    const index = ids.indexOf(id);
+    // Remove item by index
+    this.data.items.splice(index, 1);
   }
 }
 

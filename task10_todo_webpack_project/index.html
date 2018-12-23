@@ -23,7 +23,19 @@
     <!-- navbar -->
     <nav class="navbar navbar-dark bg-dark text-light">
       <div class="container col-md-8 col-xl-6 justify-content-between">
-        <h3 class="">Todo</h3>
+        <a
+          class="navbar-brand"
+          href="https://github.com/KNazarenko/KNazarenko.github.io"
+        >
+          <img
+            src="assets/img/GitHub-Mark-64px-invert.png"
+            width="30"
+            height="30"
+            class="d-inline-block align-top"
+            alt="KNazarenko.github.io"
+          />
+          <span class="appName">Todo</span>
+        </a>
         <button type="button" id="newTaskBtn" class="btn btn-warning btn-sm">
           Новая задача
         </button>
@@ -56,76 +68,77 @@
       <div id="tasksCollection" class="row justify-content-center">
         <div class="col">
           <!-- card ul -->
-          <div
+          <ul
             id="tasksList"
             class="jumbotron pt-0 pb-2 border mb-0"
             style="max-height: 300px; overflow: auto;"
           >
             <!-- card li 1 -->
-            <div id="tasksItem-0" class="card mt-2">
+            <li id="tasksItem-0" class="card mt-2">
               <div class="card-body">
-                <h5 class="card-title">Название задачи</h5>
-                <div class="row">
+                <strong class="card-title"><mark>Название задачи</mark></strong>
+                <div class="row mt-3">
                   <div class="col-8">
-                    <h6 class="card-subtitle mb-2 text-muted">
+                    <strong>
                       Проект:
-                      <strong class="numberOfProject text-primary"
-                        >Название проекта</strong
+                      <span class="numberOfProject text-primary"
+                        >Название проекта</span
                       >
-                    </h6>
+                    </strong>
                   </div>
                   <div class="col-4">
-                    <h6 class="card-subtitle mb-2 text-muted float-right">
+                    <strong class="float-right">
                       Приоритет:
-                      <strong class="numberOfProject text-danger">2</strong>
-                    </h6>
+                      <span class="numberOfProject text-danger">2</span>
+                    </strong>
                   </div>
                 </div>
-                <p class="card-text">
+                <p class="card-text mt-2 displayNone">
                   With supporting text below as a natural lead-in to additional
                   content.
                 </p>
                 <div
-                  class="btn-group btn-group-sm"
+                  class="btn-group btn-group-sm float-right mt-3"
                   role="group"
                   aria-label="Basic example"
                 >
-                  <button type="button" class="btn btn-secondary">
+                  <button type="button" class="editBtn btn btn-secondary">
                     Изменить
                   </button>
-                  <button type="button" class="btn btn-success">Закрыть</button>
-                  <button type="button" class="btn btn-muted">
+                  <button type="button" class="deleteBtn btn btn-danger">
+                    Завершить
+                  </button>
+                  <button type="button" class="maximizeBtn btn btn-muted">
                     Развернуть
                   </button>
                 </div>
               </div>
-            </div>
+            </li>
             <!-- card li 1 end-->
-          </div>
+          </ul>
         </div>
       </div>
 
       <!-- control panel -->
-
       <div id="ctrlPanel" class="mt-3">
         <form class="form-inline justify-content-around">
-          <div class="custom-control custom-checkbox">
+          <div class="custom-control custom-checkbox col-sm-4 pl-5">
             <input
               type="checkbox"
               class="custom-control-input"
               id="checkBoxInput"
             />
-            <label class="custom-control-label" for="checkBoxInput"
+            <label class="custom-control-label float-left" for="checkBoxInput"
               >По приоритету</label
             >
           </div>
-          <div class="form-group">
-            <label class="my-1 mr-2" for="inputSelectPriority"
+          <div class="form-group justify-content-end col-sm-8">
+            <label class="my-1 pr-3 col-4 text-right" for="inputSelectPriority"
               >Проект &nbsp;</label
             >
-            <select class="custom-select" id="inputSelectPriority">
+            <select class="custom-select col-7" id="inputSelectPriority">
               <option selected>Все...</option>
-              <option value="1">1</option>
+              <option value="1">Project send email</option>
               <option value="2">2</option>
               <option value="3">3</option>
               <option value="4">4</option>
@@ -148,7 +161,7 @@
                 type="text"
                 class="form-control form-control-sm"
                 id="inputTaskTitle"
-                placeholder="Title of the Task"
+                placeholder=""
               />
             </div>
           </div>
@@ -164,7 +177,7 @@
                 type="text"
                 class="form-control form-control-sm"
                 id="inputProjectTitle"
-                placeholder="Title of the Project"
+                placeholder=""
               />
             </div>
           </div>
@@ -196,7 +209,7 @@
                 class="form-control form-control-sm"
                 id="inputTaskDescribe"
                 rows="2"
-                placeholder="Task descripion"
+                placeholder=""
               ></textarea>
             </div>
           </div>
@@ -204,12 +217,15 @@
           <div class="form-group row justify-content-end">
             <div class="col-sm-7">
               <div class="row justify-content-around">
+                <button type="submit" id="addBtn" class="btn btn-info btn-sm">
+                  Сохранить
+                </button>
                 <button
                   type="submit"
-                  id="addBtn"
+                  id="updateBtn"
                   class="btn btn-warning btn-sm"
                 >
-                  Сохранить
+                  Обновить
                 </button>
                 <button
                   type="submit"
