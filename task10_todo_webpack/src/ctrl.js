@@ -5,7 +5,7 @@ class ItemCtrl {
       items: [
         {
           id: 0,
-          name: 'new task 0',
+          name: 'new task 777',
           project: 'New Project 0',
           priority: 1,
           description: 'some description'

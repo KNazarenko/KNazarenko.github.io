@@ -12,6 +12,8 @@ const showCards = function() {
     ui.showTasksCards();
   }
 };
+// Set flag for open new task form
+let openNewTaskFormFlag = false;
 
 // Fetch items from data structure
 const items = ctrl.getItems();
@@ -54,10 +56,20 @@ const loadEventListeners = function() {
 
 // Open form for new task
 function openFormForNewTask() {
-  // Show form
-  ui.showFormForNewTask();
-  // Clear inputs
-  ui.clearInputs();
+  // Check if new task form open
+  if (!openNewTaskFormFlag) {
+    // Show form
+    ui.showFormForNewTask();
+    // Clear inputs
+    ui.clearInputs();
+  } else {
+    // Clear form inputs UI
+    ui.clearInputs();
+    // Show cards list UI
+    ui.showTasksCards();
+  }
+  // Set toggle for flag
+  openNewTaskFormFlag = !openNewTaskFormFlag;
 }
 
 // Add new task sumbit
