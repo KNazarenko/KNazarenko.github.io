@@ -62,14 +62,16 @@ function openFormForNewTask() {
     ui.showFormForNewTask();
     // Clear inputs
     ui.clearInputs();
+    // Set toggle for flag
+    openNewTaskFormFlag = !openNewTaskFormFlag;
   } else {
     // Clear form inputs UI
     ui.clearInputs();
     // Show cards list UI
     ui.showTasksCards();
+    // Set toggle for flag
+    openNewTaskFormFlag = !openNewTaskFormFlag;
   }
-  // Set toggle for flag
-  openNewTaskFormFlag = !openNewTaskFormFlag;
 }
 
 // Add new task sumbit
@@ -79,15 +81,18 @@ function addNewTask(e) {
   const input = ui.getItemInput();
   // Check input for blind
   if (input.name !== '' && input.project !== '' && input.description !== '') {
-    console.log(input);
     // Add new task to data
     const newItem = ctrl.addNewItem(input);
     // Add new card to UI
     ui.addNewCard(newItem);
+    // Add new task to LS
+    local.addNewTask(newItem);
     // Clear form inputs UI
     ui.clearInputs();
     // Show cards list UI
     ui.showTasksCards();
+    // Set toggle for flag
+    openNewTaskFormFlag = !openNewTaskFormFlag;
     // Set total tasks number
     setTasksNumber();
   } else {
@@ -98,6 +103,11 @@ function addNewTask(e) {
 
 // Edit task click
 function editTaskClick(e) {
+  // Check if new task form open
+  if (openNewTaskFormFlag) {
+    // Set toggle for flag
+    openNewTaskFormFlag = !openNewTaskFormFlag;
+  }
   // Check for edit button
   if (e.target.classList.contains('editBtn')) {
     // Open form for edit task
@@ -142,6 +152,8 @@ function deleteTaskSubmit(e) {
     ui.deleteCard(itemToDelete.id);
     // Update total tasks number
     setTasksNumber();
+    // Delete task from LS data
+    local.deleteTaskItem(itemToDelete.id);
     // Check for presence task cards
     showCards();
   }
@@ -162,6 +174,11 @@ const cancelClick = function(e) {
   ui.clearInputs();
   // Show cards list UI
   ui.showTasksCards();
+  // Check if new task form open
+  if (openNewTaskFormFlag) {
+    // Set toggle for flag
+    openNewTaskFormFlag = !openNewTaskFormFlag;
+  }
 };
 // Load event listeners
 loadEventListeners();

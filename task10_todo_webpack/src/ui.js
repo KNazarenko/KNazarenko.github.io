@@ -153,10 +153,10 @@ class UI {
 
   // Show form for edit task
   showFormForEditTask() {
-    ui.newTaskForm.style.display = 'block';
-    ui.updateBtn.style.display = 'block';
-    ui.addBtn.style.display = 'none';
-    ui.ctrlPanel.style.display = 'none';
+    newTaskForm.style.display = 'block';
+    updateBtn.style.display = 'block';
+    addBtn.style.display = 'none';
+    ctrlPanel.style.display = 'none';
   }
 
   // Clear form inputs

@@ -1,44 +1,40 @@
+import { local } from './local';
+
 class ItemCtrl {
   constructor() {
     // Data Structure / State
     this.data = {
-      items: [
-        {
-          id: 0,
-          name: 'new task 777',
-          project: 'New Project 0',
-          priority: 1,
-          description: 'some description'
-        },
-        {
-          id: 1,
-          name: 'new task 1',
-          project: 'New Project 0',
-          priority: 2,
-          description: 'some description1'
-        },
-        {
-          id: 2,
-          name: 'new task 2',
-          project: 'New Project 2',
-          priority: 1,
-          description: 'some description2'
-        }
-      ],
-      // items: StorageCtrl.getItemsFromStorage(),
+      // taskItems: [
+      //   {
+      //     id: 0,
+      //     name: 'new task 777',
+      //     project: 'New Project 0',
+      //     priority: 1,
+      //     description: 'some description'
+      //   },
+      //   {
+      //     id: 1,
+      //     name: 'new task 1',
+      //     project: 'New Project 0',
+      //     priority: 2,
+      //     description: 'some description1'
+      //   }
+      // ],
+
+      taskItems: local.getData(),
       currentItem: null,
       totalTasks: 0
     };
   }
 
   totalTasksNumber() {
-    const totalTasks = this.data.items.length;
+    const totalTasks = this.data.taskItems.length;
     this.data.totalTasks = totalTasks;
     return totalTasks;
   }
 
   getItems() {
-    return this.data.items;
+    return this.data.taskItems;
   }
 
   Item(id, name, project, priority, description) {
@@ -52,8 +48,8 @@ class ItemCtrl {
   addNewItem(input) {
     let ID;
     // Create ID
-    if (this.data.items.length > 0) {
-      ID = this.data.items[this.data.items.length - 1].id + 1;
+    if (this.data.taskItems.length > 0) {
+      ID = this.data.taskItems[this.data.taskItems.length - 1].id + 1;
     } else {
       ID = 0;
     }
@@ -65,8 +61,8 @@ class ItemCtrl {
       input.priority,
       input.description
     );
-    // Add to items array
-    this.data.items.push(newItem);
+    // Add to taskItems array
+    this.data.taskItems.push(newItem);
     return newItem;
   }
 
@@ -74,7 +70,7 @@ class ItemCtrl {
   getItemByID(idNumber) {
     let findItem = null;
     // Find current item
-    this.data.items.forEach(function(item) {
+    this.data.taskItems.forEach(function(item) {
       if (item.id === idNumber) {
         findItem = item;
       }
@@ -97,6 +93,8 @@ class ItemCtrl {
 
   // Get currenItem from Data
   getCurrentItem() {
+    console.log('current item');
+    console.log(this.data.currentItem);
     return this.data.currentItem;
   }
 
@@ -105,7 +103,7 @@ class ItemCtrl {
     let itemToUpdate;
     let that = this;
     // Find current item
-    this.data.items.forEach(function(item) {
+    this.data.taskItems.forEach(function(item) {
       if (item.id == that.data.currentItem.id) {
         itemToUpdate = item;
       }
@@ -122,13 +120,13 @@ class ItemCtrl {
   // Delete item from data
   deleteCurrentItem(id) {
     // Get ids from data
-    const ids = this.data.items.map(function(item) {
+    const ids = this.data.taskItems.map(function(item) {
       return item.id;
     });
     // Get index
     const index = ids.indexOf(id);
     // Remove item by index
-    this.data.items.splice(index, 1);
+    this.data.taskItems.splice(index, 1);
   }
 }
 

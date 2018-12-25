@@ -1,0 +1,45 @@
+class localStorageCtrl {
+  // Add new task to LS
+  addNewTask(newItem) {
+    let tasks;
+    // Check if LS has data
+    if (localStorage.getItem('taskItems') === null) {
+      tasks = [];
+      // Add new item to array
+      tasks.push(newItem);
+    } else {
+      tasks = JSON.parse(localStorage.getItem('taskItems'));
+      // Add new item to array
+      tasks.push(newItem);
+    }
+    // Update LS data array
+    localStorage.setItem('taskItems', JSON.stringify(tasks));
+  }
+
+  // Get LS data
+  getData() {
+    let tasks;
+    // Check if LS has data
+    if (localStorage.getItem('taskItems') === null) {
+      tasks = [];
+    } else {
+      tasks = JSON.parse(localStorage.getItem('taskItems'));
+    }
+    return tasks;
+  }
+
+  // Delete task item
+  deleteTaskItem(id) {
+    let tasks = JSON.parse(localStorage.getItem('taskItems'));
+    // Find task item with id
+    tasks.forEach(function(task, index) {
+      if (id === task.id) {
+        tasks.splice(index, 1);
+        // Update LS data array
+        localStorage.setItem('taskItems', JSON.stringify(tasks));
+      }
+    });
+  }
+}
+
+export const local = new localStorageCtrl();
