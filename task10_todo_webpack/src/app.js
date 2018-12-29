@@ -130,6 +130,8 @@ function updateTaskSubmit(e) {
   const newData = ctrl.updateItemData(input);
   // Update task card
   ui.updateTaskCardData(newData);
+  // Update data into LS
+  local.updateData(newData);
   // Clear form inputs UI
   ui.clearInputs();
   // Show cards list UI
@@ -179,6 +181,8 @@ const cancelClick = function(e) {
     // Set toggle for flag
     openNewTaskFormFlag = !openNewTaskFormFlag;
   }
+  // Check for presence task cards
+  showCards();
 };
 // Load event listeners
 loadEventListeners();

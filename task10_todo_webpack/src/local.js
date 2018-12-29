@@ -28,6 +28,22 @@ class localStorageCtrl {
     return tasks;
   }
 
+  // Update data into LS
+  updateData(newData) {
+    let tasks = JSON.parse(localStorage.getItem('taskItems'));
+    // Find task item and update data
+    tasks.forEach(function(task) {
+      if (task.id === newData.id) {
+        task.name = newData.name;
+        task.project = newData.project;
+        task.priority = newData.priority;
+        task.description = newData.description;
+      }
+    });
+    // Update LS data array
+    localStorage.setItem('taskItems', JSON.stringify(tasks));
+  }
+
   // Delete task item
   deleteTaskItem(id) {
     let tasks = JSON.parse(localStorage.getItem('taskItems'));

@@ -108,6 +108,8 @@ class ItemCtrl {
         itemToUpdate = item;
       }
     });
+    console.log('data after update');
+    console.log(this.data.taskItems);
     // Set new value to data
     itemToUpdate.name = input.name;
     itemToUpdate.project = input.project;
