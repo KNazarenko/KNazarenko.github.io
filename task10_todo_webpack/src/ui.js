@@ -14,6 +14,9 @@ class UI {
     this.inputProjectTitle = document.querySelector('#inputProjectTitle');
     this.inputPriority = document.querySelector('#inputPriority');
     this.inputTaskDescribe = document.querySelector('#inputTaskDescribe');
+    // Control Panel
+    this.selectProjectName = document.querySelector('#selectProjectName');
+    this.checkBoxInput = document.querySelector('#checkBoxInput');
   }
 
   // Populate tasks item
@@ -22,7 +25,7 @@ class UI {
     items.forEach(function(item) {
       html += `<li id="tasksItem-${item.id}" class="card mt-2">
       <div class="card-body">
-        <strong class="card-title"><mark>${item.name}</mark></strong>
+        <strong class="card-title"><mark>${item.name.toUpperCase()}</mark></strong>
         <div class="row mt-2">
           <div class="col-8">
             <strong>
@@ -65,6 +68,22 @@ class UI {
     tasksList.innerHTML = html;
   }
 
+  // Populate select
+  populateSelect(items, selectAll) {
+    let select = `<option selected>${selectAll}</option>`;
+    // Arr for project names
+    let selectNames = [];
+    // Check if arr has project name
+    items.forEach(function(item, index) {
+      if (selectNames.indexOf(item.project) === -1) {
+        selectNames.push(item.project);
+        select += `<option>${item.project}</option>`;
+      }
+    });
+    // Add select items into UI
+    selectProjectName.innerHTML = select;
+  }
+
   // Update total tasks number
   updateTotalTasks(number) {
     totalTasks.innerHTML = number;
@@ -86,7 +105,7 @@ class UI {
     newCard.className = 'card mt-2';
     newCard.id = `tasksItem-${newItem.id}`;
     newCard.innerHTML = `<div class="card-body">
-      <strong class="card-title"><mark>${newItem.name}</mark></strong>
+      <strong class="card-title"><mark>${newItem.name.toUpperCase()}</mark></strong>
       <div class="row mt-2">
         <div class="col-8">
           <strong>
@@ -188,7 +207,7 @@ class UI {
       // Update task
       if (idAttribute === `tasksItem-${newData.id}`) {
         task.innerHTML = `<div class="card-body">
-          <strong class="card-title"><mark>${newData.name}</mark></strong>
+          <strong class="card-title"><mark>${newData.name.toUpperCase()}</mark></strong>
           <div class="row mt-2">
             <div class="col-8">
               <strong>
@@ -254,6 +273,11 @@ class UI {
       e.target.classList.remove('btn-info');
       e.target.classList.add('btn-muted');
     }
+  }
+
+  // Filter tasks by priority
+  filterByPriority() {
+    ui.filterCardsByPriority();
   }
 }
 

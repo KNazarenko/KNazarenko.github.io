@@ -19,6 +19,9 @@ let openNewTaskFormFlag = false;
 const items = ctrl.getItems();
 // Populate list with items
 ui.populateItemList(items);
+const selectAll = 'Все...';
+// Populate select
+ui.populateSelect(items, selectAll);
 
 // Set total tasks number
 const setTasksNumber = function() {
@@ -44,6 +47,10 @@ const loadEventListeners = function() {
   ui.tasksList.addEventListener('click', deleteTaskSubmit);
   // Maximize/minimize task body
   ui.tasksList.addEventListener('click', maxminTaskSubmit);
+  // Select by project name
+  ui.selectProjectName.addEventListener('change', filterByProjectName);
+  // Select by priority
+  ui.checkBoxInput.addEventListener('change', filterByPriority);
 
   // Disable submit on enter
   document.addEventListener('keypress', function(e) {
@@ -91,6 +98,8 @@ function addNewTask(e) {
     ui.clearInputs();
     // Show cards list UI
     ui.showTasksCards();
+    // Add new project name to select
+    ui.populateSelect(ctrl.data.taskItems, selectAll);
     // Set toggle for flag
     openNewTaskFormFlag = !openNewTaskFormFlag;
     // Set total tasks number
@@ -132,6 +141,8 @@ function updateTaskSubmit(e) {
   ui.updateTaskCardData(newData);
   // Update data into LS
   local.updateData(newData);
+  // Update project name to select
+  ui.populateSelect(ctrl.data.taskItems, selectAll);
   // Clear form inputs UI
   ui.clearInputs();
   // Show cards list UI
@@ -154,6 +165,8 @@ function deleteTaskSubmit(e) {
     ui.deleteCard(itemToDelete.id);
     // Update total tasks number
     setTasksNumber();
+    // Update project name to select
+    ui.populateSelect(ctrl.data.taskItems, selectAll);
     // Delete task from LS data
     local.deleteTaskItem(itemToDelete.id);
     // Check for presence task cards
@@ -170,7 +183,7 @@ function maxminTaskSubmit(e) {
 }
 
 // Cancel new task
-const cancelClick = function(e) {
+function cancelClick(e) {
   e.preventDefault();
   // Clear form inputs UI
   ui.clearInputs();
@@ -183,7 +196,29 @@ const cancelClick = function(e) {
   }
   // Check for presence task cards
   showCards();
-};
+}
+
+// Filter tasks by project name
+function filterByProjectName() {
+  // Fetch items from data structure
+  const items = ctrl.getItems();
+  // Fetch select input
+  const select = ui.selectProjectName.value;
+  // Fetch filter items to populate
+  const filterItems = ctrl.filterCardsBySelect(items, select);
+  // Populate list with items
+  if (select == selectAll) {
+    ui.populateItemList(items);
+  } else {
+    ui.populateItemList(filterItems);
+  }
+}
+
+// Filter tasks by priority
+function filterByPriority() {
+  const items = ui.filterCardsByPriority();
+}
+
 // Load event listeners
 loadEventListeners();
 // Set total tasks number

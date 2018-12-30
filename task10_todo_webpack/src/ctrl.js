@@ -93,8 +93,6 @@ class ItemCtrl {
 
   // Get currenItem from Data
   getCurrentItem() {
-    console.log('current item');
-    console.log(this.data.currentItem);
     return this.data.currentItem;
   }
 
@@ -108,8 +106,6 @@ class ItemCtrl {
         itemToUpdate = item;
       }
     });
-    console.log('data after update');
-    console.log(this.data.taskItems);
     // Set new value to data
     itemToUpdate.name = input.name;
     itemToUpdate.project = input.project;
@@ -129,6 +125,20 @@ class ItemCtrl {
     const index = ids.indexOf(id);
     // Remove item by index
     this.data.taskItems.splice(index, 1);
+  }
+
+  // Filter tasks by project name
+  filterCardsBySelect(items, select) {
+    let filterItem = [];
+
+    // Filter items
+    items.forEach(function(item) {
+      if (item.project == select) {
+        filterItem.push(item);
+      }
+    });
+    // Return new array to populate
+    return filterItem;
   }
 }
 
