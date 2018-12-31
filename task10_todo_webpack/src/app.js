@@ -19,6 +19,7 @@ let openNewTaskFormFlag = false;
 const items = ctrl.getItems();
 // Populate list with items
 ui.populateItemList(items);
+// Const for select all
 const selectAll = 'Все...';
 // Populate select
 ui.populateSelect(items, selectAll);
@@ -62,13 +63,15 @@ const loadEventListeners = function() {
 };
 
 // Open form for new task
-function openFormForNewTask() {
+function openFormForNewTask(e) {
   // Check if new task form open
   if (!openNewTaskFormFlag) {
     // Show form
     ui.showFormForNewTask();
     // Clear inputs
     ui.clearInputs();
+    // Change button name
+    e.target.innerHTML = 'Отменить';
     // Set toggle for flag
     openNewTaskFormFlag = !openNewTaskFormFlag;
   } else {
@@ -76,6 +79,8 @@ function openFormForNewTask() {
     ui.clearInputs();
     // Show cards list UI
     ui.showTasksCards();
+    // Change button name
+    e.target.innerHTML = 'Новая задача';
     // Set toggle for flag
     openNewTaskFormFlag = !openNewTaskFormFlag;
   }
@@ -100,6 +105,8 @@ function addNewTask(e) {
     ui.showTasksCards();
     // Add new project name to select
     ui.populateSelect(ctrl.data.taskItems, selectAll);
+    // Update filter tasks by project name
+    filterByProjectName();
     // Set toggle for flag
     openNewTaskFormFlag = !openNewTaskFormFlag;
     // Set total tasks number
@@ -114,6 +121,8 @@ function addNewTask(e) {
 function editTaskClick(e) {
   // Check if new task form open
   if (openNewTaskFormFlag) {
+    // Change new task button name
+    ui.newTaskBtn.innerHTML = 'Новая задача';
     // Set toggle for flag
     openNewTaskFormFlag = !openNewTaskFormFlag;
   }
@@ -143,6 +152,8 @@ function updateTaskSubmit(e) {
   local.updateData(newData);
   // Update project name to select
   ui.populateSelect(ctrl.data.taskItems, selectAll);
+  // Update filter tasks by project name
+  filterByProjectName();
   // Clear form inputs UI
   ui.clearInputs();
   // Show cards list UI
@@ -167,6 +178,8 @@ function deleteTaskSubmit(e) {
     setTasksNumber();
     // Update project name to select
     ui.populateSelect(ctrl.data.taskItems, selectAll);
+    // Update filter tasks by project name
+    filterByProjectName();
     // Delete task from LS data
     local.deleteTaskItem(itemToDelete.id);
     // Check for presence task cards
@@ -200,23 +213,34 @@ function cancelClick(e) {
 
 // Filter tasks by project name
 function filterByProjectName() {
+  //Disable filter by priority
+  if (ui.checkBoxInput.checked == true) {
+    ui.checkBoxInput.checked = false;
+  }
   // Fetch items from data structure
   const items = ctrl.getItems();
   // Fetch select input
   const select = ui.selectProjectName.value;
   // Fetch filter items to populate
   const filterItems = ctrl.filterCardsBySelect(items, select);
-  // Populate list with items
+  // Check if select all
   if (select == selectAll) {
+    // Populate list with items
     ui.populateItemList(items);
   } else {
+    // Populate list with filter items
     ui.populateItemList(filterItems);
   }
 }
 
 // Filter tasks by priority
-function filterByPriority() {
-  const items = ui.filterCardsByPriority();
+function filterByPriority(e) {
+  if (e.target.checked == true) {
+    ui.filterCardsByPriority();
+  } else {
+    // Filter tasks by project name
+    filterByProjectName();
+  }
 }
 
 // Load event listeners

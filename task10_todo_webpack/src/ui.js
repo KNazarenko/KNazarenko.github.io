@@ -30,7 +30,7 @@ class UI {
           <div class="col-8">
             <strong>
               Проект:
-              <span class="numberOfProject text-primary"
+              <span class="text-primary"
                 >${item.project}</span
               >
             </strong>
@@ -38,7 +38,9 @@ class UI {
           <div class="col-4">
             <strong class="float-right">
               Приоритет:
-              <span class="numberOfProject text-danger">${item.priority}</span>
+              <span id="priorityNumber" class="text-danger">${
+                item.priority
+              }</span>
             </strong>
           </div>
         </div>
@@ -56,7 +58,7 @@ class UI {
           <button type="button" class="deleteBtn btn btn-danger">
             Завершить
           </button>
-          <button type="button" class="maximizeBtn btn btn-muted">
+          <button type="button" class="maximizeBtn btn btn-secondary">
             Развернуть
           </button>
         </div>
@@ -110,7 +112,7 @@ class UI {
         <div class="col-8">
           <strong>
             Проект:
-            <span class="numberOfProject text-primary"
+            <span class="text-primary"
               >${newItem.project}</span
             >
           </strong>
@@ -118,7 +120,9 @@ class UI {
         <div class="col-4">
           <strong class="float-right">
             Приоритет:
-            <span class="numberOfProject text-danger">${newItem.priority}</span>
+            <span id="priorityNumber" class="text-danger">${
+              newItem.priority
+            }</span>
           </strong>
         </div>
       </div>
@@ -136,7 +140,7 @@ class UI {
         <button type="button" class="deleteBtn btn btn-danger">
           Завершить
         </button>
-        <button type="button" class="maximizeBtn btn btn-muted">
+        <button type="button" class="maximizeBtn btn btn-secondary">
           Развернуть
         </button>
       </div>
@@ -212,7 +216,7 @@ class UI {
             <div class="col-8">
               <strong>
                 Проект:
-                <span class="numberOfProject text-primary"
+                <span class="text-primary"
                   >${newData.project}</span
                 >
               </strong>
@@ -220,7 +224,7 @@ class UI {
             <div class="col-4">
               <strong class="float-right">
                 Приоритет:
-                <span class="numberOfProject text-danger">${
+                <span id="priorityNumber" class="text-danger">${
                   newData.priority
                 }</span>
               </strong>
@@ -240,7 +244,7 @@ class UI {
             <button type="button" class="deleteBtn btn btn-danger">
               Завершить
             </button>
-            <button type="button" class="maximizeBtn btn btn-muted">
+            <button type="button" class="maximizeBtn btn btn-secondary">
               Развернуть
             </button>
           </div>
@@ -264,20 +268,34 @@ class UI {
       item.classList.remove('displayNone');
       e.target.innerHTML = 'Свернуть';
       // Change button color
-      e.target.classList.remove('btn-muted');
+      e.target.classList.remove('btn-secondary');
       e.target.classList.add('btn-info');
     } else {
       item.classList.add('displayNone');
       e.target.innerHTML = 'Развернуть';
       // Change button color
       e.target.classList.remove('btn-info');
-      e.target.classList.add('btn-muted');
+      e.target.classList.add('btn-secondary');
     }
   }
 
   // Filter tasks by priority
-  filterByPriority() {
-    ui.filterCardsByPriority();
+  filterCardsByPriority() {
+    // Find all 'li' elements
+    let items = tasksList.querySelectorAll('li');
+    // Turn into array
+    let tasks = Array.from(items);
+    // Sort by priority number
+    tasks.sort(function(a, b) {
+      return parseInt(a.querySelector('#priorityNumber').innerHTML) >
+        parseInt(b.querySelector('#priorityNumber').innerHTML)
+        ? 1
+        : -1;
+    });
+    // Insert into 'ul' element
+    tasks.forEach(function(task) {
+      tasksList.appendChild(task);
+    });
   }
 }
 

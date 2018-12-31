@@ -11,13 +11,6 @@ class ItemCtrl {
       //     project: 'New Project 0',
       //     priority: 1,
       //     description: 'some description'
-      //   },
-      //   {
-      //     id: 1,
-      //     name: 'new task 1',
-      //     project: 'New Project 0',
-      //     priority: 2,
-      //     description: 'some description1'
       //   }
       // ],
 
