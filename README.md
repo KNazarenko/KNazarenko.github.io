@@ -12,4 +12,4 @@
 
 #### [task 09 - Popup ООП](https://knazarenko.github.io/task09_Popup/) (класс Popup на чистом js, bootstrap-buttons)
 
-#### [task 10 - Todo](https://knazarenko.github.io/task10_todo_webpack/) (js, bootstrap, webpack)
+#### [task 10 - Todo App](https://knazarenko.github.io/task10_todo_webpack/) (js, bootstrap, webpack)

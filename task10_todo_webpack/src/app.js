@@ -64,12 +64,12 @@ const loadEventListeners = function() {
   ui.checkBoxInput.addEventListener('change', filterByPriority);
 
   // Disable submit on enter
-  document.addEventListener('keypress', function(e) {
-    if (e.keyCode === 13 || e.which === 13) {
-      e.preventDefault();
-      return false;
-    }
-  });
+  // document.addEventListener('keypress', function(e) {
+  //   if (e.keyCode === 13 || e.which === 13) {
+  //     e.preventDefault();
+  //     return false;
+  //   }
+  // });
 };
 
 // Open form for new task
