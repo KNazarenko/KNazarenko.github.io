@@ -132,6 +132,8 @@ function editTaskClick(e) {
   }
   // Check for edit button
   if (e.target.classList.contains('editBtn')) {
+    // Clear error inputs
+    ui.clearErrorInputs();
     // Open form for edit task
     ui.showFormForEditTask();
     // Set current item
