@@ -150,6 +150,42 @@ class UI {
     tasksList.insertAdjacentElement('beforeend', newCard);
   }
 
+  // Show error for empty inputs
+  showError() {
+    let inputs = [inputTaskTitle, inputProjectTitle, inputTaskDescribe];
+    let form = newTaskForm.querySelector('form');
+    // Check every input for empty string
+    inputs.forEach(function(input, index) {
+      if (input.value == '') {
+        // Add red border
+        input.classList.add('error');
+        // Create div with error text
+        let error = document.createElement('div');
+        error.className = 'errorText text-right text-danger font-italic';
+        error.innerHTML = 'Заполните поле';
+        // Add UI error text
+        form.insertBefore(error, input.parentElement.parentElement);
+      }
+    });
+  }
+
+  // Clear inputs with error
+  clearErrorInputs() {
+    let inputs = [inputTaskTitle, inputProjectTitle, inputTaskDescribe];
+    let errors = newTaskForm.querySelectorAll('.errorText');
+    // Check every input for empty string
+    if (errors != null) {
+      // Delete div with error text
+      errors.forEach(function(error, index) {
+        error.parentNode.removeChild(error);
+      });
+      // Remove red border
+      inputs.forEach(function(input) {
+        input.classList.remove('error');
+      });
+    }
+  }
+
   // Show welcome card
   showWelcomeCard() {
     welcomeCard.style.display = 'block';

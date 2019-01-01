@@ -28,3 +28,7 @@ html {
   font-weight: bold;
   margin-left: 10px;
 }
+
+.error {
+  border-color: #dc3545;
+}

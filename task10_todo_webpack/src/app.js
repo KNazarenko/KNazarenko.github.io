@@ -66,6 +66,8 @@ const loadEventListeners = function() {
 function openFormForNewTask(e) {
   // Check if new task form open
   if (!openNewTaskFormFlag) {
+    // Clear error inputs
+    ui.clearErrorInputs();
     // Show form
     ui.showFormForNewTask();
     // Clear inputs
@@ -89,9 +91,11 @@ function openFormForNewTask(e) {
 // Add new task sumbit
 function addNewTask(e) {
   e.preventDefault();
+  // Clear error inputs
+  ui.clearErrorInputs();
   // Get new input from UI
   const input = ui.getItemInput();
-  // Check input for blind
+  // Check inputs for blind
   if (input.name !== '' && input.project !== '' && input.description !== '') {
     // Add new task to data
     const newItem = ctrl.addNewItem(input);
@@ -142,22 +146,30 @@ function editTaskClick(e) {
 // Update task submit
 function updateTaskSubmit(e) {
   e.preventDefault();
-  // Get item data from inputs
+  // Clear error inputs
+  ui.clearErrorInputs();
+  // Get update input from UI
   const input = ui.getItemInput();
-  // Update item data
-  const newData = ctrl.updateItemData(input);
-  // Update task card
-  ui.updateTaskCardData(newData);
-  // Update data into LS
-  local.updateData(newData);
-  // Update project name to select
-  ui.populateSelect(ctrl.data.taskItems, selectAll);
-  // Update filter tasks by project name
-  filterByProjectName();
-  // Clear form inputs UI
-  ui.clearInputs();
-  // Show cards list UI
-  ui.showTasksCards();
+  // Check inputs for blind
+  if (input.name !== '' && input.project !== '' && input.description !== '') {
+    // Update item data
+    const newData = ctrl.updateItemData(input);
+    // Update task card
+    ui.updateTaskCardData(newData);
+    // Update data into LS
+    local.updateData(newData);
+    // Update project name to select
+    ui.populateSelect(ctrl.data.taskItems, selectAll);
+    // Update filter tasks by project name
+    filterByProjectName();
+    // Clear form inputs UI
+    ui.clearInputs();
+    // Show cards list UI
+    ui.showTasksCards();
+  } else {
+    // Show error for empty inputs
+    ui.showError();
+  }
 }
 
 // Delete task click
@@ -204,6 +216,8 @@ function cancelClick(e) {
   ui.showTasksCards();
   // Check if new task form open
   if (openNewTaskFormFlag) {
+    // Change new task button name
+    ui.newTaskBtn.innerHTML = 'Новая задача';
     // Set toggle for flag
     openNewTaskFormFlag = !openNewTaskFormFlag;
   }
