@@ -12,8 +12,18 @@ const showCards = function() {
     ui.showTasksCards();
   }
 };
-// Set flag for open new task form
-let openNewTaskFormFlag = false;
+// Set flag for close/open new task form
+let closeNewTaskFormFlag = true;
+// Check for flag
+function checkForTaskFormFlag() {
+  if (closeNewTaskFormFlag) {
+    // Close
+    ui.newTaskBtn.innerHTML = 'Новая задача';
+  } else {
+    // Open
+    ui.newTaskBtn.innerHTML = 'Отменить';
+  }
+}
 
 // Fetch items from data structure
 const items = ctrl.getItems();
@@ -65,26 +75,26 @@ const loadEventListeners = function() {
 // Open form for new task
 function openFormForNewTask(e) {
   // Check if new task form open
-  if (!openNewTaskFormFlag) {
+  if (closeNewTaskFormFlag) {
     // Clear error inputs
     ui.clearErrorInputs();
     // Show form
     ui.showFormForNewTask();
     // Clear inputs
     ui.clearInputs();
-    // Change button name
-    e.target.innerHTML = 'Отменить';
     // Set toggle for flag
-    openNewTaskFormFlag = !openNewTaskFormFlag;
+    closeNewTaskFormFlag = !closeNewTaskFormFlag;
+    // Change button name
+    checkForTaskFormFlag();
   } else {
     // Clear form inputs UI
     ui.clearInputs();
     // Show cards list UI
     ui.showTasksCards();
-    // Change button name
-    e.target.innerHTML = 'Новая задача';
     // Set toggle for flag
-    openNewTaskFormFlag = !openNewTaskFormFlag;
+    closeNewTaskFormFlag = !closeNewTaskFormFlag;
+    // Change button name
+    checkForTaskFormFlag();
   }
 }
 
@@ -112,7 +122,9 @@ function addNewTask(e) {
     // Update filter tasks by project name
     filterByProjectName();
     // Set toggle for flag
-    openNewTaskFormFlag = !openNewTaskFormFlag;
+    closeNewTaskFormFlag = !closeNewTaskFormFlag;
+    // Change button name
+    checkForTaskFormFlag();
     // Set total tasks number
     setTasksNumber();
   } else {
@@ -123,15 +135,15 @@ function addNewTask(e) {
 
 // Edit task click
 function editTaskClick(e) {
-  // Check if new task form open
-  if (openNewTaskFormFlag) {
-    // Change new task button name
-    ui.newTaskBtn.innerHTML = 'Новая задача';
-    // Set toggle for flag
-    openNewTaskFormFlag = !openNewTaskFormFlag;
-  }
   // Check for edit button
   if (e.target.classList.contains('editBtn')) {
+    // Check if new task form open
+    if (!closeNewTaskFormFlag) {
+      // Set toggle for flag
+      closeNewTaskFormFlag = !closeNewTaskFormFlag;
+      // Change button name
+      checkForTaskFormFlag();
+    }
     // Clear error inputs
     ui.clearErrorInputs();
     // Open form for edit task
@@ -178,6 +190,13 @@ function updateTaskSubmit(e) {
 function deleteTaskSubmit(e) {
   // Check for delete button
   if (e.target.classList.contains('deleteBtn')) {
+    // Check if new task form open
+    if (!closeNewTaskFormFlag) {
+      // Set toggle for flag
+      closeNewTaskFormFlag = !closeNewTaskFormFlag;
+      // Change button name
+      checkForTaskFormFlag();
+    }
     // Show cards list UI
     ui.showTasksCards();
     // Set current item
@@ -217,11 +236,11 @@ function cancelClick(e) {
   // Show cards list UI
   ui.showTasksCards();
   // Check if new task form open
-  if (openNewTaskFormFlag) {
-    // Change new task button name
-    ui.newTaskBtn.innerHTML = 'Новая задача';
+  if (!closeNewTaskFormFlag) {
     // Set toggle for flag
-    openNewTaskFormFlag = !openNewTaskFormFlag;
+    closeNewTaskFormFlag = !closeNewTaskFormFlag;
+    // Change button name
+    checkForTaskFormFlag();
   }
   // Check for presence task cards
   showCards();
