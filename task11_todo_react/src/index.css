@@ -1,0 +1,44 @@
+html {
+  font-size: 0.9rem;
+}
+
+#tasksCollection {
+  /* display: none; */
+}
+
+#ctrlPanel {
+  display: none;
+}
+
+#newTaskForm {
+  /* display: none; */
+}
+
+.displayNone {
+  display: none;
+}
+
+#totalTasks {
+  font-size: 1.3rem;
+  text-align: center;
+}
+
+.appName {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-left: 10px;
+}
+
+.error {
+  border-color: #dc3545;
+}
+
+.none {
+  display: none;
+}
+
+.fas {
+  cursor: pointer;
+  font-size: 1.5rem;
+  margin-left: 1.5rem;
+}
