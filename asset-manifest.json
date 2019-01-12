@@ -1,15 +1,15 @@
 {
-  "main.css": "/task11_todo_react/static/css/main.6ef01424.chunk.css",
-  "main.js": "/task11_todo_react/static/js/main.646f8e44.chunk.js",
-  "main.js.map": "/task11_todo_react/static/js/main.646f8e44.chunk.js.map",
-  "static/css/1.bff2cc1e.chunk.css": "/task11_todo_react/static/css/1.bff2cc1e.chunk.css",
-  "static/js/1.a8d13abe.chunk.js": "/task11_todo_react/static/js/1.a8d13abe.chunk.js",
-  "static/js/1.a8d13abe.chunk.js.map": "/task11_todo_react/static/js/1.a8d13abe.chunk.js.map",
-  "runtime~main.js": "/task11_todo_react/static/js/runtime~main.e9684b85.js",
-  "runtime~main.js.map": "/task11_todo_react/static/js/runtime~main.e9684b85.js.map",
-  "static/css/1.bff2cc1e.chunk.css.map": "/task11_todo_react/static/css/1.bff2cc1e.chunk.css.map",
-  "static/css/main.6ef01424.chunk.css.map": "/task11_todo_react/static/css/main.6ef01424.chunk.css.map",
-  "index.html": "/task11_todo_react/index.html",
-  "precache-manifest.1aaf46b1258deb39b9070cdb142d97eb.js": "/task11_todo_react/precache-manifest.1aaf46b1258deb39b9070cdb142d97eb.js",
-  "service-worker.js": "/task11_todo_react/service-worker.js"
+  "main.css": "/task11_todo_react_redux/static/css/main.6ef01424.chunk.css",
+  "main.js": "/task11_todo_react_redux/static/js/main.646f8e44.chunk.js",
+  "main.js.map": "/task11_todo_react_redux/static/js/main.646f8e44.chunk.js.map",
+  "static/css/1.bff2cc1e.chunk.css": "/task11_todo_react_redux/static/css/1.bff2cc1e.chunk.css",
+  "static/js/1.a8d13abe.chunk.js": "/task11_todo_react_redux/static/js/1.a8d13abe.chunk.js",
+  "static/js/1.a8d13abe.chunk.js.map": "/task11_todo_react_redux/static/js/1.a8d13abe.chunk.js.map",
+  "runtime~main.js": "/task11_todo_react_redux/static/js/runtime~main.5951c0e7.js",
+  "runtime~main.js.map": "/task11_todo_react_redux/static/js/runtime~main.5951c0e7.js.map",
+  "static/css/1.bff2cc1e.chunk.css.map": "/task11_todo_react_redux/static/css/1.bff2cc1e.chunk.css.map",
+  "static/css/main.6ef01424.chunk.css.map": "/task11_todo_react_redux/static/css/main.6ef01424.chunk.css.map",
+  "index.html": "/task11_todo_react_redux/index.html",
+  "precache-manifest.228d7e768815feaa6120865a1e1866b0.js": "/task11_todo_react_redux/precache-manifest.228d7e768815feaa6120865a1e1866b0.js",
+  "service-worker.js": "/task11_todo_react_redux/service-worker.js"
 }
