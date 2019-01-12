@@ -1,7 +1,5 @@
 ## Demo
 
-#### [task 03 - tinyone](https://knazarenko.github.io/task03_tinyone/)
-
 #### [task 04 - form](https://knazarenko.github.io/task04_form/) (css only)
 
 #### [task 05 - DAISY](https://knazarenko.github.io/task05_daisy/) (css only)
@@ -13,3 +11,5 @@
 #### [task 09 - Popup ООП](https://knazarenko.github.io/task09_Popup/) (класс Popup на чистом js, bootstrap-buttons)
 
 #### [task 10 - Todo App](https://knazarenko.github.io/task10_todo_webpack/) (js, bootstrap, webpack)
+
+#### [task 11 - Todo App React/Redux](https://knazarenko.github.io/task11_todo_react/) (js/ES6, bootstrap, react, redux)
