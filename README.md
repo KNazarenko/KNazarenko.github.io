@@ -12,6 +12,6 @@
 
 #### [task 10 - Todo App](https://knazarenko.github.io/task10_todo_webpack/) (js, bootstrap, webpack)
 
-#### [task 11 - Todo App React/Redux](https://knazarenko.github.io/todo_react-redux_app/) (js/ES6, bootstrap, react, redux) [source](https://github.com/KNazarenko/todo_react-redux_app/tree/master)
+#### [task 11 - Todo App React/Redux](https://knazarenko.github.io/task11_todo-react/) (js/ES6, bootstrap, react, redux) [source](https://github.com/KNazarenko/todo_react-redux_app/tree/master)
 
-#### [task 12 - Todo App with server api](https://knazarenko.github.io/task12_real_api/) (js/ES6, bootstrap, react, redux, [server api](https://uxcandy.com/))
+#### [task 12 - Todo App with pagination](https://knazarenko.github.io/task12_todo-bj/) (js/ES6, bootstrap, react, redux, [server api](https://uxcandy.com/))
