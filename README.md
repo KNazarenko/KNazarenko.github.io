@@ -10,6 +10,8 @@
 
 #### [task 09 - Popup ООП](https://knazarenko.github.io/task09_Popup/) (класс Popup на чистом js, bootstrap-buttons)
 
-#### [task 10 - Todo App](https://knazarenko.github.io/task10_todo_webpack/) (js, bootstrap, webpack)
+#### [task 10 - Todo-app](https://knazarenko.github.io/task10_todo_webpack/) with sorting and filtering (js, bootstrap, webpack)
 
-#### [task 11 - Todo App React/Redux](https://knazarenko.github.io/todo_react-redux_app) (js/ES6, bootstrap, react, redux) [source](https://github.com/KNazarenko/todo_react-redux_app/tree/master)
+#### [task 11 - React Todo-app](https://knazarenko.github.io/todo_react-redux_app) with sorting and filtering (js/ES6, bootstrap, react, redux) [source](https://github.com/KNazarenko/todo_react-redux_app/tree/master)
+
+#### [task 12 - Todo-app with pagination](https://knazarenko.github.io/todo-bj/) (js/ES6, react, redux, routing, axios) [source](https://github.com/KNazarenko/todo-bj)
